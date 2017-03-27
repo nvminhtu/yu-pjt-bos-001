@@ -58,13 +58,16 @@ body {
 	margin-left: 51px;
 	color: #FFF;
 }
-.header .h_navi a {
+.header .h_navi li {
+	line-height: 51px;
+}
+.header .h_navi li a {
 	color: #fff;
-	padding: 0 5px;
+	padding: 0 9px;
 	border-left: 1px solid #fff;
 	font-size: 14px;
 }
-.header .h_navi a:first-child {
+.header .h_navi li:first-child a {
 	border-left: none;
 }
 .header .header_right {

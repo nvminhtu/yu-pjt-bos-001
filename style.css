@@ -10,3 +10,13 @@ License URI: http://www.bosty.jp/
 Tags: Bosty
 Text Domain: Bosty
 */
+
+#menu-top-menu li {
+  float: left;
+}
+/* custom for responsive */
+@media screen and (max-width:768px){
+  #menu-top-menu li {
+    float: none;
+  }
+}

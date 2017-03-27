@@ -9,7 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<link  href="<?php bloginfo('template_url'); ?>/css/import.css" rel="stylesheet" type="text/css" />
+<link href="<?php bloginfo('template_url'); ?>/css/import.css" rel="stylesheet" type="text/css" />
+<link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" type="text/css" />
 <?php wp_head(); ?>
 </head>
 
@@ -17,26 +18,35 @@
 <body id="<?php echo $id_page; ?>">
 	<header id="header" class="header">
 		<div class="inner clearfix">
-			<h1 class="h_logo"><a href="/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="BOSTY 腹筋専門パーソナルジム" /></a><span>腹筋専門パーソナルジム</span></h1>
+			<h1 class="h_logo">
+				<a href="/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="BOSTY 腹筋専門パーソナルジム" /></a>
+				<span>腹筋専門パーソナルジム</span>
+			</h1>
 			<div class="h_navi">
-				<a href="studio.html">スタジオ一覧</a>
-				<a href="price.html">プログラム・料金</a>
-				<a href="feature.html">BOSTYの特徴</a>
-				<a href="qa.html">Q&amp;A</a>
+				<?php
+						$defaults = array(
+							'theme_location'  => 'top-menu'
+						);
+						wp_nav_menu( $defaults );
+				?>
 			</div>
 			<div class="header_right">
 				<a href="#" class="menu_icon"><img src="<?php bloginfo('template_url'); ?>/images/menu_icon.png" alt="MENU" /></a>
 				<div class="h_search">
 					<div class="h_search_inner">
 						<img src="<?php bloginfo('template_url'); ?>/images/h_search.png" alt="Search">
-						<form action="" method="post">
+						<!-- <form action="" method="post">
 							<input type="text" name="keyword" class="text">
 							<input type="submit" name="submit" value="Search" class="submit">
+						</form> -->
+						<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+							<input type="text" name="keyword" value="<?php echo get_search_query(); ?>" name="s" id="s" class="text" data-ic-class="search-input" placeholder="Search"/>
+							<span class="fa fa-times-circle" data-ic-class="search-clear"></span>
 						</form>
 						<a class="close">x</a>
 					</div>
 				</div>
-				<a href="contact.html" class="h_contact">体験レッスン予約 ▶</a>
+				<a href="contact.html" class="h_contact">体験レッスン予約</a>
 				<a href="tel:0362058288" class="h_tel" disabled="disabled">03-6205-8288</a>
 				<a href="#" class="h_share"><img src="<?php bloginfo('template_url'); ?>/images/h_share.png" alt="Share" /></a>
 			</div>

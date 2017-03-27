@@ -47,7 +47,7 @@
 		border-right:10px solid transparent;
 		border-bottom:10px solid #dfdbd7;
 	}
-	.header .h_navi a{
+	.header .h_navi li a {
 		padding: 5%;
 		border: none;
 		border-top: 1px dotted #ababab;
@@ -58,14 +58,14 @@
 		font-size: 16px;
 		line-height: 1.2;
 	}
-	.header .h_navi a:hover
+	.header .h_navi li a:hover
 	{
 		color:#7c5a00;
 			}
-	.header .h_navi a:first-child{
+	.header .h_navi li:first-child a{
 		border: none;
 	}
-	.header .h_navi a:before{
+	.header .h_navi li a:before{
 		content: '';
 		position: absolute;
 		top: 50%;
