@@ -13,22 +13,7 @@
 <?php wp_head(); ?>
 </head>
 
-<?php
-  global $post;
-  $current_page_template = get_page_template_slug( $post->ID );
-  $slug_patterns = array();
-  $slug_patterns[0] = '/page-/';
-  $slug_patterns[1] = '/.php/';
-  $current_page_slug = preg_replace($slug_patterns, '', $current_page_template);
-  //check what type of page?
-  if(is_front_page()||is_home()) {
-    $id_page = "index";
-  } elseif(is_page()) {
-    $id_page = $current_page_slug;
-  } else {
-
-  }
-?>
+<?php $id_page = get_custom_page_slug();  ?>
 <body id="<?php echo $id_page; ?>">
 	<header id="header" class="header">
 		<div class="inner clearfix">
