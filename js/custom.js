@@ -222,12 +222,12 @@ $(function(){
 			$("#side").removeClass("side--fixed");
 			$("#side").removeClass("side--bottom");
 		}
-		// if(xPosition>$('#list_footer').offset().top){
-		// 	$("#side").removeClass('side--fixed');
-		// 	$("#side").addClass("side--bottom");
-		// }else{
-		// 	$("#side").removeClass("side--bottom");
-		// }
+		if(xPosition>$('#list_footer').offset().top){
+			$("#side").removeClass('side--fixed');
+			$("#side").addClass("side--bottom");
+		}else{
+			$("#side").removeClass("side--bottom");
+		}
 
 	};
 });

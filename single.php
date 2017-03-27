@@ -104,58 +104,12 @@
           </dd>
         </dl>
       </div>
-      <div id="side">
-        <div class="nav_fb">
-          <div class="fb-page" data-href="https://www.facebook.com/bosty.jp/" data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/bosty.jp/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bosty.jp/">BOSTY -  ボスティ</a></blockquote>
-          </div>
-        </div>
-        <div class="nav02">
-          <p class="nav02_tit">話題のキーワード<br />
-            <span>注目されている言葉</span></p>
-          <ul>
-            <li><a href="">手帳</a></li>
-            <li><a href="">クリスマスコフレ</a></li>
-            <li><a href="">バケツ型バック</a></li>
-            <li><a href="">コート</a></li>
-            <li><a href="">手帳</a></li>
-            <li><a href="">クリスマスコフレ</a></li>
-            <li><a href="">バケツ型バック</a></li>
-            <li><a href="">コート</a></li>
-          </ul>
-        </div>
-      </div>
+      <?php get_sidebar(); ?>
+
     </div>
   </div>
 </div>
-<section id="section_05" class="footer_section_01">
-  <div id="list_footer" class="list_05"> <a href="#">
-    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_13.jpg" alt="学習コンセプト" />
-      <h3>学習コンセプト</h3>
-      <p>コーチング型でやる気を引き出す</p>
-    </div>
-    </a> <a href="#">
-    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_14.jpg" alt="学習コンセプト" />
-      <h3>学習コンセプト</h3>
-      <p>コーチング型でやる気を引き出す</p>
-    </div>
-    </a> <a href="#">
-    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_15.jpg" alt="学習コンセプト" />
-      <h3>学習コンセプト</h3>
-      <p>コーチング型でやる気を引き出す</p>
-    </div>
-    </a> <a href="#">
-    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_16.jpg" alt="学習コンセプト" />
-      <h3>学習コンセプト</h3>
-      <p>コーチング型でやる気を引き出す</p>
-    </div>
-    </a> <a href="#">
-    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_17.jpg" alt="学習コンセプト" />
-      <h3>学習コンセプト</h3>
-      <p>コーチング型でやる気を引き出す</p>
-    </div>
-    </a> </div>
-</section>
+<?php get_template_part('parts','list-pages'); ?>
 <section id="section_07" class="footer_section_02">
   <div class="inner">
     <h2>心も体もシェイプアップ！<br class="table" />
