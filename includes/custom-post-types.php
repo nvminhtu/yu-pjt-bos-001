@@ -37,7 +37,6 @@ function prefix_register_all() {
 				'custom-fields'
 			),
 			'taxonomies'    => array(
-				'blog-cat',
 				'post_tag'
 			),
 			'has_archive'   => true,

@@ -83,7 +83,7 @@ function get_custom_page_slug() {
     $id_page = "index";
   } elseif(is_page()) {
     $id_page = $current_page_slug;
-  } elseif (is_single()) {
+  } elseif (is_single()||is_category()) {
     $id_page = "bloglist";
   } else {
 
