@@ -24,7 +24,7 @@ add_image_size( 'img_blog_thumbnail', 640, 9999);
 /** -------------- 02.Add included files -------------- **/
 require_once (dirname(__FILE__) . '/includes/add-image-size.php');
 require_once (dirname(__FILE__) . '/includes/metabox.php');
-//require_once (dirname(__FILE__) . '/includes/custom-post-types.php');
+require_once (dirname(__FILE__) . '/includes/custom-post-types.php');
 require_once (dirname(__FILE__) . '/includes/widgets.php');
 require_once (dirname(__FILE__) . '/includes/pagination.php');
 require_once (dirname(__FILE__) . '/includes/shortcode.php');
@@ -83,6 +83,8 @@ function get_custom_page_slug() {
     $id_page = "index";
   } elseif(is_page()) {
     $id_page = $current_page_slug;
+  } elseif (is_single()) {
+    $id_page = "bloglist";
   } else {
 
   }
