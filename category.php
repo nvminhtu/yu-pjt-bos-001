@@ -9,9 +9,9 @@ get_header(); ?>
   <div class="inner clearfix">
     <div class="left_content">
       <div class="big_article clearfix">
-        <p class="bigimg"><img src="images/bloglist/bloglist_bigimg.png" alt="" /></p>
+        <p class="bigimg"><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_bigimg.png" alt="" /></p>
         <div class="bigcontent">
-          <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+          <p class="userinfo"><span><img src="<?php bloginfo('template_url'); ?>/images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
           <h3><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h3>
           <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
           <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
@@ -19,44 +19,44 @@ get_header(); ?>
       </div>
       <div class="news_article clearfix">
         <dl class="clearfix">
-          <dt><img src="images/bloglist/bloglist_simg01.png" alt="" /></dt>
+          <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
           <dd>
             <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
             <div class="clearfix">
-              <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+              <p class="userinfo"><span><img src="<?php bloginfo('template_url'); ?>/images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
               <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
             </div>
           </dd>
         </dl>
         <dl class="clearfix">
-          <dt><img src="images/bloglist/bloglist_simg02.png" alt="" /></dt>
+          <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg02.png" alt="" /></dt>
           <dd>
             <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-            <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+            <p class="userinfo"><span><img src="<?php bloginfo('template_url'); ?>/images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
             <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
           </dd>
         </dl>
         <dl class="clearfix">
-          <dt><img src="images/bloglist/bloglist_simg01.png" alt="" /></dt>
+          <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
           <dd>
             <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-            <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+            <p class="userinfo"><span><img src="<?php bloginfo('template_url'); ?>/images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
             <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
           </dd>
         </dl>
         <dl class="clearfix">
-          <dt><img src="images/bloglist/bloglist_simg02.png" alt="" /></dt>
+          <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg02.png" alt="" /></dt>
           <dd>
             <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-            <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+            <p class="userinfo"><span><img src="<?php bloginfo('template_url'); ?>/images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
             <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
           </dd>
         </dl>
         <dl class="clearfix">
-          <dt><img src="images/bloglist/bloglist_simg01.png" alt="" /></dt>
+          <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
           <dd>
             <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-            <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+            <p class="userinfo"><span><img src="<?php bloginfo('template_url'); ?>/images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
             <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
           </dd>
         </dl>
@@ -113,27 +113,27 @@ get_header(); ?>
 </div>
 <section id="section_05" class="footer_section_01">
   <div id="list_footer" class="list_05"> <a href="#">
-    <div class="slide"> <img src="images/feature/feature_img_13.jpg" alt="学習コンセプト" />
+    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_13.jpg" alt="学習コンセプト" />
       <h3>学習コンセプト</h3>
       <p>コーチング型でやる気を引き出す</p>
     </div>
     </a> <a href="#">
-    <div class="slide"> <img src="images/feature/feature_img_14.jpg" alt="学習コンセプト" />
+    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_14.jpg" alt="学習コンセプト" />
       <h3>学習コンセプト</h3>
       <p>コーチング型でやる気を引き出す</p>
     </div>
     </a> <a href="#">
-    <div class="slide"> <img src="images/feature/feature_img_15.jpg" alt="学習コンセプト" />
+    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_15.jpg" alt="学習コンセプト" />
       <h3>学習コンセプト</h3>
       <p>コーチング型でやる気を引き出す</p>
     </div>
     </a> <a href="#">
-    <div class="slide"> <img src="images/feature/feature_img_16.jpg" alt="学習コンセプト" />
+    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_16.jpg" alt="学習コンセプト" />
       <h3>学習コンセプト</h3>
       <p>コーチング型でやる気を引き出す</p>
     </div>
     </a> <a href="#">
-    <div class="slide"> <img src="images/feature/feature_img_17.jpg" alt="学習コンセプト" />
+    <div class="slide"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_17.jpg" alt="学習コンセプト" />
       <h3>学習コンセプト</h3>
       <p>コーチング型でやる気を引き出す</p>
     </div>
@@ -147,7 +147,7 @@ get_header(); ?>
   </div>
 </section>
 <section id="section_08" class="footer_section_03">
-  <div class="inner"> <img src="images/feature/feature_img_18.png" alt="お電話からでも、お気軽にご相談ください。" class="pc"> <img src="images/feature/feature_img_18_tb.png" alt="お電話からでも、お気軽にご相談ください。" class="tablet"> <img src="images/feature/feature_img_18_tb.png" alt="お電話からでも、お気軽にご相談ください。" class="sp">
+  <div class="inner"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_18.png" alt="お電話からでも、お気軽にご相談ください。" class="pc"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_18_tb.png" alt="お電話からでも、お気軽にご相談ください。" class="tablet"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_18_tb.png" alt="お電話からでも、お気軽にご相談ください。" class="sp">
     <div class="footer_tel"> お電話からでも、お気軽にご相談ください。 <a href="tel:0362058288">03-6205-8288</a> </div>
   </div>
 </section>
