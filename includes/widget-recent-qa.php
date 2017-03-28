@@ -39,65 +39,39 @@ class TNT_Recent_QA_List_Widget extends WP_Widget {
 	 
 	function widget( $args, $instance ) {
 	     ?>
-	     <div class="nav02">
+	    <div class="nav02">
 		<p class="nav02_tit"><span><?php echo $instance['title']; ?></span></p>
-		<ul>
-		<li>
-		<p class="nav_Q"><a href="">テキストが入ります。
-		    テキストが入ります。テキス
-		    トが入ります。
-		    テキストが入ります。</a></p>
-		    <p class="nav_cate"><a href="">Category name</a></p>
-		</li>
+		<?php 
+			// The Query
+			$recent_qa_args = array(
+			  'post_type' => 'qa',
+			  'posts_per_page' => 7
+			);
+			$qa_query = new WP_Query( $recent_qa_args );
 
-		<li>
-		<p class="nav_Q"><a href="">テキストが入ります。
-		    テキストが入ります。テキス
-		    トが入ります。
-		    テキストが入ります。</a></p>
-		    <p class="nav_cate"><a href="">Category name</a></p>
-		</li>
-
-		<li>
-		<p class="nav_Q"><a href="">テキストが入ります。
-		    テキストが入ります。テキス
-		    トが入ります。
-		    テキストが入ります。</a></p>
-		    <p class="nav_cate"><a href="">Category name</a></p>
-		</li>
-
-		<li>
-		<p class="nav_Q"><a href="">テキストが入ります。
-		    テキストが入ります。テキス
-		    トが入ります。
-		    テキストが入ります。</a></p>
-		    <p class="nav_cate"><a href="">Category name</a></p>
-		</li>
-
-		<li>
-		<p class="nav_Q"><a href="">テキストが入ります。
-		    テキストが入ります。テキス
-		    トが入ります。
-		    テキストが入ります。</a></p>
-		    <p class="nav_cate"><a href="">Category name</a></p>
-		</li>
-
-		<li>
-		<p class="nav_Q"><a href="">テキストが入ります。
-		    テキストが入ります。テキス
-		    トが入ります。
-		    テキストが入ります。</a></p>
-		    <p class="nav_cate"><a href="">Category name</a></p>
-		</li>
-
-		<li>
-		<p class="nav_Q"><a href="">テキストが入ります。
-		    テキストが入ります。テキス
-		    トが入ります。
-		    テキストが入ります。</a></p>
-		    <p class="nav_cate"><a href="">Category name</a></p>
-		</li>
-		</ul>
+			// The Loop
+			if ( $qa_query->have_posts() ) {
+				echo '<ul>';
+				while ( $qa_query->have_posts() ) {
+					$qa_query->the_post();
+					$terms = get_the_terms( get_the_ID() , 'qacat' );
+					?>
+					<li>
+					<p class="nav_Q"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+						<?php foreach ($terms as $term): ?>
+							<?php $termLink = get_term_link($term->term_id); ?>
+							<p class="nav_cate"><a href="<?php echo $termLink ?>"><?php echo $term->name; ?></a></p>	
+						<?php endforeach ?>
+					</li>
+					<?php
+				}
+				echo '</ul>';
+				/* Restore original Post Data */
+				wp_reset_postdata();
+			} else {
+				echo "<p>No QA to show</p>";
+			}
+		 ?>
 
 		</div>
 	     <?php
