@@ -102,7 +102,7 @@ $(document).ready(function() {
 	});
 
 	// #home blog list to be roll over
-	$('#section_01 .list_01').slick({
+	$('#section_01 .index-blog-slick').slick({
 	  speed: 300,
 	  slidesToShow: 3,
 	  slidesToScroll: 3,
