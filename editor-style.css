@@ -1,1 +1,64 @@
 /* Visual Editor Style */
+
+.style_h2
+{
+	font-weight:bold;
+	font-size:30px;
+	margin:20px 0;
+}
+
+.style_h3
+{
+	font-weight:bold;
+	font-size:25px;
+	margin:20px 0;
+	background:url(images/style_h3.png) no-repeat 0 0;
+	padding:0 0 10px 45px;
+	border-bottom:3px solid #e3d28c;
+}
+
+
+.style_h3
+{
+	font-weight:bold;
+	font-size:25px;
+	margin:20px 0;
+	background:url(images/style_h3.png) no-repeat 0 0;
+	padding:0 0 10px 45px;
+	border-bottom:3px solid #e3d28c;
+}
+
+.style_h4
+{
+	font-weight:bold;
+	font-size:20px;
+	margin:20px 0;
+	background:url(images/style_h401.png) no-repeat 10px 12px, url(images/style_h402.png) no-repeat top right, #fbf5dc;
+	padding:5px 0 5px 40px;
+}
+
+
+.style_h5
+{
+	font-weight:bold;
+	color:#e3d28c;
+	margin:20px 0;
+	background:url(images/style_h5.png) no-repeat 0 10px;
+	padding:5px 0 5px 25px;
+}
+
+
+.style_h6
+{
+	font-weight:bold;
+	margin:20px 0;
+	padding:0 0 0 10px;
+	border-left:5px solid #e3d28c;
+}
+
+.style_list li
+{
+	background:url(images/style_listicon.png) no-repeat 0 5px;
+	padding:0 0 0 15px;
+	margin:7px 0;
+}

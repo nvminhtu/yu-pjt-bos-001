@@ -6,6 +6,7 @@ add_theme_support( 'post-thumbnails' );
 
 // add image for uploading
 add_image_size( 'img_other_pages', 391, 198, true );
+add_image_size( 'img_blog_index', 360, 165, true );
 
 /** -------------- 02.Add included files -------------- **/
 require_once (dirname(__FILE__) . '/includes/add-image-size.php');

@@ -34,6 +34,27 @@
 				</li>
 				<li>
 					<a href="#">
+						<img src="<?php bloginfo('template_url'); ?>/images/index_img_03.jpg" alt="ダイエット中でもデザートをあきらめきれないあなたに" />
+						<h3 class="title_02">ダイエット中でもデザートをあきらめきれないあなたに</h3>
+						<p class="meta">2016.12.22 ダイエット, 腹筋</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="<?php bloginfo('template_url'); ?>/images/index_img_03.jpg" alt="ダイエット中でもデザートをあきらめきれないあなたに" />
+						<h3 class="title_02">ダイエット中でもデザートをあきらめきれないあなたに</h3>
+						<p class="meta">2016.12.22 ダイエット, 腹筋</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="<?php bloginfo('template_url'); ?>/images/index_img_03.jpg" alt="ダイエット中でもデザートをあきらめきれないあなたに" />
+						<h3 class="title_02">ダイエット中でもデザートをあきらめきれないあなたに</h3>
+						<p class="meta">2016.12.22 ダイエット, 腹筋</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
 						<img src="<?php bloginfo('template_url'); ?>/images/index_img_04.jpg" alt="ダイエット中でもデザートをあきらめきれないあなたに" />
 						<h3 class="title_02">ダイエット中でもデザートをあきらめきれないあなたに</h3>
 						<p class="meta">2016.12.22 ダイエット, 腹筋</p>

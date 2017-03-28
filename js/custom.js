@@ -78,7 +78,31 @@ $(document).ready(function() {
 		}
 	  ]
 	});
+
 	$('#feature .section_04 .list_03').slick({
+	  speed: 300,
+	  slidesToShow: 3,
+	  slidesToScroll: 3,
+	  responsive: [
+		{
+		  breakpoint: 890,
+		  settings: {
+			slidesToShow: 2,
+			slidesToScroll: 2
+		  }
+		},
+		{
+		  breakpoint: 640,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		}
+	  ]
+	});
+
+	// #home blog list to be roll over
+	$('#section_01 .list_01').slick({
 	  speed: 300,
 	  slidesToShow: 3,
 	  slidesToScroll: 3,
@@ -221,12 +245,18 @@ $(function(){
 			$("#side").removeClass("side--fixed");
 			$("#side").removeClass("side--bottom");
 		}
-		if(xPosition>$('#list_footer').offset().top){
-			$("#side").removeClass('side--fixed');
-			$("#side").addClass("side--bottom");
-		}else{
-			$("#side").removeClass("side--bottom");
+
+		//some pages don't have bottom list
+		if( $('#list_footer').length ) {
+			if(xPosition>$('#list_footer').offset().top){
+			 $("#side").removeClass('side--fixed');
+			 $("#side").addClass("side--bottom");
+			} else {
+				 $("#side").removeClass("side--bottom");
+			}
 		}
+
+
 
 	};
 });
