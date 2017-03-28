@@ -110,6 +110,20 @@ function sidebar_widget() {
  }
 add_action('widgets_init', 'sidebar_widget');
 
+function sidebar_qa_widget() {
+	register_sidebar(array(
+	  'id' => 'sidebar-qa-widget',
+	  'name' => 'Sidebar QA',
+	  'class' => '',
+	  'description' => 'This is sidebar QA Widget',
+	  'before_title' => '',
+	  'after_title' => '',
+	  'before_widget' => '<div class="cwidget-sidebar">',
+	  'after_widget' => '</div>',
+	 ));
+ }
+add_action('widgets_init', 'sidebar_qa_widget');
+
 
 // ----------------- 07. Custom code for removing wrap symbol -----------------------
 // >> add [widget title] to prevent it display on

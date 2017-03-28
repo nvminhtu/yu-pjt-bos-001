@@ -30,6 +30,8 @@ require_once (dirname(__FILE__) . '/includes/pagination.php');
 require_once (dirname(__FILE__) . '/includes/shortcode.php');
 require_once (dirname(__FILE__) . '/includes/format-editor.php');
 require_once (dirname(__FILE__) . '/includes/admin-customize.php');
+require_once (dirname(__FILE__) . '/includes/widget-list-qa-category.php');
+require_once (dirname(__FILE__) . '/includes/widget-recent-qa.php');
 
 /** -------------- 03. Setting for theme -------------- **/
 // #menu

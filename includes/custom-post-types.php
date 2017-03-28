@@ -46,6 +46,74 @@ function prefix_register_all() {
 			),
 		)
 	);
+
+	/* 02 -- FAQ ------- */
+	register_post_type(
+		'qa',
+		array(
+			'labels'        => array(
+				'name'               => __('FAQs', 'custom_text_posttype'),
+				'singular_name'      => __('FAQ', 'custom_text_posttype'),
+				'menu_name'          => __('FAQ', 'custom_text_posttype'),
+				'name_admin_bar'     => __('FAQ', 'custom_text_posttype'),
+				'all_items'          => __('All Items', 'custom_text_posttype'),
+				'add_new'            => _x('Add New', 'studio', 'custom_text_posttype'),
+				'add_new_item'       => __('Add New Item', 'custom_text_posttype'),
+				'edit_item'          => __('Edit Item', 'custom_text_posttype'),
+				'new_item'           => __('New Item', 'custom_text_posttype'),
+				'view_item'          => __('View Item', 'custom_text_posttype'),
+				'search_items'       => __('Search Items', 'custom_text_posttype'),
+				'not_found'          => __('No items found.', 'custom_text_posttype'),
+				'not_found_in_trash' => __('No items found in Trash.', 'custom_text_posttype'),
+				'parent_item_colon'  => __('Parent Items:', 'custom_text_posttype'),
+			),
+			'public'        => true,
+			'menu_position' => 3,
+			'supports'      => array(
+				'title',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'author',
+				'revisions',
+				'custom-fields'
+			),
+			'taxonomies'    => array(),
+			'has_archive'   => true,
+			'menu_icon'   => 'dashicons-welcome-write-blog',
+			'rewrite'       => array(
+				'slug' => 'qa',
+			),
+		)
+	);
+
+	/* 02.1 -- FAQ CATEGORY------- */
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'QA Categories', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'QA Category', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Search Categories', 'textdomain' ),
+		'all_items'         => __( 'All Categories', 'textdomain' ),
+		'parent_item'       => __( 'Parent Category', 'textdomain' ),
+		'parent_item_colon' => __( 'Parent Category:', 'textdomain' ),
+		'edit_item'         => __( 'Edit Category', 'textdomain' ),
+		'update_item'       => __( 'Update Category', 'textdomain' ),
+		'add_new_item'      => __( 'Add New Category', 'textdomain' ),
+		'new_item_name'     => __( 'New Category Name', 'textdomain' ),
+		'menu_name'         => __( 'Category', 'textdomain' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'qacat' ),
+	);
+
+	register_taxonomy( 'qacat', array( 'qa' ), $args );
+
 }
 
 add_action('init', 'prefix_register_all', 0);
