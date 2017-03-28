@@ -162,7 +162,8 @@ $(document).ready(function() {
 
 });
 
-$(window).load(function() {
+// load slide gallery for instagram position
+$(document).ready(function() {
 	$('#instagram').slick({
 	  speed: 300,
 	  slidesToShow: 4,
@@ -200,8 +201,6 @@ $(window).load(function() {
 	  ]
 	});
 });
-
-
 
 
 $(function(){
