@@ -7,7 +7,9 @@
  * Content will be gotten from admin editor
  */ ?>
 <?php get_header(); ?>
-  <div class="mainvisual">
+<?php // Start the loop.
+  while ( have_posts() ) : the_post(); ?>
+    <div class="mainvisual">
 		<p>
 			<span>面倒な食事管理もせず、<br>独自の最新トレーニング法で、<br>しっかりあなたの体作りをサポート。</span>
 		</p>
@@ -384,9 +386,10 @@
 			</div>
 		</div>
 	</section>
-  <?php
-        // common area for all sub pages and posts
-        get_template_part('parts/list-pages');
-        get_template_part('parts/contact-information');
-  ?>
+<?php endwhile; // End of the loop. ?>
+<?php 
+  // common area for all sub pages and posts
+  get_template_part('parts/list-pages');
+  get_template_part('parts/contact-information');
+?>
 <?php get_footer(); ?>

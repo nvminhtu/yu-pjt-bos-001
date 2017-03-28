@@ -9,7 +9,7 @@
     <img src="<?php bloginfo('template_url'); ?>/images/index_img_07.png" alt="NEWS お知らせ" />
     <span class="title_03_01">NEWS</span>
     <span class="title_03_02">お知らせ</span>
-    <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/index_img_08.png" alt="お知らせ一覧へ" width="169" height="28" /></a>
+    <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/index_img_08.png" alt="お知らせ一覧へ" width="169" height="28" /></a>
   </div>
   <div class="list_02">
     <?php

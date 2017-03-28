@@ -39,7 +39,7 @@ function prefix_register_all() {
 			'taxonomies'    => array(
 				'post_tag'
 			),
-			'has_archive'   => true,
+			'has_archive'   => false,
 			'menu_icon'   => 'dashicons-welcome-write-blog',
 			'rewrite'       => array(
 				'slug' => 'studio',
