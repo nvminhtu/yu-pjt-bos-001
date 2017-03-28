@@ -53,7 +53,49 @@
 <?php } ?>
 <script src="<?php bloginfo('template_url'); ?>/js/slick.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
+
+<?php if (is_page( 'contact' )): ?>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<?php endif ?>
+
 <script src="<?php bloginfo('template_url'); ?>/js/custom.js" type="text/javascript"></script>
+
+<?php if (is_page('contact')) {
+  ?>
+  <script type="text/javascript">
+  $(function() {
+      $('input[name="date_01"]').daterangepicker({
+          timePicker: true,
+          timePickerIncrement: 30,
+          locale: {
+              // format: 'MM/DD/YYYY h:mm A'
+              format: 'MM/DD(水) h:mm A'
+          }
+      });
+      $('input[name="date_02"]').daterangepicker({
+          timePicker: true,
+          timePickerIncrement: 30,
+          locale: {
+              // format: 'MM/DD/YYYY h:mm A'
+              format: 'MM/DD(水) h:mm A'
+          }
+      });
+      $('input[name="date_03"]').daterangepicker({
+          timePicker: true,
+          timePickerIncrement: 30,
+          locale: {
+              // format: 'MM/DD/YYYY h:mm A'
+              format: 'MM/DD(水) h:mm A'
+          }
+      });
+  });
+
+  </script>
+  <?php
+} ?>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
