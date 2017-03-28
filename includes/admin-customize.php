@@ -179,3 +179,22 @@ function wpdocs_filter_wp_title( $title, $sep ) {
     return $title;
 }
 add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
+
+/* --- Format Custom fields --- */
+add_action('acf/input/admin_head', 'my_acf_admin_head');
+function my_acf_admin_head() {  ?>
+    <script type="text/javascript">
+    (function($) {
+        $(document).ready(function(){
+            $('.acf-field-58d9e72c6bbfe .acf-input').append( $('#postdivrich') );
+        });
+    })(jQuery);
+    </script>
+    <style type="text/css">
+        .acf-field #wp-content-editor-tools {
+            background: transparent;
+            padding-top: 50px;
+        }
+    </style>
+    <?php
+}
