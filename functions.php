@@ -4,22 +4,8 @@ add_theme_support( 'title-tag' );
 // add Featured Image
 add_theme_support( 'post-thumbnails' );
 
-add_image_size( 'img_avatar', 192, 192, true );
-add_image_size( 'img_author_avatar', 260, 260, true );
-add_image_size( 'img_author_tiny', 56, 56, true );
-add_image_size( 'img_author_thumb', 116, 116, true );
-add_image_size( 'img_author_list', 330, 330, true );
-add_image_size( 'img_author_slider_w', 9999, 500);
-add_image_size( 'img_author_slider_h', 668, 9999);
-add_image_size( 'img_author_slider_fixed', 668, 500, true);
-
-// add image for post
-add_image_size( 'img_blog_list', 220, 164, true );
-add_image_size( 'img_blog_index', 323, 200, true );
-add_image_size( 'img_blog_index_second', 100, 100, true );
-add_image_size( 'img_blog_sidebar', 120, 120, true );
-add_image_size( 'img_blog_related', 92, 70, true );
-add_image_size( 'img_blog_thumbnail', 640, 9999);
+// add image for uploading
+add_image_size( 'img_other_pages', 391, 198, true );
 
 /** -------------- 02.Add included files -------------- **/
 require_once (dirname(__FILE__) . '/includes/add-image-size.php');
