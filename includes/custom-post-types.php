@@ -79,7 +79,7 @@ function prefix_register_all() {
 				'custom-fields'
 			),
 			'taxonomies'    => array(),
-			'has_archive'   => true,
+			'has_archive'   => false,
 			'menu_icon'   => 'dashicons-welcome-write-blog',
 			'rewrite'       => array(
 				'slug' => 'qa',
