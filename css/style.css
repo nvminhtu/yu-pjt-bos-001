@@ -2541,7 +2541,8 @@ body {
   background-size: auto 100%;
 }
 
-.btn_02 a {
+.btn_02 a,
+.btn_02 input[type=submit]{
   height: 100%;
   padding: 10px 50px 7px 0;
   background: url(../images/btn_02_bg.jpg);
@@ -2552,6 +2553,13 @@ body {
   color: #fff;
   display: block;
   position: relative;
+}
+
+#contact .btn_02 #submit {
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0;
 }
 
 .btn_02 a:before {
