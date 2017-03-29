@@ -11,6 +11,11 @@
   while ( have_posts() ) : the_post(); ?>
     <div class="com_mainvisual">
       <div class="inner">
+        <div class="main_pic">
+          <img class="sp" src="<?php bloginfo('template_url'); ?>/images/mainvisual_sp.jpg" />
+          <img class="tablet" src="<?php bloginfo('template_url'); ?>/images/mainvisual_tb.jpg" />
+          <img class="pc" src="<?php bloginfo('template_url'); ?>/images/mainvisual_pc.jpg" />
+        </div>
         <h2><span><?php the_title(); ?></span></h2>
       </div>
     </div>
@@ -195,7 +200,7 @@
       </div>
     </section>
 <?php endwhile; // End of the loop. ?>
-<?php 
+<?php
   // common area for all sub pages and posts
   get_template_part('parts/list-pages');
   get_template_part('parts/contact-information');
