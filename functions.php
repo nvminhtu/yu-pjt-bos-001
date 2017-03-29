@@ -58,6 +58,12 @@ function trim_word($text, $length, $startPoint=0, $allowedTags=""){
     return $text = substr($text, $startPoint, $length);
 }
 
+// add style for admin visual
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
 // #custom_page_slug
 function get_custom_page_slug() {
   global $post;

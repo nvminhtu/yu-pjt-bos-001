@@ -9,41 +9,51 @@
 <?php get_header(); ?>
 <?php // Start the loop.
   while ( have_posts() ) : the_post(); ?>
-    <?php get_template_part('parts/main-visual-sec'); 
+    <?php get_template_part('parts/main-visual-sec');
       
+      $tags = array("<p>", "</p>", "<font>", "</font>");
       // Visitor
       $visitor_course_pic = get_field('visitor_course_pic');
       $visitor_course_description = get_field('visitor_course_description');
+      $visitor_course_description = str_replace($tags, "", $visitor_course_description);
       $visitor_course_content = get_field('visitor_course_content');
       
       // Pair
       $pair_course_pic = get_field('pair_course_pic');
       $pair_course_description = get_field('pair_course_description');
+      $pair_course_description = str_replace($tags, "", $pair_course_description);
       $pair_course_content = get_field('pair_course_content');
       // -----------------------------------------------------------------------------
+      
       // 2 Weeks
       $w_course_pic = get_field('w_course_pic');
       $w_course_description = get_field('w_course_description');
+      $w_course_description  = str_replace($tags, "", $w_course_description );
       $w_course_content = get_field('w_course_content');
 
       // 1 month
-      $1month_course_pic = get_field('1month_course_pic');
-      $1month_course_description = get_field('1month_course_description');
-      $1month_course_content = get_field('1month_course_content');
+      $one_month_course_pic = get_field('1month_course_pic');
+      $one_month_course_description = get_field('1month_course_description');
+      $one_month_course_description  = str_replace($tags, "", $one_month_course_description );
+      $one_month_course_content = get_field('1month_course_content');
 
       // 2 months
-      $2months_course_pic = get_field('2months_course_pic');
-      $2months_course_description = get_field('2months_course_description');
-      $2months_course_content = get_field('2months_course_content');
+      $two_months_course_pic = get_field('2months_course_pic');
+      $two_months_course_description = get_field('2months_course_description');
+      $two_months_course_description  = str_replace($tags, "", $two_months_course_description );
+      $two_months_course_content = get_field('2months_course_content');
       // -----------------------------------------------------------------------------
+      
       // mustle
       $mustle_up_course_pic = get_field('mustle_up_course_pic');
       $mustle_up_course_description = get_field('mustle_up_course_description');
+      $mustle_up_course_description  = str_replace($tags, "",  $mustle_up_course_description );
       $mustle_up_course_content = get_field('mustle_up_course_content');
 
       // Beauty Course
       $beauty_3months_course_pic = get_field('beauty_3months_course_pic');
       $beauty_3months_course_description = get_field('beauty_3months_course_description');
+      $beauty_3months_course_description  = str_replace($tags, "",  $beauty_3months_course_description );
       $beauty_3months_course_content = get_field('beauty_3months_course_content');
 
     ?>
@@ -61,18 +71,9 @@
             </li>
             <li>
               <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース2" /><span>コース</span><span class="number">2</span>ペアコース</h3>
-              <img src="<?php bloginfo('template_url'); ?>/images/price/price_img_04.jpg" alt="ペアコース" />
-              <p class="lineh_01  heightLine-a2 h_resauto">お友達やカップル参加で<br>気軽にボディメイクを体感したい貴方へ</p>
-              <table class="table_01  heightLine-a3 h_resauto">
-                <tr>
-                  <th>入会金</th>
-                  <td>0円</td>
-                </tr>
-                <tr>
-                  <th>1回コース料金</th>
-                  <td>9,000円（税別）50分1回</td>
-                </tr>
-              </table>
+              <img src="<?php echo $pair_course_pic; ?>" alt="ペアコース" />
+              <p class="lineh_01  heightLine-a2 h_resauto"><?php echo $pair_course_description; ?></p>
+              <?php echo $pair_course_content; ?>
             </li>
           </ul>
         </div>
@@ -88,52 +89,24 @@
             <li>
               <div class="list_02_inner">
                 <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース1" /><span>コース</span><span class="number">1</span>2週間コース</h3>
-                <img src="<?php bloginfo('template_url'); ?>/images/price/price_img_08.jpg" alt="コース1 2週間コース" />
-                <p class="lineh_02 heightLine-a4 h_resauto02">業界初！最速ダイエットプラン！<br>2週間60,000円入会金ナシ！</p>
-                <table class="table_02  heightLine-a5 h_resauto02" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <th>入会金</th>
-                    <td>0円</td>
-                  </tr>
-                  <tr>
-                    <th>コース料金</th>
-                    <td>60,000円<span>（税別）2週間全4回（1回50分）</span></td>
-                  </tr>
-                </table>
+                <img src="<?php echo $w_course_pic; ?>" alt="コース1 2週間コース" />
+                <p class="lineh_02 heightLine-a4 h_resauto02"><?php echo $w_course_description; ?></p>
+                <?php echo $w_course_content; ?>
               </div>
             </li>
             <li>
               <div class="list_02_inner">
                 <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース2" /><span>コース</span><span class="number">2</span>1ヶ月コース</h3>
-                <img src="<?php bloginfo('template_url'); ?>/images/price/price_img_08.jpg" alt="コース2 1ヶ月コース" />
-                <p class="lineh_02 heightLine-a4 h_resauto02">カラダを変えて印象を変えよう！<br>ビジネスにプライベートにプラスαの結果を残す！</p>
-                <table class="table_02  heightLine-a5 h_resauto02" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <th>入会金</th>
-                    <td>30,000円</td>
-                  </tr>
-                  <tr>
-                    <th>コース料金</th>
-                    <td>138,000円<span>（税別）1ヵ月全8回（1回50分）</span></td>
-                  </tr>
-                </table>
+                <img src="<?php echo $one_month_course_pic; ?>" alt="コース2 1ヶ月コース" />
+                <p class="lineh_02 heightLine-a4 h_resauto02"><?php echo $one_month_course_description; ?></p><?php echo $one_month_course_content; ?>
               </div>
             </li>
             <li>
               <div class="list_02_inner">
                 <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース3" /><span>コース</span><span class="number">3</span>2ヶ月コース</h3>
-                <img src="<?php bloginfo('template_url'); ?>/images/price/price_img_08.jpg" alt="コース3 2ヶ月コース" />
-                <p class="lineh_02 heightLine-a4 h_resauto02">より若々しく理想のカラダへ。<br>自分に自信がつくスリムボディを。</p>
-                <table class="table_02  heightLine-a5 h_resauto02" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <th>入会金</th>
-                    <td>30,000円</td>
-                  </tr>
-                  <tr>
-                    <th>コース料金</th>
-                    <td>159,000円<span>（税別）2ヵ月全12回（1回50分）</span></td>
-                  </tr>
-                </table>
+                <img src="<?php echo $two_months_course_pic; ?>" alt="コース3 2ヶ月コース" />
+                <p class="lineh_02 heightLine-a4 h_resauto02"><?php echo $two_months_course_description; ?></p>
+                <?php echo $two_months_course_content; ?>
               </div>
             </li>
           </ul>
@@ -149,74 +122,22 @@
         <ul class="clearfix">
           <li>
             <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span>筋力アップ 3ヶ月コース</h3>
-            <img src="<?php bloginfo('template_url'); ?>/images/price/price_img_09.jpg" alt="ビジターコース" />
-            <p class="lineh_03  heightLine-a7 h_resauto">魅せるカラダで2倍楽しむ！<br>スタイリッシュなボディラインにデザイン！</p>
-            <table class="table_01 heightLine-a8 h_resauto" cellpadding="0" cellspacing="0">
-              <tr>
-                <th>入会金</th>
-                <td>0円</td>
-              </tr>
-              <tr>
-                <th>1回コース料金</th>
-                <td>12,000円（税別）50分1回</td>
-              </tr>
-            </table>
-            <p class="bottom">魅せるカラダへ、厚い胸板・割れた腹筋、逆三角形の男らしいカラダを作るバルクアッププログラム。筋肥大の為の食事、トレーニング、サプリメントのアドバイスにより効率的に短期間で筋肉量を増やす事が可能です。</p>
+            <img src="<?php echo $mustle_up_course_pic; ?>" alt="ビジターコース" />
+            <p class="lineh_03  heightLine-a7 h_resauto"><?php echo $mustle_up_course_description; ?></p>
+            <?php echo $mustle_up_course_content; ?>
           </li>
           <li>
             <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース2" /><span>コース</span><span class="number">2</span>美BOSY 3ヶ月コース</h3>
-            <img src="<?php bloginfo('template_url'); ?>/images/price/price_img_10.jpg" alt="ペアコース" />
-            <p class="lineh_03  heightLine-a7 h_resauto">スリムだけど何か物足りないと感じている女性へ健康的な美脚と美尻でメリハリのあるカラダへ変身！</p>
-            <table class="table_01 heightLine-a8 h_resauto">
-              <tr>
-                <th>入会金</th>
-                <td>0円</td>
-              </tr>
-              <tr>
-                <th>1回コース料金</th>
-                <td>9,000円（税別）50分1回</td>
-              </tr>
-            </table>
-            <p class="bottom">魅せるカラダへ、厚い胸板・割れた腹筋、逆三角形の男らしいカラダを作るバルクアッププログラム。筋肥大の為の食事、トレーニング、サプリメントのアドバイスにより効率的に短期間で筋肉量を増やす事が可能です。</p>
+            <img src="<?php echo $beauty_3months_course_pic; ?>" alt="ペアコース" />
+            <p class="lineh_03  heightLine-a7 h_resauto"><?php echo $beauty_3months_course_description; ?></p>
+            <?php echo $beauty_3months_course_content; ?>
           </li>
         </ul>
       </div>
     </section>
     <section id="section_04" class="section_04">
       <div class="inner">
-        <h2 class="title_01">他社料金との比較</h2>
-        <div class="scroll_table">
-          <table class="table_03">
-            <tr>
-              <th>&nbsp;</th>
-              <td>期間</td>
-              <td>回数</td>
-              <td>料金</td>
-              <td>入会費</td>
-            </tr>
-            <tr>
-              <th>A社</th>
-              <td><span>2</span>ヶ月</td>
-              <td><span>16</span>回</td>
-              <td><span>196,000</span>円</td>
-              <td><span>38,000</span>円</td>
-            </tr>
-            <tr>
-              <th>B社</th>
-              <td><span>2</span>ヶ月</td>
-              <td><span>16</span>回</td>
-              <td><span>298,000</span>円</td>
-              <td><span>50,000</span>円</td>
-            </tr>
-            <tr class="last">
-              <th><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_11.png" alt="BOSTY" /></th>
-              <td><span class="price_12">2</span><span class="price_13">ヶ月</span></td>
-              <td><span class="price_12">12</span><span class="price_13">回</span></td>
-              <td><span class="price_12">159,800</span><span class="price_13">円</span></td>
-              <td><span class="price_12">30,000</span><span class="price_13">円</span></td>
-            </tr>
-          </table>
-        </div>
+        <?php the_content(); ?>
       </div>
     </section>
 <?php endwhile; // End of the loop. ?>
