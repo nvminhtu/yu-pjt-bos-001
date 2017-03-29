@@ -7,11 +7,8 @@
  * Content will be gotten from admin editor
  */ ?>
 <?php get_header(); ?>
-<div class="com_mainvisual">
-  <div class="inner">
-    <h2><span>よくあるご質問</span></h2>
-  </div>
-</div>
+
+<?php get_template_part('parts/main-visual-qa'); ?>
 
 <div class="main">
   <div class="search_area">
