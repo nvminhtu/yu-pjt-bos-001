@@ -67,15 +67,18 @@ function get_custom_page_slug() {
   $slug_patterns[0] = '/page-/';
   $slug_patterns[1] = '/.php/';
   $current_page_slug = preg_replace($slug_patterns, '', $current_page_template);
+
   //check what type of page?
   if(is_front_page()||is_home()) {
     $id_page = "index";
   } elseif(is_page()) {
     $id_page = $current_page_slug;
-  } elseif (is_single()||is_category()||is_post_type_archive('post')) {
+  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')) {
     $id_page = "bloglist";
+  } elseif (is_singular('qa') || is_tax( 'qacat' ) || is_post_type_archive('qa')) {
+    $id_page = "qa";
   } else {
-
+    
   }
   return $id_page;
 }
@@ -94,15 +97,15 @@ function admin_style() {
 }
 add_action('admin_enqueue_scripts', 'admin_style');
 
-function template_chooser($template)   
-{    
-  global $wp_query;   
-  $post_type = get_query_var('post_type');   
-  if( $wp_query->is_search && $post_type == 'qa' )   
+function template_chooser($template)
+{
+  global $wp_query;
+  $post_type = get_query_var('post_type');
+  if( $wp_query->is_search && $post_type == 'qa' )
   {
     return locate_template('search-qa.php');  //  redirect to archive-search.php
-  }   
-  return $template;   
+  }
+  return $template;
 }
-add_filter('template_include', 'template_chooser');    
+add_filter('template_include', 'template_chooser');
 ?>

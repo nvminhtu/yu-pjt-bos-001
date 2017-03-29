@@ -48,7 +48,7 @@
 <?php if(is_page('studio')) { ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox.min.js" type="text/javascript"></script>
 <?php } ?>
-<?php if(is_single()) {  // blog only ?>
+<?php if(is_singular( 'post' )) {  // blog only ?>
 <script src="<?php bloginfo('template_url'); ?>/js/social-button.js" type="text/javascript"></script>
 <?php } ?>
 <script src="<?php bloginfo('template_url'); ?>/js/slick.min.js" type="text/javascript"></script>
