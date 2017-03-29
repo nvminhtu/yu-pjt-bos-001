@@ -45,7 +45,7 @@ class TNT_List_QA_Cat_Widget extends WP_Widget {
     		'hide_empty' => false
 	    ));
 
-	    if ( is_page() ) {
+	    
 	 		?>
 			<div class="nav01">
 			<dl>
@@ -63,7 +63,7 @@ class TNT_List_QA_Cat_Widget extends WP_Widget {
 			</dl>
 			</div>
 	 		<?php
-	    }
+	    
     }
 }
 

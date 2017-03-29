@@ -6,7 +6,7 @@
  * @since Bosty
  * Content will be gotten from admin editor
  */ ?>
-<?php get_header('qa'); ?>
+<?php get_header(); ?>
 <div class="com_mainvisual">
   <div class="inner">
     <h2><span>よくあるご質問</span></h2>
@@ -17,9 +17,10 @@
   <div class="search_area">
     <div class="inner search_inner">
       <p class="search_tit">テキストが入ります。テキストが入ります。</p>
-      <form action="" method="post">
-        <input type="text" name="keyword" class="text" placeholder="キーワードで検索">
-        <input type="submit" name="submit" value="Search" class="submit">
+      <form action="<?php echo site_url('/'); ?>" method="get">
+        <input type="text" name="s" class="text" placeholder="キーワードで検索">
+        <input type="hidden" name="post_type" value="qa" />
+        <input type="submit" name="submit" alt="Search" value="Search" class="submit">
       </form>
     </div>
   </div>
@@ -91,4 +92,4 @@ if ( $qa_query->have_posts() ) {
     get_template_part('parts/list-pages');
     get_template_part('parts/contact-information');
 ?>
-<?php get_footer('qa'); ?>
+<?php get_footer(); ?>
