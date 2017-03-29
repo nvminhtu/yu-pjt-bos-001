@@ -387,7 +387,7 @@
 		</div>
 	</section>
 <?php endwhile; // End of the loop. ?>
-<?php 
+<?php
   // common area for all sub pages and posts
   get_template_part('parts/list-pages');
   get_template_part('parts/contact-information');

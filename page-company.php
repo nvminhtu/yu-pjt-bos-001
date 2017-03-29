@@ -9,17 +9,12 @@
 <?php get_header(); ?>
 <?php // Start the loop.
   while ( have_posts() ) : the_post(); ?>
-  <div class="com_mainvisual">
-    <div class="inner">
-      <h2><span><?php the_title(); ?></span></h2>
-    </div>
-  </div>
+  <?php get_template_part('parts/main-visual-sec'); ?>
   <section class="section_01">
     <h3 class="title_01">メディア掲載</h3>
     <div class="magazin_sl">
       <?php if( have_rows('media_group') ): ?>
-        <?php while( have_rows('media_group') ): the_row(); 
-          
+        <?php while( have_rows('media_group') ): the_row();
           $media_link = get_sub_field('media_link');
           $media_pic = get_sub_field('media_pic');
           $media_channel = get_sub_field('media_channel');
@@ -35,10 +30,10 @@
       <?php endif; ?>
     </div>
   </section>
-  <?php 
-      the_content(); 
+  <?php
+      the_content();
       endwhile; // End of the loop. ?>
-  <?php 
+  <?php
     // common area for all sub pages and posts
     get_template_part('parts/list-pages');
     get_template_part('parts/contact-information');

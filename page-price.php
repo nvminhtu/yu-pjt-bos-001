@@ -9,16 +9,7 @@
 <?php get_header(); ?>
 <?php // Start the loop.
   while ( have_posts() ) : the_post(); ?>
-    <div class="com_mainvisual">
-      <div class="inner">
-        <div class="main_pic">
-          <img class="sp" src="<?php bloginfo('template_url'); ?>/images/mainvisual_sp.jpg" />
-          <img class="tablet" src="<?php bloginfo('template_url'); ?>/images/mainvisual_tb.jpg" />
-          <img class="pc" src="<?php bloginfo('template_url'); ?>/images/mainvisual_pc.jpg" />
-        </div>
-        <h2><span><?php the_title(); ?></span></h2>
-      </div>
-    </div>
+    <?php get_template_part('parts/main-visual-sec'); ?>
     <section id="section_01" class="section_01">
       <div class="inner">
         <h2 class="title_01">体験コース<span>まずはやってみてから実感。</span></h2>

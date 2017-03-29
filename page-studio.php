@@ -9,11 +9,7 @@
 <?php get_header(); ?>
 <?php // Start the loop.
     while ( have_posts() ) : the_post(); ?>
-      <div class="com_mainvisual">
-        <div class="inner">
-          <h2><span><?php the_title(); ?></span></h2>
-        </div>
-      </div>
+      <?php get_template_part('parts/main-visual-sec'); ?>
       <section id="section_01" class="section_01">
         <div class="inner">
           <h3 class="title_01">六本木スタジオ</h3>
@@ -177,7 +173,7 @@
         </div>
       </section>
 <?php endwhile; // End of the loop. ?>
-<?php 
+<?php
   // common area for all sub pages and posts
   get_template_part('parts/list-pages');
   get_template_part('parts/contact-information');
