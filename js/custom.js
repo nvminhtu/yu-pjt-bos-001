@@ -101,30 +101,6 @@ $(document).ready(function() {
 	  ]
 	});
 
-	// #home blog list to be roll over
-	$('#section_01 .index-blog-slick').slick({
-	  speed: 300,
-	  slidesToShow: 3,
-	  slidesToScroll: 3,
-	  responsive: [
-		{
-		  breakpoint: 890,
-		  settings: {
-			slidesToShow: 2,
-			slidesToScroll: 2
-		  }
-		},
-		{
-		  breakpoint: 640,
-		  settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1
-		  }
-		}
-	  ]
-	});
-
-
 	$('.h_share').click(function(event) {
 		$('.header .share_box').slideToggle();
 		$('.header .search_box').hide();
