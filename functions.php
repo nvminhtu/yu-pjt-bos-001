@@ -111,4 +111,14 @@ function template_chooser($template)
   return $template;
 }
 add_filter('template_include', 'template_chooser');
-?>
+
+/* #advanced custom fields */
+add_action('admin_head', 'admin_styles');
+function admin_styles() { ?>
+  <style>
+    .acf-editor-wrap .wp-editor-container textarea.wp-editor-area {
+      height: 200px !important;
+      min-height: 200px;
+    }
+  </style>
+<?php } ?>

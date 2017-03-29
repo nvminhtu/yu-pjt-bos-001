@@ -9,7 +9,44 @@
 <?php get_header(); ?>
 <?php // Start the loop.
   while ( have_posts() ) : the_post(); ?>
-    <?php get_template_part('parts/main-visual-sec'); ?>
+    <?php get_template_part('parts/main-visual-sec'); 
+      
+      // Visitor
+      $visitor_course_pic = get_field('visitor_course_pic');
+      $visitor_course_description = get_field('visitor_course_description');
+      $visitor_course_content = get_field('visitor_course_content');
+      
+      // Pair
+      $pair_course_pic = get_field('pair_course_pic');
+      $pair_course_description = get_field('pair_course_description');
+      $pair_course_content = get_field('pair_course_content');
+      // -----------------------------------------------------------------------------
+      // 2 Weeks
+      $w_course_pic = get_field('w_course_pic');
+      $w_course_description = get_field('w_course_description');
+      $w_course_content = get_field('w_course_content');
+
+      // 1 month
+      $1month_course_pic = get_field('1month_course_pic');
+      $1month_course_description = get_field('1month_course_description');
+      $1month_course_content = get_field('1month_course_content');
+
+      // 2 months
+      $2months_course_pic = get_field('2months_course_pic');
+      $2months_course_description = get_field('2months_course_description');
+      $2months_course_content = get_field('2months_course_content');
+      // -----------------------------------------------------------------------------
+      // mustle
+      $mustle_up_course_pic = get_field('mustle_up_course_pic');
+      $mustle_up_course_description = get_field('mustle_up_course_description');
+      $mustle_up_course_content = get_field('mustle_up_course_content');
+
+      // Beauty Course
+      $beauty_3months_course_pic = get_field('beauty_3months_course_pic');
+      $beauty_3months_course_description = get_field('beauty_3months_course_description');
+      $beauty_3months_course_content = get_field('beauty_3months_course_content');
+
+    ?>
     <section id="section_01" class="section_01">
       <div class="inner">
         <h2 class="title_01">体験コース<span>まずはやってみてから実感。</span></h2>
@@ -18,18 +55,9 @@
           <ul class="clearfix">
             <li>
               <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span>ビジターコース</h3>
-              <img src="<?php bloginfo('template_url'); ?>/images/price/price_img_02.jpg" alt="ビジターコース" />
-              <p class="lineh_01  heightLine-a2 h_resauto">はじめてのボディメイク<br>まずは体感してみたい貴方へ</p>
-              <table class="table_01  heightLine-a3 h_resauto" cellpadding="0" cellspacing="0">
-                <tr>
-                  <th>入会金</th>
-                  <td>0円</td>
-                </tr>
-                <tr>
-                  <th>1回コース料金</th>
-                  <td>12,000円（税別）50分1回</td>
-                </tr>
-              </table>
+              <img src="<?php echo $visitor_course_pic; ?>" alt="ビジターコース" />
+              <p class="lineh_01 heightLine-a2 h_resauto"><?php echo $visitor_course_description; ?></p>
+              <?php echo $visitor_course_content; ?>
             </li>
             <li>
               <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース2" /><span>コース</span><span class="number">2</span>ペアコース</h3>
@@ -50,6 +78,7 @@
         </div>
       </div>
     </section>
+
     <section id="section_02" class="section_02">
       <div class="inner">
         <h2 class="title_01">ダイエットコース<span>痩せるための体づくりを。</span></h2>
