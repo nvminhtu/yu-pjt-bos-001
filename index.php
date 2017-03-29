@@ -85,7 +85,7 @@
 			<img src="<?php bloginfo('template_url'); ?>/images/index_img_12_sp.png" alt="まずはお気軽に体験レッスンから" class="sp" />
 			<div class="section_05_01">まずはお気軽に<span>体験レッスン</span>から</div>
 			<p class="btn_04">
-				<a href="contact.html">
+				<a href="<?php bloginfo('url'); ?>">
 					<span class="btn_04_01">24時間<br>受付可能</span>
 					<span class="btn_04_02">Webでご予約</span>
 				</a>
