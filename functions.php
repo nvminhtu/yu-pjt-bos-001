@@ -67,6 +67,7 @@ function get_custom_page_slug() {
   $slug_patterns[0] = '/page-/';
   $slug_patterns[1] = '/.php/';
   $current_page_slug = preg_replace($slug_patterns, '', $current_page_template);
+  $post_type = get_query_var('post_type');
 
   //check what type of page?
   if(is_front_page()||is_home()) {
@@ -77,8 +78,10 @@ function get_custom_page_slug() {
     $id_page = "bloglist";
   } elseif (is_singular('qa') || is_tax( 'qacat' ) || is_post_type_archive('qa')) {
     $id_page = "qa";
+  } elseif (is_search()&&$post_type=='qa') {
+    $id_page = "qa";
   } else {
-    
+
   }
   return $id_page;
 }
