@@ -29,19 +29,10 @@
 
 <div class="qa_sec">
 <?php
-// The Query
-$qa_paged = get_query_var('paged') ? get_query_var('paged') : 1;
-$qa_args = array(
-  'post_type' => 'qa',
-  'posts_per_page' => 5,
-  'paged'=>$qa_paged
-);
-$qa_query = new WP_Query( $qa_args );
-
 // The Loop
-if ( $qa_query->have_posts() ) {
-  while ( $qa_query->have_posts() ) {
-    $qa_query->the_post();
+if ( have_posts() )  {
+  while ( have_posts() ) {
+    the_post();
     ?>
     <dl>
     <dt><?php the_title(); ?></dt>
@@ -53,7 +44,7 @@ if ( $qa_query->have_posts() ) {
   wp_reset_postdata();
 } else {
   ?>
-  <p>No FAQS to show</p>
+  <p>No FAQS found.</p>
   <?php
 }
 
@@ -72,7 +63,7 @@ if ( $qa_query->have_posts() ) {
 
 </style>
 <div class="pagination">
-<?php wp_pagenavi( array( 'query' => $qa_query ) ); ?>
+<?php wp_pagenavi(); ?>
 </div>
 </div><!-- end left_content -->
 
