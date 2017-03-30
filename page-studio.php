@@ -16,6 +16,9 @@
           <div class="clearfix">
             <div class="section_01_left">
               <div class="map">
+                  <div id="gmap" style="with:100%; height:320px;border:0;"></div>
+              </div>
+              <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.8376997477758!2d139.72371132185117!3d35.660368279032454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b7a7ecc24d9%3A0xbacdb29a104f2dfb!2zSmFwYW4sIOOAkjEwNi0wMDMxIFTFjWt5xY0tdG8sIE1pbmF0by1rdSwgTmlzaGlhemFidSwgMSBDaG9tZeKIkjEx4oiSNiwg44Ob44OG44Or77yG44Os44K444OH44Oz44K55YWt5pys5pyo!5e0!3m2!1svi!2s!4v1488554708329" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
                 <p class="text-right"><a href="https://www.google.com/maps/place/Japan,+%E3%80%92106-0031+T%C5%8Dky%C5%8D-to,+Minato-ku,+Nishiazabu,+1+Chome%E2%88%9211%E2%88%926,+%E3%83%9B%E3%83%86%E3%83%AB%EF%BC%86%E3%83%AC%E3%82%B8%E3%83%87%E3%83%B3%E3%82%B9%E5%85%AD%E6%9C%AC%E6%9C%A8/@35.6603683,139.7237113,18z/data=!3m1!4b1!4m5!3m4!1s0x60188b7a7ecc24d9:0xbacdb29a104f2dfb!8m2!3d35.6603457!4d139.7246094" target="_blank">Google Mapで見る</a></p>
                 <h4>アクセスマップ</h4>

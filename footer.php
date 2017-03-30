@@ -46,14 +46,16 @@
     <script src="<?php bloginfo('template_url'); ?>/js/jqinstapics.js" type="text/javascript"></script>
 <?php } ?>
 <?php if(is_page('studio')) { ?>
-    <script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox.min.js" type="text/javascript"></script>
+  <script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/studio-map.js" type="text/javascript"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox.min.js" type="text/javascript"></script>
 <?php } ?>
 <?php if(is_singular( 'post' )) {  // blog only ?>
 <script src="<?php bloginfo('template_url'); ?>/js/social-button.js" type="text/javascript"></script>
 <?php } ?>
 <script src="<?php bloginfo('template_url'); ?>/js/slick.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
-
 <?php if (is_page( 'contact' )): ?>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />

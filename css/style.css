@@ -2882,3 +2882,29 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* Google Map Styling */
+.place-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+}
+
+.place-address,
+.place-view {
+  margin-top: 6px;
+  color: #5B5B5B;
+  font-family: Roboto,Arial;
+  font-size: 12px;
+}
+
+.place-view {
+  margin-top: 15px;
+}
+
+#studio .section_01 .map .place-view a {
+  font-size: 12px;
+  color: #3a84df;
+}
