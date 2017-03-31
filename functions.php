@@ -8,7 +8,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'img_other_pages', 391, 198, true );
 add_image_size( 'img_blog_index', 360, 165, true );
 add_image_size( 'img_studio_large', 423, 282, true );
-add_image_size( 'img_studio_small', 342, 287, true );
+add_image_size( 'img_studio_small', 342, 278, true );
 add_image_size( 'img_feature_avatar', 374, 278, true );
 add_image_size( 'img_blog_main', 332, 223, true );
 add_image_size( 'img_blog_sub', 255, 150, true );
