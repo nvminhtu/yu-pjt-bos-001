@@ -49,21 +49,7 @@
 		<div class="inner">
 			<h2 class="title_01">Gallery<span>ギャラリー</span></h2>
 		</div>
-		<div id="instagram" class="instagram clearfix">
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_14.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_15.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_16.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_17.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_14.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_15.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_16.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_17.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_14.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_15.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_16.jpg" alt="Gallery ギャラリー" /></div>
-			<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/index_img_17.jpg" alt="Gallery ギャラリー" /></div>
-		</div>
-		<p class="inner index_img_10 text-center"><a href="https://www.instagram.com/bosty_official/?hl=ja" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/index_img_10.png" alt="BOSTY Instagram を見る" /></a></p>
+		<?php get_template_part('parts/instagram'); ?>
 	</section>
 	<!--<section id="section_04" class="section_04">
 		<div class="inner clearfix">
