@@ -32,6 +32,7 @@
         $map_direction = get_field('map_direction',$post->ID);
         $address = get_field('address',$post->ID);
         $pictures = get_field('picture',$post->ID);
+        $opening_hour = get_field('opening_hour',$post->ID);
 
         $coordinate = get_post_meta( $post->ID, '_bosty_google_map', true );
         $address_map = $coordinate['address'];
@@ -68,6 +69,12 @@
                 <dt><img src="<?php bloginfo('template_url'); ?>/images/studio/studio_img_02.png" /></dt>
                 <dd>
                   <?php echo $map_direction; ?>
+                </dd>
+              </dl>
+              <dl>
+                <dt><img src="<?php bloginfo('template_url'); ?>/images/studio/studio_img_02.png" /></dt>
+                <dd>
+                  <?php echo $opening_hour; ?>
                 </dd>
               </dl>
             </div>
