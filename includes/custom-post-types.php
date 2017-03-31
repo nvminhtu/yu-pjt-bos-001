@@ -29,7 +29,6 @@ function prefix_register_all() {
 			'menu_position' => 3,
 			'supports'      => array(
 				'title',
-				'editor',
 				'thumbnail',
 				'excerpt',
 				'author',
