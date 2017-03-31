@@ -14,10 +14,10 @@
 		</h2>
 	</div>
 	<div class="div_01 inner clearfix">
-		<a href="studio.html" class="index_img_01">
+		<a href="<?php bloginfo('url'); ?>/studio/" class="index_img_01">
 			<p><span>Studio</span>スタジオ一覧</p>
 		</a>
-		<a href="price.html" class="index_img_02">
+		<a href="<?php bloginfo('url'); ?>/price/" class="index_img_02">
 			<p><span>Program</span>プログラム・料金</p>
 		</a>
 	</div>

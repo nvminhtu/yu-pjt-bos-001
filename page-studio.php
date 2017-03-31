@@ -72,7 +72,7 @@
                 </dd>
               </dl>
               <dl>
-                <dt><img src="<?php bloginfo('template_url'); ?>/images/studio/studio_img_02.png" /></dt>
+                <dt><img src="<?php bloginfo('template_url'); ?>/images/studio/studio_img_hour.png" /></dt>
                 <dd>
                   <?php echo $opening_hour; ?>
                 </dd>
