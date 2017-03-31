@@ -7,6 +7,12 @@ add_theme_support( 'post-thumbnails' );
 // add image for uploading
 add_image_size( 'img_other_pages', 391, 198, true );
 add_image_size( 'img_blog_index', 360, 165, true );
+add_image_size( 'img_studio_large', 423, 282, true );
+add_image_size( 'img_studio_small', 342, 287, true );
+add_image_size( 'img_feature_avatar', 374, 278, true );
+add_image_size( 'img_blog_main', 332, 223, true );
+add_image_size( 'img_blog_sub', 255, 150, true );
+add_image_size( 'img_user_avatar_small', 40, 40, true );
 
 /** -------------- 02.Add included files -------------- **/
 require_once (dirname(__FILE__) . '/includes/add-image-size.php');
