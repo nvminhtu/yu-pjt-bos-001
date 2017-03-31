@@ -9,13 +9,16 @@ $(function() {
 
   for(var i = 0 ; i < numberMap; i++) {
     idMap = '#gmap_' + i;
-
+    idPlaceName = '#place_name_' + i;
+    idPlaceAddress = '#place_address_' + i;
     //console.log(idMapArea);
     latitude = $(idMap).data('lat');
     longitude = $(idMap).data('long');
+    var placeName = $(idPlaceName).data('content');
+    var placeAddress = $(idPlaceAddress).data('content');
     viewMapLarger = 'https://www.google.com/maps/place/' + latitude + ',' + longitude;
-    var html = '<div class="place-name">ホテル＆レジデンス六本木</div>'+
-                  '<div class="place-address">Nhật Bản, 〒106-0031 Tōkyō-to, Minato-ku, Nishiazabu, 1 Chome−11−6, ホテル＆レジデンス六本木</div>'
+    var html = '<div class="place-name">'+ placeName +'</div>'+
+                  '<div class="place-address">'+ placeAddress +'</div>'
                    + '<div class="place-view"><a target="_blank" href="'+ viewMapLarger +'">Google Mapで見る</a></div>';
 
     // init map

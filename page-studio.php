@@ -35,10 +35,10 @@
 
         $coordinate = get_post_meta( $post->ID, '_bosty_google_map', true );
         $address_map = $coordinate['address'];
-        $place_name = $coordinate['place_name'];
-        $place_address = $coordinate['place_address'];
         $latitude = $coordinate['latitude'];
         $longitude = $coordinate['longitude'];
+        $place_name = $coordinate['place_name'];
+        $place_address = $coordinate['place_address'];
         $mapURL = 'https://www.google.com/maps/place/'.$latitude.','.$longitude;
         $alignPics = 'left';
         $alignContent = 'right';
@@ -48,13 +48,13 @@
       <section id="section_<?php $i; ?>" class="section_01">
         <div class="inner">
         <h3 class="title_01"><?php the_title(); ?></h3>
-        <div class="section_01_<?php echo $alignContent; ?>">
         <div class="clearfix">
+          <div class="section_01_<?php echo $alignContent; ?>">
             <div class="map">
               <div class="maparea">
                   <div id="gmap_<?php echo $i; ?>" data-lat="<?php echo $latitude; ?>" data-long="<?php echo $longitude; ?>" style="with:100%; height:320px;border:0;"></div>
-                  <div id="place_name_<?php echo $i; ?>" data-content="<?php echo $place_name; ?>"></div>
-                  <div id="place_address_<?php echo $i; ?>" data-content="<?php echo $place_address; ?>"></div>
+                  <span id="place_name_<?php echo $i; ?>" data-content="<?php echo $place_name; ?>"></span>
+                  <span id="place_address_<?php echo $i; ?>" data-content="<?php echo $place_address; ?>"></span>
               </div>
               <p class="text-right"><a href="<?php echo $mapURL; ?>" target="_blank">Google Mapで見る</a></p>
               <h4>アクセスマップ</h4>
