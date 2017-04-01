@@ -5,36 +5,23 @@
 ?>
 <!-- start : related_box_out -->
 <p class="blogdetail_tit">関連記事</p>
-<?php /* <div class="bloglist_box clearfix">
-  <div class="box">
-    <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
-    <div class="box_inner">
-      <p class="tit"><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></p>
-      <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-    </div>
-  </div>
-  <div class="box">
-    <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
-    <div class="box_inner">
-      <p class="tit"><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></p>
-      <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-    </div>
-  </div>
-</div> ?*/ ?>
-
 <?php
   $id = get_the_ID();
+  $no_query = 6;
   $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
   $query_args = array(
       'post_type' => 'post',
       'post__not_in' => array($id),
-      'posts_per_page' => 6,
+      'posts_per_page' => $no_query,
       'orderby' => date,
       'order' => desc,
       'field' => 'slug'
     );
+
   $i = 1;
   $the_query = new WP_Query( $query_args );
+  $number_of_posts = $the_query->post_count;
+
   if ( $the_query->have_posts() ) :
     while ( $the_query->have_posts() ) : $the_query->the_post();
       $time = get_the_date('Y.m.d', $post->ID);
@@ -53,32 +40,34 @@
   <?php if($i==1) { // list box display ?>
       <div class="bloglist_box clearfix">
   <?php } ?>
-      <div class="box">
-        <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
-        <div class="box_inner">
-          <p class="tit"><a href="bloglist_detail.html"><?php the_title(); ?></a></p>
-          <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-        </div>
-      </div>
-  <?php if($i==2) { // loop 2 times - then end of box wrap code block ?>
-      </div>
-  <?php } ?>
-
   <?php if($i==3) { // list box of column blog list ?>
       <div class="news_article blogdetail_list clearfix">
   <?php } ?>
-      <dl class="clearfix">
-        <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
-        <dd>
-          <h4><a href="bloglist_detail.html"><?php the_title(); ?></a></h4>
-          <div class="clearfix">
-            <p class="dateinfo alg_L"><span class="cal"><?php echo $time; ?></span><span class="like">10</span></p>
-          </div>
-        </dd>
-      </dl>
-    <?php if($i==1) { // list box of column blog list ?>
+
+  <?php if($i<3) { ?>
+    <div class="box">
+      <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
+      <div class="box_inner">
+        <p class="tit"><a href="bloglist_detail.html"><?php the_title(); ?></a></p>
+        <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
+      </div>
+    </div>
+  <?php } else { ?>
+    <dl class="clearfix">
+      <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
+      <dd>
+        <h4><a href="bloglist_detail.html"><?php the_title(); ?></a></h4>
+        <div class="clearfix">
+          <p class="dateinfo alg_L"><span class="cal"><?php echo $time; ?></span><span class="like">10</span></p>
         </div>
-    <?php } ?>
+      </dd>
+    </dl>
+  <?php }?>
+
+  <?php if($i==2 || ($i > 2 && $i == $number_of_posts) ) { // loop 2 times - then end of box wrap code block ?>
+      </div>
+  <?php } ?>
+
   <?php $i++; endwhile; ?>
 
   <!-- end of the loop -->

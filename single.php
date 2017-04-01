@@ -37,23 +37,7 @@
           <?php the_content(); ?>
           <div id="social-button2"></div>
 
-          <p class="blogdetail_tit">関連記事</p>
-          <div class="bloglist_box clearfix">
-            <div class="box">
-              <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
-              <div class="box_inner">
-                <p class="tit"><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></p>
-                <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-              </div>
-            </div>
-            <div class="box">
-              <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
-              <div class="box_inner">
-                <p class="tit"><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></p>
-                <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-              </div>
-            </div>
-          </div>
+        
           <?php get_template_part('parts/related-posts'); ?>
         <?php } // end while
         } // end if
