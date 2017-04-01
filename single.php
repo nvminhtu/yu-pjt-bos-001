@@ -34,22 +34,9 @@
             <p class="border_img img100"><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img01.jpg" /></p>
           </div>
 
-          <h3 class="style_h3">h3 が入ります。 h3 が入ります。h3 が入ります。h3 が入ります。</h3>
-          <div class="c_section">
-            <h4 class="style_h4">h4が入ります。 </h4>
-            <h5 class="style_h5">h5が入ります。 </h5>
-            <h6 class="style_h6">h6が入ります。 </h6>
-            <ul class="style_list">
-              <li>テキストが入ります。テキストが入ります。</li>
-              <li>テキストが入ります。テキストが入ります。</li>
-              <li>テキストが入ります。テキストが入ります。</li>
-              <li>テキストが入ります。</li>
-              <li>テキストが入ります。</li>
-            </ul>
-          </div>
-
-          <!-- <div class="social02"><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_social02.jpg" /></div> -->
+          <?php the_content(); ?>
           <div id="social-button2"></div>
+
           <p class="blogdetail_tit">関連記事</p>
           <div class="bloglist_box clearfix">
             <div class="box">
@@ -67,40 +54,7 @@
               </div>
             </div>
           </div>
-          <div class="news_article blogdetail_list clearfix">
-            <dl class="clearfix">
-              <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
-              <dd>
-                <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-                <div class="clearfix">
-                  <p class="dateinfo alg_L"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-                </div>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg02.png" alt="" /></dt>
-              <dd>
-                <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-                <p class="dateinfo alg_L"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
-              <dd>
-                <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-                <div class="clearfix">
-                  <p class="dateinfo alg_L"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-                </div>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg02.png" alt="" /></dt>
-              <dd>
-                <h4><a href="bloglist_detail.html">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
-                <p class="dateinfo alg_L"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
-              </dd>
-            </dl>
-          </div>
+          <?php get_template_part('parts/related-posts'); ?>
         <?php } // end while
         } // end if
       ?>
