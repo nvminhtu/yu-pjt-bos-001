@@ -16,16 +16,9 @@
 </style>
 <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part('parts/main-visual-sec');?>
-
-    <div class="com_mainvisual">
-      <div class="inner">
-        <h2><span>フォーム送信完了</span></h2>
-      </div>
-    </div>
     <section class="section01">
       <div class="inner">
-
-      <h3 class="title_01"><?php the_title(); ?></h3>
+      <h3 class="title_01">メッセージ</h3>
         <div class="contentThank">
           <?php the_content(); ?>  
         </div>
