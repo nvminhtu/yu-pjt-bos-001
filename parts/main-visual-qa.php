@@ -15,6 +15,15 @@
      <img class="tablet" src="<?php echo $qa_main_visual_tablet; ?>" />
      <img class="pc" src="<?php echo $qa_main_visual_pc; ?>" />
    </div>
-   <h2><span><?php the_title(); ?></span></h2>
+   <h2><span><?php
+   if(is_single())
+   {
+    the_title();
+   } 
+   else{
+    single_term_title();
+   }
+    ?></span></h2>
+   }
  </div>
 </div>

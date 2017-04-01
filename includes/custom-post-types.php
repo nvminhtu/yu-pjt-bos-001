@@ -51,10 +51,10 @@ function prefix_register_all() {
 		'qa',
 		array(
 			'labels'        => array(
-				'name'               => __('FAQs', 'custom_text_posttype'),
-				'singular_name'      => __('FAQ', 'custom_text_posttype'),
-				'menu_name'          => __('FAQ', 'custom_text_posttype'),
-				'name_admin_bar'     => __('FAQ', 'custom_text_posttype'),
+				'name'               => __('QAs', 'custom_text_posttype'),
+				'singular_name'      => __('QA', 'custom_text_posttype'),
+				'menu_name'          => __('QA', 'custom_text_posttype'),
+				'name_admin_bar'     => __('QA', 'custom_text_posttype'),
 				'all_items'          => __('All Items', 'custom_text_posttype'),
 				'add_new'            => _x('Add New', 'studio', 'custom_text_posttype'),
 				'add_new_item'       => __('Add New Item', 'custom_text_posttype'),
@@ -78,7 +78,7 @@ function prefix_register_all() {
 				'custom-fields'
 			),
 			'taxonomies'    => array(),
-			'has_archive'   => false,
+			'has_archive'   => true,
 			'menu_icon'   => 'dashicons-welcome-write-blog',
 			'rewrite'       => array(
 				'slug' => 'qa',

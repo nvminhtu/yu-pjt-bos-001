@@ -25,7 +25,7 @@
 <div class="inner clearfix">
 <!-- left_content -->
 <div class="left_content">
-<h3 class="h3_ttl">タイトルが入ります。タイトルが入ります。</h3>
+<h3 class="h3_ttl"><?php  single_term_title(); ?></h3>
 
 <div class="qa_sec">
 <?php
