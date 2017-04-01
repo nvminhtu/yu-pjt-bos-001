@@ -16,13 +16,22 @@
      <img class="pc" src="<?php echo $qa_main_visual_pc; ?>" />
    </div>
    <h2><span><?php
-   if(is_single())
-   {
-    the_title();
-   } 
-   else{
-    single_term_title();
-   }
+    if(is_single())
+    {
+      the_title();
+    } 
+    elseif(is_archive())
+    {
+      if(is_post_type_archive('qa'))
+      {
+        echo "QA";
+      }
+      elseif(is_tax('qacat'))
+      {
+        single_term_title();
+      }
+
+    }
     ?></span></h2>
    }
  </div>

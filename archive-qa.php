@@ -1,6 +1,5 @@
 <?php
 /**
- * Template Name: QA listing
  * @package WordPress
  * @subpackage Bosty
  * @since Bosty
