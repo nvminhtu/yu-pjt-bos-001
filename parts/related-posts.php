@@ -28,9 +28,13 @@
       $title = get_the_title($post->ID);
       $nd = get_the_content();
       $id = get_the_ID();
-      $img_blog = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_blog_index');
-      $img_blog_src = $img_blog[0];
+      
+      $img_blog_small = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_related_blog_small');
+      $img_blog_small_src = $img_blog_small[0];
 
+      $img_blog_large = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_related_blog_large');
+      $img_blog_large_src = $img_blog_large[0];
+      
       $author_id = $post->post_author;
       $nicename = get_the_author_meta( 'user_nicename' );
       $editor_gallery = get_field('profile_picture', 'user_'. $author_id);
@@ -46,7 +50,12 @@
 
   <?php if($i<3) { ?>
     <div class="box">
-      <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
+      <p>
+        <?php if ( has_post_thumbnail($post->ID) ) { ?>
+          <img src="<?php echo $img_blog_large_src; ?>" alt="<?php echo get_the_title($post->ID); ?>" alt="<?php echo $title; ?>" />
+        <?php } else { ?>
+          <img src="<?php echo get_bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" alt="<?php echo $title; ?>">
+        <?php } ?>
       <div class="box_inner">
         <p class="tit"><a href="bloglist_detail.html"><?php the_title(); ?></a></p>
         <p class="dateinfo"><span class="cal"><?php echo $time; ?></span> <span class="like">10</span></p>
@@ -54,7 +63,13 @@
     </div>
   <?php } else { ?>
     <dl class="clearfix">
-      <dt><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="" /></dt>
+      <dt>
+        <?php if ( has_post_thumbnail($post->ID) ) { ?>
+          <img src="<?php echo $img_blog_large_src; ?>" alt="<?php echo get_the_title($post->ID); ?>" alt="<?php echo $title; ?>" />
+        <?php } else { ?>
+          <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png" alt="<?php echo $title; ?>" />
+        <?php } ?>
+      </dt>
       <dd>
         <h4><a href="bloglist_detail.html"><?php the_title(); ?></a></h4>
         <div class="clearfix">
