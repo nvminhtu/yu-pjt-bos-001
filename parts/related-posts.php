@@ -49,7 +49,7 @@
       <p><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" /></p>
       <div class="box_inner">
         <p class="tit"><a href="bloglist_detail.html"><?php the_title(); ?></a></p>
-        <p class="dateinfo"><span class="cal">2016.12.03</span> <span class="like">10</span></p>
+        <p class="dateinfo"><span class="cal"><?php echo $time; ?></span> <span class="like">10</span></p>
       </div>
     </div>
   <?php } else { ?>
