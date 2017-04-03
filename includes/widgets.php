@@ -96,19 +96,34 @@ function footer_copyright_bottom() {
  }
  add_action('widgets_init', 'footer_copyright_bottom');
 
-function sidebar_blog() {
+function sidebar_blog_top() {
 	register_sidebar(array(
-	  'id' => 'sidebar-blog',
-	  'name' => 'Sidebar Blog',
+	  'id' => 'sidebar-blog-top',
+	  'name' => 'Sidebar Blog Top',
 	  'class' => '',
 	  'description' => 'This is sidebar Widget',
 	  'before_title' => '',
 	  'after_title' => '',
-	  'before_widget' => '<div class="cwidget-sidebar">',
-	  'after_widget' => '</div>',
+	  'before_widget' => '',
+	  'after_widget' => '',
 	 ));
  }
-add_action('widgets_init', 'sidebar_blog');
+add_action('widgets_init', 'sidebar_blog_top');
+
+function sidebar_blog_bottom() {
+	register_sidebar(array(
+	  'id' => 'sidebar-blog-bottom',
+	  'name' => 'Sidebar Blog Bottom',
+	  'class' => '',
+	  'description' => 'This is sidebar Widget',
+	  'before_title' => '',
+	  'after_title' => '',
+	  'before_widget' => '',
+	  'after_widget' => '',
+	 ));
+ }
+add_action('widgets_init', 'sidebar_blog_bottom');
+
 
 function sidebar_qa_widget() {
 	register_sidebar(array(

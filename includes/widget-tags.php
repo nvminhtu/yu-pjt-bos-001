@@ -7,11 +7,11 @@ class MT_Tag_Cloud_Widget extends WP_Widget {
 	        'mt_tag_cloud_widget',
 	         
 	        // name of the widget
-	        __('Tag Cloud', 'tnt' ),
+	        __('Wordpress Tag Cloud', 'mt' ),
 	         
 	        // widget options
 	        array (
-	            'description' => __( 'Show Tag Cloud.', 'tnt' )
+	            'description' => __( 'Show Tag Cloud.', 'mt' )
 	        )
 	         
 	    );
@@ -44,14 +44,29 @@ class MT_Tag_Cloud_Widget extends WP_Widget {
 	    $instance[ 'sub_title' ] = strip_tags( $new_instance[ 'sub_title' ] );
 	    return $instance;
 	}
-	 
+	
+	function bwp_wp_tag_cloud($echo = false) {
+		$args = array(
+			'unit' => 'px',
+			'smallest' => '12',
+			'largest' => '12',
+			'format' => 'list',
+			'orderby' => 'count',
+			'order' => 'DESC',
+			'echo' => $echo
+		);
+
+		return wp_tag_cloud($args);
+	}
+
 	function widget( $args, $instance ) {
 	     ?>
 	    <div class="nav02">
-			<p class="nav02_tit"><?php echo $instance['title']; ?><br />
+	      <p class="nav02_tit"><?php echo $instance['title']; ?><br />
 	        <span><?php echo $instance['sub_title']; ?></span></p>
-		</div>
-	     <?php
+	        <?php echo $this->bwp_wp_tag_cloud(); ?>
+	    </div>
+	   <?php
 	}
 }
 
