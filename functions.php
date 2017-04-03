@@ -27,6 +27,7 @@ require_once (dirname(__FILE__) . '/includes/shortcode.php');
 require_once (dirname(__FILE__) . '/includes/format-editor.php');
 require_once (dirname(__FILE__) . '/includes/admin-customize.php');
 require_once (dirname(__FILE__) . '/includes/widget-list-qa-category.php');
+require_once (dirname(__FILE__) . '/includes/widget-tags.php');
 require_once (dirname(__FILE__) . '/includes/widget-recent-qa.php');
 require_once (dirname(__FILE__) . '/includes/widget-recent-posts.php');
 

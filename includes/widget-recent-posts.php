@@ -58,8 +58,24 @@ class MT_Recent_Post_List_Widget extends WP_Widget {
 
 					if ( $the_query->have_posts() ) :
     					while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-						 <li><a href="bloglist_detail.html"><span class="small_des"><?php the_title(); ?></span><br />
-		           			<?php the_excerpt(); ?></a>
+						 <li>
+						 <a href="<?php the_permalink(); ?>"><span class="small_des"><?php the_title(); ?></span><br />
+						 	 <?php 
+
+						 	 	$my_postid = $post->ID;
+						 	   //show content limited
+	                          	$content_display = mb_substr(wp_strip_all_tags( get_the_content()), 0, 80 , 'UTF-8');
+	                            $content_display = apply_filters('the_content', $content_display);
+	                            $content_display = strip_tags( $content_display, '<p><br/>');
+	                            $content_length = mb_strlen($content_display);
+
+	                            if($content_length > 81) {
+	                              echo $content_display.' ...';
+	                            } else {
+	                              echo $content_display;
+	                            }
+	                          ?>
+		           			<?php //the_excerpt(); ?></a>
 		           		</li>
 		       		<?php $i++; endwhile; ?>
 		       		<!-- end of the loop -->
@@ -68,8 +84,6 @@ class MT_Recent_Post_List_Widget extends WP_Widget {
 					<?php else:  ?>
 					  <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
 					<?php endif; ?>
-
-		       	?>
 		       </ul>
 		     </dd>
 		   </dl>
