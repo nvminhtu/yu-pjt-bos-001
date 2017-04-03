@@ -28,52 +28,42 @@
 <h3 class="h3_ttl">タイトルが入ります。タイトルが入ります。</h3>
 
 <div class="qa_sec">
-<?php
-// The Query
-$qa_paged = get_query_var('paged') ? get_query_var('paged') : 1;
-$qa_args = array(
-  'post_type' => 'qa',
-  'posts_per_page' => 5,
-  'paged'=>$qa_paged
-);
-$qa_query = new WP_Query( $qa_args );
+  <?php
+  // The Query
+  $qa_paged = get_query_var('paged') ? get_query_var('paged') : 1;
+  $qa_args = array(
+    'post_type' => 'qa',
+    'posts_per_page' => 5,
+    'paged'=>$qa_paged
+  );
+  $qa_query = new WP_Query( $qa_args );
 
-// The Loop
-if ( $qa_query->have_posts() ) {
-  while ( $qa_query->have_posts() ) {
-    $qa_query->the_post();
+  // The Loop
+  if ( $qa_query->have_posts() ) {
+    while ( $qa_query->have_posts() ) {
+      $qa_query->the_post();
+      ?>
+      <dl>
+      <dt><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></dt>
+      <dd><?php the_content(); ?></dd>
+      </dl>
+      <?php
+    }
+    /* Restore original Post Data */
+    wp_reset_postdata();
+  } else {
     ?>
-    <dl>
-    <dt><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></dt>
-    <dd><?php the_content(); ?></dd>
-    </dl>
+    <p>No FAQS to show</p>
     <?php
   }
-  /* Restore original Post Data */
-  wp_reset_postdata();
-} else {
+
   ?>
-  <p>No FAQS to show</p>
-  <?php
-}
-
-?>
 </div>
-<style>
-.pagination span.current {
-  background-color: #f2eabf;
-  color: #473308;
-  display: inline;
-  padding: 6px 12px;
-  text-decoration: none;
-  transition: background-color .3s;
-  margin: 0 1px;
-}
 
-</style>
 <div class="pagination">
 <?php wp_pagenavi( array( 'query' => $qa_query ) ); ?>
 </div>
+
 </div><!-- end left_content -->
 
 <!-- Get Sidebar -->

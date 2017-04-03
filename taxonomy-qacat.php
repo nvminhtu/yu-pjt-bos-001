@@ -50,18 +50,6 @@ if ( have_posts() )  {
 
 ?>
 </div>
-<style>
-.pagination span.current {
-  background-color: #f2eabf;
-  color: #473308;
-  display: inline;
-  padding: 6px 12px;
-  text-decoration: none;
-  transition: background-color .3s;
-  margin: 0 1px;
-}
-
-</style>
 <div class="pagination">
 <?php wp_pagenavi(); ?>
 </div>
