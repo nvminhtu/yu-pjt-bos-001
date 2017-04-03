@@ -1,6 +1,6 @@
 <?php
-/***************Widget Recent Post List**************/
-class MT_Recent_Post_List_Widget extends WP_Widget {
+/***************Widget Facebook List**************/
+class MT_Facebook_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 	        // base ID of the widget
@@ -25,7 +25,7 @@ class MT_Recent_Post_List_Widget extends WP_Widget {
 
 	    // markup for form ?>
 	    <p>
-	        <label for="<?php echo $this->get_field_id( 'fb_url' ); ?>">Title:</label>
+	        <label for="<?php echo $this->get_field_id( 'fb_url' ); ?>">FB URL:</label>
 	        <input class="widefat" type="text" id="<?php echo $this->get_field_id( 'fb_url' ); ?>" name="<?php echo $this->get_field_name( 'fb_url' ); ?>" value="<?php echo esc_attr( $fb_url ); ?>">
 	    </p>
 	    <?php
@@ -50,6 +50,6 @@ class MT_Recent_Post_List_Widget extends WP_Widget {
 
 //Register Widget
 function mt_register_facebook_widget() {
-    register_widget( 'MT_Recent_Post_List_Widget' );
+    register_widget( 'MT_Facebook_Widget' );
 }
 add_action( 'widgets_init', 'mt_register_facebook_widget' );

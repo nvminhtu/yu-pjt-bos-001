@@ -32,7 +32,7 @@ class MT_Tag_Cloud_Widget extends WP_Widget {
 	    </p>
 
 	    <p>
-	        <label for="<?php echo $this->get_field_id( 'sub_title' ); ?>">Title:</label>
+	        <label for="<?php echo $this->get_field_id( 'sub_title' ); ?>">Sub Title:</label>
 	        <input class="widefat" type="text" id="<?php echo $this->get_field_id( 'sub_title' ); ?>" name="<?php echo $this->get_field_name( 'sub_title' ); ?>" value="<?php echo esc_attr( $sub_title ); ?>">
 	    </p>
 	    <?php
