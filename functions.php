@@ -90,8 +90,10 @@ function get_custom_page_slug() {
   //check what type of page?
   if(is_front_page()||is_home()) {
     $id_page = "index";
-  } elseif(is_page()) {
+  } elseif(is_page() && !is_page('blog')) {
     $id_page = $current_page_slug;
+  } elseif(is_page() && is_page('blog')) {
+    $id_page = 'bloglist';
   } elseif (is_singular('post')||is_category()||is_post_type_archive('post')) {
     $id_page = "bloglist";
   } elseif (is_singular('qa') || is_tax( 'qacat' ) || is_post_type_archive('qa')) {
