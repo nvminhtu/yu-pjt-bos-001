@@ -10,6 +10,7 @@ add_image_size( 'img_blog_index', 360, 165, true );
 add_image_size( 'img_studio_large', 423, 282, true );
 add_image_size( 'img_studio_small', 342, 278, true );
 add_image_size( 'img_feature_avatar', 374, 278, true );
+add_image_size( 'img_blog_single', 808, 457, true );
 add_image_size( 'img_blog_main', 332, 223, true );
 add_image_size( 'img_blog_sub', 255, 150, true );
 add_image_size( 'img_related_blog_large', 376, 197, true );

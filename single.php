@@ -16,7 +16,7 @@
   						//$editor_avatar_url = $editor_gallery[0]['sizes']['img_avatar'];
               //post thumbnail
               $thumb = get_post_thumbnail_id();
-              $img_blog = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_blog_thumbnail');
+              $img_blog = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_blog_single');
               $img_blog_src = $img_blog[0];
               $img_blog_w = $img_blog[1];
               $img_blog_h = $img_blog[2];
@@ -31,13 +31,15 @@
 
           <h2 class="style_h2"><?php the_title(); ?></h2>
           <div class="c_section">
-            <p class="border_img img100"><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img01.jpg" /></p>
+            <?php if(has_post_thumbnail()) { ?>
+              <p class="border_img img100"><img src="<?php echo $img_blog_src; ?>" alt="<?php the_title(); ?>" /></p>
+            <?php } else { ?>
+              <p class="border_img img100"><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img01.jpg" alt="<?php the_title(); ?>" /></p>
+            <?php } ?>
           </div>
-
           <?php the_content(); ?>
           <div id="social-button2"></div>
-
-        
+                  
           <?php get_template_part('parts/related-posts'); ?>
         <?php } // end while
         } // end if

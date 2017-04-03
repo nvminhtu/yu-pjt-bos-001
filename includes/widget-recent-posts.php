@@ -1,5 +1,5 @@
 <?php
-/***************Widget Recent QA List**************/
+/***************Widget Recent Post List**************/
 class MT_Recent_Post_List_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
@@ -39,24 +39,37 @@ class MT_Recent_Post_List_Widget extends WP_Widget {
 
 	function widget( $args, $instance ) {
 	     ?>
-			 <dl>
-		     <dt><span><?php echo $instance['title']; ?></span></dt>
+		<dl>
+		    <dt><span><?php echo $instance['title']; ?></span></dt>
 		     <dd>
 		       <ul>
-		         <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-		           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-		         <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-		           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-		         <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-		           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-		         <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-		           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-		         <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-		           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-		         <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-		           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-		         <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-		           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
+		       	<?php 
+			       	$query_args = array(
+							      'post_type' => 'post',
+							      'post__not_in' => array($id),
+							      'posts_per_page' => $no_query,
+							      'orderby' => date,
+							      'order' => desc,
+							      'field' => 'slug'
+							    );
+			       	$i = 1;
+					$the_query = new WP_Query( $query_args );
+					$number_of_posts = $the_query->post_count;
+
+					if ( $the_query->have_posts() ) :
+    					while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						 <li><a href="bloglist_detail.html"><span class="small_des"><?php the_title(); ?></span><br />
+		           			<?php the_excerpt(); ?></a>
+		           		</li>
+		       		<?php $i++; endwhile; ?>
+		       		<!-- end of the loop -->
+					<?php wp_reset_postdata(); ?>
+
+					<?php else:  ?>
+					  <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
+					<?php endif; ?>
+
+		       	?>
 		       </ul>
 		     </dd>
 		   </dl>
