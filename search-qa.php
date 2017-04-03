@@ -34,8 +34,10 @@ if ( have_posts() )  {
     the_post();
     ?>
     <dl>
-    <dt><?php the_title(); ?></dt>
-    <dd><?php the_content(); ?></dd>
+      <dt>
+        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+      </dt>
+      <dd><?php the_content(); ?></dd>
     </dl>
     <?php
   }
