@@ -96,10 +96,10 @@ function footer_copyright_bottom() {
  }
  add_action('widgets_init', 'footer_copyright_bottom');
 
-function sidebar_widget() {
+function sidebar_blog() {
 	register_sidebar(array(
-	  'id' => 'sidebar-widget',
-	  'name' => 'Sidebar Widget',
+	  'id' => 'sidebar-blog',
+	  'name' => 'Sidebar Blog',
 	  'class' => '',
 	  'description' => 'This is sidebar Widget',
 	  'before_title' => '',
@@ -108,7 +108,7 @@ function sidebar_widget() {
 	  'after_widget' => '</div>',
 	 ));
  }
-add_action('widgets_init', 'sidebar_widget');
+add_action('widgets_init', 'sidebar_blog');
 
 function sidebar_qa_widget() {
 	register_sidebar(array(

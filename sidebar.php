@@ -5,27 +5,7 @@
 ?>
 <div class="right_navi">
   <div class="nav01">
-  <dl>
-    <dt><span>関連の記事</span></dt>
-    <dd>
-      <ul>
-        <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-        <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-        <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-        <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-        <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-        <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-        <li><a href="bloglist_detail.html"><span class="small_des">テキストが入ります。テキストが入ります。</span><br />
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</a></li>
-      </ul>
-    </dd>
-  </dl>
+    <?php dynamic_sidebar( 'sidebar-blog' ); ?>
 </div>
   <div id="side">
     <div class="nav_fb">
