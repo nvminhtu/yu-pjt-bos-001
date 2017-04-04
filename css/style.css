@@ -306,15 +306,18 @@ body {
 }
 
 .com_mainvisual h2 {
+  height: 500px;
+  background: url(../images/mainvisual_pc.jpg) bottom center no-repeat;
+  position: relative;
+}
+
+.com_mainvisual h2 span {
   position: absolute;
   font-size: 50px;
   top: 48%;
   left: 0;
-  color: #89620E;
-}
-
-.com_mainvisual h2 span {
   font-weight: bold;
+  color: #89620E;
 }
 
 .left_content {
