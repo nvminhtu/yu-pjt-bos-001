@@ -147,15 +147,8 @@ $(document).ready(function() {
 		$('#popup_area').fadeIn();
 		$('body').css('overflow', 'hidden');
 	});
-	$('#btn_close_popup_area').click(function(event) {
-		$('#popup_area').fadeOut();
-		$('body').css({
-			'-ms-overflow-x': 'hidden',
-			'overflow-x': 'hidden',
-			'-ms-overflow-y': 'scroll',
-			'overflow-y': 'scroll'
-		});
-	});
+	
+	
 	var url_share = window.location.href;
 	$('.share_facebook').attr('href', 'https://www.facebook.com/sharer.php?u='+url_share);
 	$('.share_twitter').attr('href', 'https://twitter.com/intent/tweet?url='+url_share);

@@ -20,12 +20,6 @@
 	#contact .btn_02 #submit{height: 100%; background-size: 100% auto; text-align: center; font-size: 18px;font-weight: bold; color: #fff; display: block; position: relative;}
 	</style>
 
-<!-- <div class="com_mainvisual">
-  <div class="inner">
-    <h2><span>体験レッスン予約フォーム</span></h2>
-  </div>
-</div> -->
-
 <?php  while ( have_posts() ) : the_post();?>
     <?php the_content(); ?>
   <?php endwhile; // End of the loop.?>
@@ -35,4 +29,4 @@
       get_template_part('parts/list-pages');
       get_template_part('parts/contact-information');
 ?>
-<?php get_footer('contact'); ?>
+<?php get_footer(); ?>

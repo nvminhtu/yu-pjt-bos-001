@@ -123,6 +123,9 @@ function admin_style() {
 }
 add_action('admin_enqueue_scripts', 'admin_style');
 
+// let contact form 7 can understand shortcode
+add_filter( 'wpcf7_form_elements', 'do_shortcode' );
+
 function template_chooser($template)
 {
   global $wp_query;

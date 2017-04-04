@@ -65,8 +65,7 @@
 
 <script src="<?php bloginfo('template_url'); ?>/js/custom.js" type="text/javascript"></script>
 
-<?php if (is_page('contact')) {
-  ?>
+<?php if (is_page('contact')) { ?>
   <script type="text/javascript">
   $(function() {
       $('input[name="date_01"]').daterangepicker({
@@ -93,12 +92,21 @@
               format: 'MM/DD(水) h:mm A'
           }
       });
+
   });
-
   </script>
-  <?php
-} ?>
-
+  <?php } ?>
+  
+<?php if(is_page('confirmation')) { ?>
+  <script type="text/javascript">
+    // event for close button of FORM
+    jQuery(document).ready(function($) {
+      $('#btn_close_popup_area').click(function(e) {
+          window.location = "<?php echo home_url(); ?>/contact";
+        });  
+    });
+  </script>
+<?php } ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
