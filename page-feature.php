@@ -100,7 +100,7 @@
 			<h2 class="title_01">好アクセス</h2>
 			<p class="text_01">通勤の帰りや、自宅の近くなど、ご自身の生活リズムに合わせて利用しやすい場所に位置しています。<br class="pc">スタジオは現在も各地に拡張中です！</p>
 			<?php get_template_part('parts/studio-list'); ?>
-			<p class="btn_02"><a href="#">スタジオをもっと見る</a></p>
+			<p class="btn_02"><a href="<?php bloginfo('siteurl'); ?>/studio/">スタジオをもっと見る</a></p>
 		</div>
 	</section>
   <!-- End Studio List -->

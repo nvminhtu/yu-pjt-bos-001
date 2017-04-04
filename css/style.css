@@ -2931,3 +2931,13 @@ body {
 	font-weight: normal;
 	padding-right: 5px;
 }
+
+/* #feature */
+#feature .map .text_01,
+#feature .map .text_02 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  text-align: left;
+  font-weight: normal;
+}

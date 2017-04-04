@@ -45,7 +45,7 @@
 <?php if(is_front_page()||is_home()) { ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jqinstapics.js" type="text/javascript"></script>
 <?php } ?>
-<?php if(is_page('studio')) { ?>
+<?php if(is_page('studio') || is_page('feature')) { ?>
   <script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/studio-map.js" type="text/javascript"></script>
