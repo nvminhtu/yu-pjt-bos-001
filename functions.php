@@ -13,7 +13,7 @@ add_image_size( 'img_feature_avatar', 374, 278, true );
 add_image_size( 'img_blog_single', 808, 457, true );
 add_image_size( 'img_blog_main', 332, 223, true );
 add_image_size( 'img_blog_sub', 255, 150, true );
-add_image_size( 'img_blog_list', 421, 196, true );
+add_image_size( 'img_blog_list', 421, 296, true );
 add_image_size( 'img_blog_list_item', 230, 135, true );
 add_image_size( 'img_related_blog_large', 376, 197, true );
 add_image_size( 'img_related_blog_small', 230, 135, true );

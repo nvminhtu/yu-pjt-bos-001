@@ -2100,8 +2100,6 @@ body {
 }
 
 #bloglist .dateinfo .like {
-  background: url(../images/bloglist/bloglist_icon02.png) no-repeat 0 3px;
-  background-size: 12px 12px;
 }
 
 #bloglist .news_article dl {
