@@ -208,6 +208,8 @@ body {
   letter-spacing: -2px;
   font-weight: bold;
   margin-right: 60px;
+  padding-right: 26px;
+  background: url(../images/bg-list-contact.png) 126px 16px no-repeat;
 }
 
 .header .h_search {

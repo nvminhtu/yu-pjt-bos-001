@@ -24,10 +24,10 @@
 			</h1>
 			<div class="h_navi">
 				<?php
-						$defaults = array(
-							'theme_location'  => 'top-menu'
-						);
-						wp_nav_menu( $defaults );
+					$defaults = array(
+						'theme_location'  => 'top-menu'
+					);
+					wp_nav_menu( $defaults );
 				?>
 			</div>
 			<div class="header_right">
@@ -42,7 +42,7 @@
 						<a class="close">x</a>
 					</div>
 				</div>
-				<a href="contact.html" class="h_contact">体験レッスン予約</a>
+				<a href="<?php bloginfo('siteurl'); ?>/contact/" class="h_contact">体験レッスン予約</a>
 				<a href="tel:0362058288" class="h_tel" disabled="disabled">03-6205-8288</a>
 				<a href="#" class="h_share"><img src="<?php bloginfo('template_url'); ?>/images/h_share.png" alt="Share" /></a>
 			</div>
