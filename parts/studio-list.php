@@ -27,6 +27,7 @@
         $address = get_field('address',$post->ID);
         $pictures = get_field('picture',$post->ID);
         $opening_hour = get_field('opening_hour',$post->ID);
+        $station = get_field('station',$post->ID);
 
         $coordinate = get_post_meta( $post->ID, '_bosty_google_map', true );
         $address_map = $coordinate['address'];
@@ -59,7 +60,7 @@
           </dl>
           <dl class="clearfix">
             <dt>最寄り駅</dt>
-            <dd>六本木、乃木坂、広尾</dd>
+            <dd><?php echo $station; ?></dd>
           </dl>
         </div><!-- .map -->
       </div><!-- .slide -->
