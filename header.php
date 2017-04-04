@@ -51,12 +51,5 @@
 				<div class="share_box_social"><a href="" class="share_facebook" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/share_box_facebook.png" alt="Facebook" /></a></div>
 				<div class="share_box_social"><a href="" class="share_twitter" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/share_box_twitter.png" alt="Twitter" /></a></div>
 			</div>
-			<div class="search_box">
-				<form action="" method="post">
-					<input type="text" name="keyword" class="text">
-					<input type="submit" name="submit" value="Search" class="submit">
-				</form>
-			</div>
-
 		</div>
 	</header>
