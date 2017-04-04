@@ -58,9 +58,9 @@ if ( $qa_query->have_posts() ) {
 
 ?>
 </div>
-<div class="pagination">
-<?php wp_pagenavi( array( 'query' => $qa_query ) ); ?>
-</div>
+  <div class="pagination">
+    <?php wp_pagenavi( array( 'query' => $qa_query ) ); ?>
+  </div>
 </div><!-- end left_content -->
 
 <!-- Get Sidebar -->

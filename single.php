@@ -12,8 +12,9 @@
   						$fullname = $lastname.' '.$firstname;
 
               //editor information
-              //$editor_gallery = get_field('profile_picture', 'user_'. $author_id);
-  						//$editor_avatar_url = $editor_gallery[0]['sizes']['img_avatar'];
+              $editor_avatar = get_field('user_profile_picture', 'user_'. $author_id);
+  						$editor_avatar_url = $editor_avatar[0]['sizes']['img_avatar'];
+
               //post thumbnail
               $thumb = get_post_thumbnail_id();
               $img_blog = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_blog_single');
@@ -39,7 +40,7 @@
           </div>
           <?php the_content(); ?>
           <div id="social-button2"></div>
-                  
+
           <?php get_template_part('parts/related-posts'); ?>
         <?php } // end while
         } // end if

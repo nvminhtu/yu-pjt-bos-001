@@ -72,7 +72,7 @@ if ( $qa_query->have_posts() ) {
 
 </style>
 <div class="pagination">
-<?php wp_pagenavi( array( 'query' => $qa_query ) ); ?>
+  <?php wp_pagenavi( array( 'query' => $qa_query ) ); ?>
 </div>
 </div><!-- end left_content -->
 

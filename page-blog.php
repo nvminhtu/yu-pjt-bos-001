@@ -16,16 +16,19 @@ get_header(); ?>
           $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
           $query_args = array(
             'post_type' => 'post',
-            'posts_per_page' => 10,
+            'posts_per_page' => 6,
             'paged' => $paged
           );
-          $the_query = new WP_Query( $query_args );
-          $number_of_posts = $the_query->post_count;
-          if ( $the_query->have_posts() ) :
-            while ( $the_query->have_posts() ) : $the_query->the_post();
+          $blog_query = new WP_Query( $query_args );
+          $number_of_posts = $blog_query->post_count;
+          if ( $blog_query->have_posts() ) :
+            while ( $blog_query->have_posts() ) : $blog_query->the_post();
               $author_id = get_the_author_meta('ID');
-              //$editor_gallery = get_field('profile_picture', 'user_'. $author_id);
-              //$editor_avatar_url = $editor_gallery[0]['sizes']['img_author_tiny'];
+              $firstname = get_the_author_meta( 'user_firstname' );
+              $lastname = get_the_author_meta( 'user_lastname' );
+  						$fullname = $lastname.' '.$firstname;
+              //editor information
+              $editor_avatar_url = get_field('user_profile_picture', 'user_'. $author_id);
               $nicename = get_the_author_meta( 'user_nicename', $author_id );
               $thumb = get_post_thumbnail_id();
               $img_blog_list = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_blog_list');
@@ -38,7 +41,10 @@ get_header(); ?>
       <div class="big_article clearfix">
         <p class="bigimg"><img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" /></p>
         <div class="bigcontent">
-          <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+          <p class="userinfo">
+            <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
+            <span><?php echo $fullname; ?></span>
+          </p>
           <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
           <p>
             <?php
@@ -74,7 +80,10 @@ get_header(); ?>
             <dd>
               <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
               <div class="clearfix">
-                <p class="userinfo"><span><img src="images/bloglist/avatar.jpg" /></span> <span>Marilyn J. Hancock</span></p>
+                <p class="userinfo">
+                  <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
+                  <span><?php echo $fullname; ?></span>
+                </p>
                 <p class="dateinfo">
                   <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
                   <span class="like"><?php if( function_exists('zilla_likes') ) zilla_likes(); ?></span>
@@ -89,11 +98,10 @@ get_header(); ?>
         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
       <?php endif; ?>
 
+      <div class="pagination">
+        <?php wp_pagenavi( array( 'query' => $blog_query ) ); ?>
+      </div>
 
-
-
-      <!--
-      <div class="pagination"> <a href="#">&laquo;</a> <a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">&raquo;</a> </div> -->
     </div>
     <?php get_sidebar(); ?>
   </div>

@@ -4,6 +4,7 @@
   */
 ?>
 <?php
+  //instagram_account_username
 	$insta_username = 'bosty_official';
 	echo do_shortcode('[ap_instagram_slider set_username="'.$insta_username.'"]');
 ?>
