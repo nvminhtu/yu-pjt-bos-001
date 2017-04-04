@@ -2544,55 +2544,6 @@ body {
   background-size: auto 100%;
 }
 
-.btn_02 a,
-.btn_02 input[type=submit]{
-  height: 100%;
-  padding: 10px 50px 7px 0;
-  background: url(../images/btn_02_bg.jpg);
-  background-size: 100% auto;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  display: block;
-  position: relative;
-}
-
-#contact .btn_02 #submit {
-    width: 300px;
-    height: 60px;
-    line-height: 60px;
-    padding: 0;
-}
-
-.btn_02 a:before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: url(../images/btn_02_right.png) center no-repeat;
-  top: 50%;
-  margin-top: -7px;
-  right: 10px;
-}
-
-.btn_02 a:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn_02.index_img_13 {
-  width: 268px;
-}
-
-.btn_02 img {
-  margin-left: 10px;
-  margin-top: 3px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-}
-
 #feature .mainvisual {
   position: relative;
 }
@@ -2945,4 +2896,77 @@ body {
   font-size: inherit;
   text-align: left;
   font-weight: normal;
+}
+
+/* #contact form */
+.btn_02 #submit {
+  height: 100%; 
+  background-size: 100% auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; 
+  display: block; 
+  position: relative; }
+
+
+.btn_02 a {
+  height: 100%;
+  padding: 10px 50px 7px 0;
+  background: url(../images/btn_02_bg.jpg);
+  background-size: 100% auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+
+#contact .btn_02 input[type=submit]{
+  height: 100%;
+  padding: 10px 50px 7px 0;
+  background: url(../images/btn-form.png);
+  background-size: 100% auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+
+#contact .btn_02 #submit {
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0;
+}
+
+.btn_02 a:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url(../images/btn_02_right.png) center no-repeat;
+  top: 50%;
+  margin-top: -7px;
+  right: 10px;
+}
+
+.btn_02 a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn_02.index_img_13 {
+  width: 268px;
+}
+
+.btn_02 img {
+  margin-left: 10px;
+  margin-top: 3px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
 }
