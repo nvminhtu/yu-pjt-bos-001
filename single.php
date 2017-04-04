@@ -2,9 +2,9 @@
 <div class="main">
   <div class="inner clearfix">
     <div class="left_content">
+      <?php get_template_part('parts/breadcrumbs'); ?>
       <?php if ( have_posts() ) { ?>
-        <p class="topicpath"><a href="./">HOME</a> &gt; タイトルが入ります。</p>
-         <?php while ( have_posts() ) {
+          <?php while ( have_posts() ) {
           		the_post();
               $author_id = get_the_author_meta('ID');
   						$firstname = get_the_author_meta( 'user_firstname' );
@@ -12,8 +12,7 @@
   						$fullname = $lastname.' '.$firstname;
 
               //editor information
-              $editor_avatar = get_field('user_profile_picture', 'user_'. $author_id);
-  						$editor_avatar_url = $editor_avatar[0]['sizes']['img_avatar'];
+              $editor_avatar_url = get_field('user_profile_picture', 'user_'. $author_id);
 
               //post thumbnail
               $thumb = get_post_thumbnail_id();

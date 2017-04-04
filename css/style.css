@@ -2921,3 +2921,13 @@ body {
 .pagination a {
   line-height: 40px;
 }
+
+.topicpath li {
+	display: inline-block;
+	font-weight: normal;
+	margin-right: 8px;
+}
+.topicpath li a {
+	font-weight: normal;
+	padding-right: 5px;
+}
