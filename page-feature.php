@@ -20,6 +20,7 @@
 		</h2>
 	</div>
 	<?php the_content(); ?>
+
   <!-- Feature Content -->
   <section id="section_02" class="section_02 editor-feature">
     <div class="inner">
@@ -63,7 +64,14 @@
     </div>
   </section>
   <!-- End feature Content -->
+  
+  <!-- Gallery Section -->
 	<section id="section_03" class="section_03">
+    <?php 
+      // get picture gallery from custom fields
+      $trainer_gallery = get_field('trainer_gallery');
+
+    ?>
 		<div class="inner">
 			<h2 class="title_01">完全個室</h2>
 			<p class="text_02">マンツーマンで集中鍛錬</p>
@@ -71,19 +79,23 @@
 		</div>
 		<div class="out_instagram">
 			<div id="instagram" class="clearfix">
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_04.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_05.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_06.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_04.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_05.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_06.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_04.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_05.jpg" alt="完全個室" /></div>
-				<div class="slide"><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_06.jpg" alt="完全個室" /></div>
-			</div>
+        <?php // loop author slider main
+            $i = 0;
+            if( $trainer_gallery ): 
+              foreach( $trainer_gallery as $image ): 
+        ?>              
+                <div class="slide"><img src="<?php echo $image['sizes']['img_feature_gallery']; ?>" alt="<?php echo $image['alt']; ?>" /></div> 
+        <?php  $i++; 
+            endforeach; 
+          endif; 
+          // end loop author thumb
+        ?>
+			</div><!-- end #instagram -->
 		</div>
 	</section>
-  <!-- Studio List -->
+  <!-- End Gallery Section -->
+  
+  <!-- Trainer Section -->
 	<section id="section_04" class="section_04">
 		<div class="inner">
 			<h2 class="title_01">好アクセス</h2>
@@ -95,8 +107,9 @@
   <!-- End Studio List -->
 
 	<section id="section_05" class="section_05">
+    <?php $trainer_title = get_field('trainer_title'); ?>
 		<div class="inner">
-			<h2 class="title_01">プロトレーナー陣</h2>
+			<h2 class="title_01"><?php echo $trainer_title; ?></h2>
 			<div class="list_04">
 				<ul class="clearfix">
           <?php $i = 1;
@@ -136,10 +149,14 @@
 			</div>
 		</div>
 	</section>
+  <!-- End Trainer Section -->
 <?php endwhile; // End of the loop. ?>
+
 <?php
   // common area for all sub pages and posts
   get_template_part('parts/list-pages');
   get_template_part('parts/contact-information');
 ?>
 <?php get_footer(); ?>
+
+
