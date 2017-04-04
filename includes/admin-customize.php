@@ -101,53 +101,6 @@ function customize_dashboard_widgets () {
 }
 add_action('wp_dashboard_setup', 'customize_dashboard_widgets');
 
-// #postviews: Hide other posts in wordpress
-add_filter('wp_count_posts', 'wpse149143_wp_count_posts', 10, 3);
-function wpse149143_wp_count_posts( $counts, $type, $perm ) {
-    global $wpdb;
-
-    // We only want to modify the counts shown in admin and depending on $perm being 'readable'
-    if ( ! is_admin() || 'readable' !== $perm ) {
-        return $counts;
-    }
-
-    // Only modify the counts if the user is not allowed to edit the posts of others
-    $post_type_object = get_post_type_object($type);
-    if (current_user_can( $post_type_object->cap->edit_others_posts ) ) {
-        return $counts;
-    }
-
-    $query = "SELECT post_status, COUNT( * ) AS num_posts FROM {$wpdb->posts} WHERE post_type = %s AND (post_author = %d) GROUP BY post_status";
-    $results = (array) $wpdb->get_results( $wpdb->prepare( $query, $type, get_current_user_id() ), ARRAY_A );
-    $counts = array_fill_keys( get_post_stati(), 0 );
-
-    foreach ( $results as $row ) {
-        $counts[ $row['post_status'] ] = $row['num_posts'];
-    }
-
-    return (object) $counts;
-}
-
-// #postviews: return view visible for users
-function mine_published_only($views) {
-  unset($views['sticky']);
-  return $views;
-}
-
-// #postviews: show only posts of a specific user
-function only_own_posts_parse_query( $wp_query ) {
-    if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/wp-admin/edit.php' ) !== false ) {
-      global $current_user;
-      $wp_query->set( 'author', $current_user->id );
-     }
-}
-
-// #postviews: filter posts
-if (current_user_can('editor')) {
-  add_filter('views_edit-post', 'mine_published_only');
-  add_filter('parse_query', 'only_own_posts_parse_query' );
-}
-
 // #postviews: filter title of user page.
 function wpdocs_filter_wp_title( $title, $sep ) {
     global $paged, $page;

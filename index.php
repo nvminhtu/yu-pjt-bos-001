@@ -51,6 +51,7 @@
 		</div>
 		<?php get_template_part('parts/instagram'); ?>
 	</section>
+
 	<!--<section id="section_04" class="section_04">
 		<div class="inner clearfix">
 			<div class="section_04_left">
@@ -64,6 +65,7 @@
 			</div>
 		</div>
 	</section>-->
+	
 	<section id="section_05" class="section_05">
 		<div class="inner">
 			<img src="<?php bloginfo('template_url'); ?>/images/index_img_12.png" alt="まずはお気軽に体験レッスンから" class="pc" />
