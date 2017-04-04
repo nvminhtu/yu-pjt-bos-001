@@ -10,9 +10,7 @@
 ?>
 <div class="com_mainvisual">
   <div class="inner">
-    <h2 id="title-background" data-pc="<?php echo $page_main_visual_pc; ?>" data-tb="<?php echo $page_main_visual_tablet; ?>" data-sp="<?php echo $page_main_visual_sp; ?>">
-      <span>
-        <?php
+    <h2 id="title-background" data-pc="<?php echo $page_main_visual_pc; ?>" data-tb="<?php echo $page_main_visual_tablet; ?>" data-sp="<?php echo $page_main_visual_sp; ?>"><span>   <?php
           if(is_single())
           {
             the_title();
@@ -29,8 +27,6 @@
             }
 
           }
-        ?>
-      </span>
-    </h2>
+        ?></span></h2>
   </div>
 </div>
