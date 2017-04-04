@@ -19,71 +19,59 @@
 			<span class="h2_03"><span>戦略</span>を。</span>
 		</h2>
 	</div>
-	<section id="section_01" class="section_01">
-		<div class="inner">
-			<h2 class="title_01">3つの特徴</h2>
-			<p class="text_01">無駄なことを一切省いた独自のプログラム。<br>大切なのは、必要な事を必要量行うこと。</p>
-			<div class="list_01">
-				<ul class="clearfix">
-					<li>
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_01.png" alt="01 知識伝授" />
-						<p class="number_title"><span>01</span><span>知識伝授</span></p>
-						<h3>自ら覚える<br class="pc">体の仕組み。</h3>
-						<p>トレーナーに毎日食事の写真を送って管理してもらう、というのが通常ですが、BOSTYはそれを行いません。その代わりに「食事指導」という形で、体の仕組みや食事のことなど、基礎知識をお伝えすることで、管理されずとも自分で判断できるようになります。</p>
-					</li>
-					<li>
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_02.png" alt="02 プロのトレーナー" />
-						<p class="number_title"><span>02</span><span>プロのトレーナー</span></p>
-						<h3>プロの中のプロ<br class="pc">現役プレーヤー</h3>
-						<p>現役ボディビルダーや、産後トレーニングの女性トレーナーなど、今もトレーニングを続ける現役プレーヤーがトレーナーにあたります。女性のトレーナーがいい、などご自身のニーズや目指すべき理想像に合わせたトレーナーを選んでいただけます。</p>
-					</li>
-					<li>
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_03.png" alt="03 マンツーマン" />
-						<p class="number_title"><span>03</span><span>マンツーマン</span></p>
-						<h3>個室でみっちり<br class="pc">個人指導</h3>
-						<p>トレーニングは個人で行うため、しっかり集中してトレーニングいただきます。個人指導なので小さなクセや仕草に気づきやすく、また、周りの人の目が気になることもありません。</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<section id="section_02" class="section_02">
-		<div class="inner">
-			<div class="list_02">
-				<ul class="clearfix">
-					<li>
-						<h3>完全予約制</h3>
-						<p>お客様のご都合に合わせてご予約いただきます。</p>
-					</li>
-					<li>
-						<h3>各種レンタル可能</h3>
-						<p>レンタルウェア・タオル・アメニティ・水素水などの無料貸与、シャワールーム完備シューズの預かりも可能</p>
-					</li>
-					<div class="clearfix tablet"></div>
-					<div class="clearfix sp"></div>
-					<li class="last">
-						<h3>プロテイン、サプリメント</h3>
-						<p>お客様のトレーニング内容に応じ、プロテイン・サプリメントをご提案しています。自社販売は行っていませんので、安心できる最適な情報をお伝えします。</p>
-					</li>
-					<li>
-						<h3>深夜、早朝対応</h3>
-						<p>通勤前や通勤後もご利用いただけるよう、営業時間も柔軟に対応しております。</p>
-						<p><a href="#">各スタジオの詳細を確認する</a></p>
-					</li>
-					<div class="clearfix tablet"></div>
-					<div class="clearfix sp"></div>
-					<li>
-						<h3>便利な支払い方法</h3>
-						<p>現金分割払い、各種クレジットカードのご利用が可能です。</p>
-					</li>
-					<li class="last">
-						<h3>アフターフォロー</h3>
-						<p>会員様は特別価格でのコース延長が可能です。月1〜2回のビジタートレーニングのご利用も可能です。</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+	<?php the_content(); ?>
+  <!-- Feature Content -->
+  <section id="section_02" class="section_02 editor-feature">
+    <div class="inner">
+      <div class="list_02">
+        <ul class="clearfix">
+          <?php if( have_rows('feature_items') ): ?>
+            <?php while( have_rows('feature_items') ): the_row();
+              $feature_title = get_sub_field('feature_title');
+              $feature_content = get_sub_field('feature_content');
+              $feature_link = get_sub_field('feature_link');
+              $feature_link_title = get_sub_field('feature_link_title');
+            ?>
+            <li>
+              <h3><?php echo $feature_title; ?></h3>
+              <p><?php echo $feature_content; ?></p>
+            </li>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <!-- <li>
+            <h3>完全予約制</h3>
+            <p>お客様のご都合に合わせてご予約いただきます。</p>
+          </li>
+          <li>
+            <h3>各種レンタル可能</h3>
+            <p>レンタルウェア・タオル・アメニティ・水素水などの無料貸与、シャワールーム完備シューズの預かりも可能</p>
+          </li>
+          <div class="clearfix tablet"></div>
+          <div class="clearfix sp"></div>
+          <li class="last">
+            <h3>プロテイン、サプリメント</h3>
+            <p>お客様のトレーニング内容に応じ、プロテイン・サプリメントをご提案しています。自社販売は行っていませんので、安心できる最適な情報をお伝えします。</p>
+          </li>
+          <li>
+            <h3>深夜、早朝対応</h3>
+            <p>通勤前や通勤後もご利用いただけるよう、営業時間も柔軟に対応しております。</p>
+            <p><a href="#">各スタジオの詳細を確認する</a></p>
+          </li>
+          <div class="clearfix tablet"></div>
+          <div class="clearfix sp"></div>
+          <li>
+            <h3>便利な支払い方法</h3>
+            <p>現金分割払い、各種クレジットカードのご利用が可能です。</p>
+          </li>
+          <li class="last">
+            <h3>アフターフォロー</h3>
+            <p>会員様は特別価格でのコース延長が可能です。月1〜2回のビジタートレーニングのご利用も可能です。</p>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End feature Content -->
 	<section id="section_03" class="section_03">
 		<div class="inner">
 			<h2 class="title_01">完全個室</h2>
@@ -104,183 +92,17 @@
 			</div>
 		</div>
 	</section>
+  <!-- Studio List -->
 	<section id="section_04" class="section_04">
 		<div class="inner">
 			<h2 class="title_01">好アクセス</h2>
 			<p class="text_01">通勤の帰りや、自宅の近くなど、ご自身の生活リズムに合わせて利用しやすい場所に位置しています。<br class="pc">スタジオは現在も各地に拡張中です！</p>
-			<div class="list_03 clearfix">
-				<div class="slide">
-					<h3>六本木スタジオ</h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.428242431035!2d139.71875737425893!3d35.65941443796204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b64c222fec1%3A0x3cc59422b1b591c1!2zMTA2LTAwMzEsIE5o4bqtdCBC4bqjbg!5e0!3m2!1svi!2sus!4v1487575593238" width="100%" height="204" frameborder="0" style="border:0" allowfullscreen></iframe>
-					<dl class="clearfix">
-						<dt>住所</dt>
-						<dd>〒106-0031東京都港区西麻布1-11-6<br>ホテル＆レジデンス六本木1108</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>電話番号</dt>
-						<dd><a href="tel:0362058288">03-6205-8288</a></dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>営業時間</dt>
-						<dd>07:00〜0：00</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>定休日</dt>
-						<dd>不定休</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>アクセス</dt>
-						<dd>日比谷線「六本木」駅 2番出口より徒歩6分<br>大江戸線「六本木」駅 4b出口より徒歩7分<br>千代田線「乃木坂」駅<br>5番出口より徒歩8分</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>最寄り駅</dt>
-						<dd>六本木、乃木坂、広尾</dd>
-					</dl>
-				</div>
-				<div class="slide">
-					<h3>恵比寿スタジオ</h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6484.584977686397!2d139.71222557425722!3d35.64516473953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b1310444769%3A0x458306283d53660a!2zMTUwLTAwMTMsIE5o4bqtdCBC4bqjbg!5e0!3m2!1svi!2sus!4v1487575876420" width="100%" height="204" frameborder="0" style="border:0" allowfullscreen></iframe>
-					<dl class="clearfix">
-						<dt>住所</dt>
-						<dd>〒150-0013　東京都渋谷区恵比寿4-11-8<br>グランヌーノ202</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>電話番号</dt>
-						<dd><a href="tel:0362058288">03-6205-8288</a></dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>営業時間</dt>
-						<dd>07:00〜23：00</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>定休日</dt>
-						<dd>不定休</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>アクセス</dt>
-						<dd>山の手線「恵比寿」駅　東口より徒歩5分<br>東京メトロ日比谷線「恵比寿」駅　3番出口よ<br>り徒歩5分</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>最寄り駅</dt>
-						<dd>恵比寿</dd>
-					</dl>
-				</div>
-				<div class="slide">
-					<h3>銀座スタジオ</h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12965.206288796131!2d139.75673982726525!3d35.669575715303154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be687fe9ab7%3A0x3673756fdf31e99d!2zMTA0LTAwNjEsIE5o4bqtdCBC4bqjbg!5e0!3m2!1svi!2sus!4v1487576033779" width="100%" height="204" frameborder="0" style="border:0" allowfullscreen></iframe>
-					<dl class="clearfix">
-						<dt>住所</dt>
-						<dd>〒104-0061　東京都中央区銀座8-15-6<br>クリスタルスクエア銀座Ⅰ　4Ｆ</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>電話番号</dt>
-						<dd><a href="tel:0362058288">03-6205-8288</a></dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>営業時間</dt>
-						<dd>07:00〜23：00</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>定休日</dt>
-						<dd>不定休</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>アクセス</dt>
-						<dd>山手線「新橋」駅　汐留口より徒歩5分<br>東京メトロ日比谷線「東銀座」駅　<br>4番出口より徒歩6分<br>大江戸線「汐留」駅　3番出口より徒歩3分</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>最寄り駅</dt>
-						<dd>汐留、新橋、東銀座、銀座、築地</dd>
-					</dl>
-				</div>
-				<div class="slide">
-					<h3>六本木スタジオ</h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.428242431035!2d139.71875737425893!3d35.65941443796204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b64c222fec1%3A0x3cc59422b1b591c1!2zMTA2LTAwMzEsIE5o4bqtdCBC4bqjbg!5e0!3m2!1svi!2sus!4v1487575593238" width="100%" height="204" frameborder="0" style="border:0" allowfullscreen></iframe>
-					<dl class="clearfix">
-						<dt>住所</dt>
-						<dd>〒106-0031東京都港区西麻布1-11-6<br>ホテル＆レジデンス六本木1108</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>電話番号</dt>
-						<dd><a href="tel:0362058288">03-6205-8288</a></dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>営業時間</dt>
-						<dd>07:00〜0：00</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>定休日</dt>
-						<dd>不定休</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>アクセス</dt>
-						<dd>日比谷線「六本木」駅 2番出口より徒歩6分<br>大江戸線「六本木」駅 4b出口より徒歩7分<br>千代田線「乃木坂」駅<br>5番出口より徒歩8分</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>最寄り駅</dt>
-						<dd>六本木、乃木坂、広尾</dd>
-					</dl>
-				</div>
-				<div class="slide">
-					<h3>恵比寿スタジオ</h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6484.584977686397!2d139.71222557425722!3d35.64516473953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b1310444769%3A0x458306283d53660a!2zMTUwLTAwMTMsIE5o4bqtdCBC4bqjbg!5e0!3m2!1svi!2sus!4v1487575876420" width="100%" height="204" frameborder="0" style="border:0" allowfullscreen></iframe>
-					<dl class="clearfix">
-						<dt>住所</dt>
-						<dd>〒150-0013　東京都渋谷区恵比寿4-11-8<br>グランヌーノ202</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>電話番号</dt>
-						<dd><a href="tel:0362058288">03-6205-8288</a></dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>営業時間</dt>
-						<dd>07:00〜23：00</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>定休日</dt>
-						<dd>不定休</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>アクセス</dt>
-						<dd>山の手線「恵比寿」駅　東口より徒歩5分<br>東京メトロ日比谷線「恵比寿」駅　3番出口よ<br>り徒歩5分</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>最寄り駅</dt>
-						<dd>恵比寿</dd>
-					</dl>
-				</div>
-				<div class="slide">
-					<h3>銀座スタジオ</h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12965.206288796131!2d139.75673982726525!3d35.669575715303154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be687fe9ab7%3A0x3673756fdf31e99d!2zMTA0LTAwNjEsIE5o4bqtdCBC4bqjbg!5e0!3m2!1svi!2sus!4v1487576033779" width="100%" height="204" frameborder="0" style="border:0" allowfullscreen></iframe>
-					<dl class="clearfix">
-						<dt>住所</dt>
-						<dd>〒104-0061　東京都中央区銀座8-15-6<br>クリスタルスクエア銀座Ⅰ　4Ｆ</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>電話番号</dt>
-						<dd><a href="tel:0362058288">03-6205-8288</a></dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>営業時間</dt>
-						<dd>07:00〜23：00</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>定休日</dt>
-						<dd>不定休</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>アクセス</dt>
-						<dd>山手線「新橋」駅　汐留口より徒歩5分<br>東京メトロ日比谷線「東銀座」駅　<br>4番出口より徒歩6分<br>大江戸線「汐留」駅　3番出口より徒歩3分</dd>
-					</dl>
-					<dl class="clearfix">
-						<dt>最寄り駅</dt>
-						<dd>汐留、新橋、東銀座、銀座、築地</dd>
-					</dl>
-				</div>
-			</div>
+			<?php get_template_part('parts/studio-list'); ?>
 			<p class="btn_02"><a href="#">スタジオをもっと見る</a></p>
 		</div>
 	</section>
+  <!-- End Studio List -->
+
 	<section id="section_05" class="section_05">
 		<div class="inner">
 			<h2 class="title_01">プロトレーナー陣</h2>
