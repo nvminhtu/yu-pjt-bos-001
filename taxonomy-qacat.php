@@ -22,46 +22,43 @@
     </div>
   </div>
 
-<div class="inner clearfix">
-<!-- left_content -->
-<div class="left_content">
-<h3 class="h3_ttl"><?php  single_term_title(); ?></h3>
+  <div class="inner clearfix">
+    <!-- left_content -->
+    <div class="left_content">
+      <?php get_template_part('parts/breadcrumbs'); ?>
+      <h3 class="h3_ttl"><?php single_term_title(); ?></h3>
+        <div class="qa_sec">
+          <?php
+          // The Loop
+          if ( have_posts() )  {
+            while ( have_posts() ) {
+              the_post();
+              ?>
+              <dl>
+                <dt><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></dt>
+                <dd><?php the_content(); ?></dd>
+              </dl>
+              <?php
+            }
+            /* Restore original Post Data */
+            wp_reset_postdata();
+          } else {
+            ?>
+            <p>No FAQS found.</p>
+            <?php
+          }
 
-<div class="qa_sec">
-<?php
-// The Loop
-if ( have_posts() )  {
-  while ( have_posts() ) {
-    the_post();
-    ?>
-    <dl>
-    <dt><?php the_title(); ?></dt>
-    <dd><?php the_content(); ?></dd>
-    </dl>
-    <?php
-  }
-  /* Restore original Post Data */
-  wp_reset_postdata();
-} else {
-  ?>
-  <p>No FAQS found.</p>
-  <?php
-}
+          ?>
+        </div>
+        <div class="pagination">
+          <?php wp_pagenavi(); ?>
+        </div>
+      </div><!-- end left_content -->
 
-?>
+    <!-- Get Sidebar -->
+    <?php get_sidebar('qa'); ?>
+  </div>
 </div>
-<div class="pagination">
-<?php wp_pagenavi(); ?>
-</div>
-</div><!-- end left_content -->
-
-<!-- Get Sidebar -->
-<?php get_sidebar('qa'); ?>
-
-</div>
-</div>
-
-
 
 <?php
     // common area for all sub pages and posts

@@ -10,6 +10,7 @@ get_header(); ?>
 <div class="main">
   <div class="inner clearfix">
     <div class="left_content">
+        <?php get_template_part('parts/breadcrumbs'); ?>
         <?php
           // set up or arguments for our custom query
           $i = 1;
