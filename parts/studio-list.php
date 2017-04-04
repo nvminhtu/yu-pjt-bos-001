@@ -12,16 +12,8 @@
       <dd>〒106-0031東京都港区西麻布1-11-6<br>ホテル＆レジデンス六本木1108</dd>
     </dl>
     <dl class="clearfix">
-      <dt>電話番号</dt>
-      <dd><a href="tel:0362058288">03-6205-8288</a></dd>
-    </dl>
-    <dl class="clearfix">
       <dt>営業時間</dt>
       <dd>07:00〜0：00</dd>
-    </dl>
-    <dl class="clearfix">
-      <dt>定休日</dt>
-      <dd>不定休</dd>
     </dl>
     <dl class="clearfix">
       <dt>アクセス</dt>
@@ -40,16 +32,8 @@
       <dd>〒150-0013　東京都渋谷区恵比寿4-11-8<br>グランヌーノ202</dd>
     </dl>
     <dl class="clearfix">
-      <dt>電話番号</dt>
-      <dd><a href="tel:0362058288">03-6205-8288</a></dd>
-    </dl>
-    <dl class="clearfix">
       <dt>営業時間</dt>
       <dd>07:00〜23：00</dd>
-    </dl>
-    <dl class="clearfix">
-      <dt>定休日</dt>
-      <dd>不定休</dd>
     </dl>
     <dl class="clearfix">
       <dt>アクセス</dt>
@@ -68,16 +52,8 @@
       <dd>〒104-0061　東京都中央区銀座8-15-6<br>クリスタルスクエア銀座Ⅰ　4Ｆ</dd>
     </dl>
     <dl class="clearfix">
-      <dt>電話番号</dt>
-      <dd><a href="tel:0362058288">03-6205-8288</a></dd>
-    </dl>
-    <dl class="clearfix">
       <dt>営業時間</dt>
       <dd>07:00〜23：00</dd>
-    </dl>
-    <dl class="clearfix">
-      <dt>定休日</dt>
-      <dd>不定休</dd>
     </dl>
     <dl class="clearfix">
       <dt>アクセス</dt>
@@ -96,16 +72,8 @@
       <dd>〒106-0031東京都港区西麻布1-11-6<br>ホテル＆レジデンス六本木1108</dd>
     </dl>
     <dl class="clearfix">
-      <dt>電話番号</dt>
-      <dd><a href="tel:0362058288">03-6205-8288</a></dd>
-    </dl>
-    <dl class="clearfix">
       <dt>営業時間</dt>
       <dd>07:00〜0：00</dd>
-    </dl>
-    <dl class="clearfix">
-      <dt>定休日</dt>
-      <dd>不定休</dd>
     </dl>
     <dl class="clearfix">
       <dt>アクセス</dt>
@@ -124,16 +92,8 @@
       <dd>〒150-0013　東京都渋谷区恵比寿4-11-8<br>グランヌーノ202</dd>
     </dl>
     <dl class="clearfix">
-      <dt>電話番号</dt>
-      <dd><a href="tel:0362058288">03-6205-8288</a></dd>
-    </dl>
-    <dl class="clearfix">
       <dt>営業時間</dt>
       <dd>07:00〜23：00</dd>
-    </dl>
-    <dl class="clearfix">
-      <dt>定休日</dt>
-      <dd>不定休</dd>
     </dl>
     <dl class="clearfix">
       <dt>アクセス</dt>
@@ -152,16 +112,8 @@
       <dd>〒104-0061　東京都中央区銀座8-15-6<br>クリスタルスクエア銀座Ⅰ　4Ｆ</dd>
     </dl>
     <dl class="clearfix">
-      <dt>電話番号</dt>
-      <dd><a href="tel:0362058288">03-6205-8288</a></dd>
-    </dl>
-    <dl class="clearfix">
       <dt>営業時間</dt>
       <dd>07:00〜23：00</dd>
-    </dl>
-    <dl class="clearfix">
-      <dt>定休日</dt>
-      <dd>不定休</dd>
     </dl>
     <dl class="clearfix">
       <dt>アクセス</dt>
