@@ -125,6 +125,14 @@
   }
 
   .com_mainvisual h2 {
+    height: 360px;
+    background: url(../images/mainvisual_tb.jpg) bottom right no-repeat;
+      -webkit-background-size: auto 90%;
+         -moz-background-size: auto 90%;
+          -ms-background-size: auto 90%;
+           -o-background-size: auto 90%;
+              background-size: auto 90%;
+
   }
 
   #index .mainvisual h2 {
@@ -771,7 +779,24 @@
     padding-top: 60px;
   }
 
-  .com_mainvisual h2 {
+  .com_mainvisual h2{
+    height: 250px;
+    background: url(../images/mainvisual_sp.jpg) bottom right no-repeat;
+      -webkit-background-size: auto 90%;
+         -moz-background-size: auto 90%;
+          -ms-background-size: auto 90%;
+           -o-background-size: auto 90%;
+              background-size: auto 90%;
+
+  }
+  
+ .main_pic { 
+    height: 250px;
+      -webkit-background-size: auto 90%;
+         -moz-background-size: auto 90%;
+          -ms-background-size: auto 90%;
+           -o-background-size: auto 90%;
+              background-size: auto 90%;
   }
 
   .com_mainvisual h2 span {

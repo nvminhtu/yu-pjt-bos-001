@@ -9,6 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+ <link  href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="<?php bloginfo('template_url'); ?>/css/import.css" rel="stylesheet" type="text/css" />
 <link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" type="text/css" />
 <?php wp_head(); ?>

@@ -1,4 +1,3 @@
-
 <footer id="footer" class="footer">
   <div class="inner clearfix">
     <div class="f_column_01">
@@ -45,10 +44,9 @@
 <?php if(is_front_page()||is_home()) { ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jqinstapics.js" type="text/javascript"></script>
 <?php } ?>
-<?php if(is_page('studio') || is_page('feature')) { ?>
+<?php if(is_page('studio')) { ?>
   <script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/studio-map.js" type="text/javascript"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox.min.js" type="text/javascript"></script>
 <?php } ?>
 <?php if(is_singular( 'post' )) {  // blog only ?>
@@ -58,14 +56,13 @@
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
 <?php if (is_page( 'contact' )): ?>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/daterangepicker.js"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 <?php endif ?>
 
-<script src="<?php bloginfo('template_url'); ?>/js/custom.js" type="text/javascript"></script>
-
-<?php if (is_page('contact')) { ?>
+<?php if (is_page('contact')) {
+  ?>
   <script type="text/javascript">
   $(function() {
       $('input[name="date_01"]').daterangepicker({
@@ -92,21 +89,54 @@
               format: 'MM/DD(水) h:mm A'
           }
       });
-
+      $('#list_footer').slick({
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true
+          }
+        },
+        {
+          breakpoint: 890,
+          settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+          }
+        }
+        ]
+      });
   });
   </script>
-  <?php } ?>
-
-<?php if(is_page('confirmation')) { ?>
-  <script type="text/javascript">
-    // event for close button of FORM
-    jQuery(document).ready(function($) {
-      $('#btn_close_popup_area').click(function(e) {
-          window.location = "<?php echo home_url(); ?>/contact";
-        });  
-    });
-  </script>
-<?php } ?>
+  <?php
+} ?>
+<script>
+  jQuery(document).ready(function($) {
+    $('#btn_close_popup_area').click(function(e) {
+        window.location = "<?php echo home_url(); ?>/contact";
+      });  
+  });
+</script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
