@@ -69,13 +69,12 @@
 	<section id="section_03" class="section_03">
     <?php 
       // get picture gallery from custom fields
+      $title_gallery = get_field('title_gallery');
       $trainer_gallery = get_field('trainer_gallery');
 
     ?>
 		<div class="inner">
-			<h2 class="title_01">完全個室</h2>
-			<p class="text_02">マンツーマンで集中鍛錬</p>
-			<p class="text_01">最新のトレーニングマシンと、業界屈指のプロトレーナーが<br>付きっきりでトレーニングを指導します。</p>
+      <?php echo $title_gallery; ?>
 		</div>
 		<div class="out_instagram">
 			<div id="instagram" class="clearfix">
