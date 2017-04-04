@@ -31,7 +31,7 @@ while ( have_posts() ) : the_post(); ?>
 
 <?php
     // common area for all sub pages and posts
-    //get_template_part('parts/list-pages');
-    //get_template_part('parts/contact-information');
+    get_template_part('parts/list-pages');
+    get_template_part('parts/contact-information');
 ?>
 <?php get_footer(); ?>
