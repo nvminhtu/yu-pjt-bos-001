@@ -39,7 +39,13 @@ get_header(); ?>
       ?>
       <?php if($i==1) { ?>
       <div class="big_article clearfix">
-        <p class="bigimg"><img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" /></p>
+        <p class="bigimg">
+          <?php if(has_post_thumbnail()) { ?>
+            <img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" />
+          <?php } else { ?>
+            <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_bigimg.png" alt="<?php the_title(); ?>" />
+          <?php } ?>
+        </p>
         <div class="bigcontent">
           <p class="userinfo">
             <span><img src="<?php echo $editor_avatar_url; ?>" /></span>

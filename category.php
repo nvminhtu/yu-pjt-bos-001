@@ -15,7 +15,7 @@ get_header(); ?>
           $i = 1;
           $category = get_the_category();
           $cat_id = $category[0]->term_id;
-      
+
           $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
           $query_args = array(
             'post_type' => 'post',
@@ -43,7 +43,11 @@ get_header(); ?>
       ?>
       <?php if($i==1) { ?>
       <div class="big_article clearfix">
-        <p class="bigimg"><img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" /></p>
+        <?php if(has_post_thumbnail()) { ?>
+          <img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" />
+        <?php } else { ?>
+          <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_bigimg.png" alt="<?php the_title(); ?>" />
+        <?php } ?>
         <div class="bigcontent">
           <p class="userinfo">
             <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
