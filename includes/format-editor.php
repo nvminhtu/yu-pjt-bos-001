@@ -15,4 +15,11 @@ if( is_admin() ) {
       return ' <p class="center">'. $html .'</p>';
   }
 }
+
+// #preventEditor: don't remove span tag in WP Editor
+function tinyMCEoptions($options) {
+    $options['extended_valid_elements'] = 'span';
+    return $options;
+}
+add_filter('tiny_mce_before_init', 'tinyMCEoptions');
 ?>

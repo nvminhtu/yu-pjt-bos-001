@@ -10,21 +10,26 @@
 <?php // Start the loop.
   while ( have_posts() ) : the_post(); ?>
     <?php get_template_part('parts/main-visual-sec');
-      
+
       $tags = array("<p>", "</p>", "<font>", "</font>");
+      // Content break
+      $experienced_learning = get_field('experienced_learning');
+      $eating_learning = get_field('eating_learning');
+      $special_learning = get_field('special_learning');
+
       // Visitor
       $visitor_course_pic = get_field('visitor_course_pic');
       $visitor_course_description = get_field('visitor_course_description');
       $visitor_course_description = str_replace($tags, "", $visitor_course_description);
       $visitor_course_content = get_field('visitor_course_content');
-      
+
       // Pair
       $pair_course_pic = get_field('pair_course_pic');
       $pair_course_description = get_field('pair_course_description');
       $pair_course_description = str_replace($tags, "", $pair_course_description);
       $pair_course_content = get_field('pair_course_content');
       // -----------------------------------------------------------------------------
-      
+
       // 2 Weeks
       $w_course_pic = get_field('w_course_pic');
       $w_course_description = get_field('w_course_description');
@@ -43,7 +48,7 @@
       $two_months_course_description  = str_replace($tags, "", $two_months_course_description );
       $two_months_course_content = get_field('2months_course_content');
       // -----------------------------------------------------------------------------
-      
+
       // mustle
       $mustle_up_course_pic = get_field('mustle_up_course_pic');
       $mustle_up_course_description = get_field('mustle_up_course_description');
@@ -59,8 +64,7 @@
     ?>
     <section id="section_01" class="section_01">
       <div class="inner">
-        <h2 class="title_01">体験コース<span>まずはやってみてから実感。</span></h2>
-        <p class="text_01">入会金0円で体験いただき、どのくらいの負荷が必要なのかや、<br>ご自身の生活リズムに合う形でオリジナルの<br>トレーニングメニューをカウンセリングいたします。</p>
+        <?php echo $experienced_learning; ?>
         <div class="list_01">
           <ul class="clearfix">
             <li>
@@ -82,8 +86,7 @@
 
     <section id="section_02" class="section_02">
       <div class="inner">
-        <h2 class="title_01">ダイエットコース<span>痩せるための体づくりを。</span></h2>
-        <p class="text_01">ご自身のご都合に合わせて期間別に3つのコースからお選びいただけます。</p>
+        <?php echo $eating_learning; ?>
         <div class="list_02">
           <ul class="clearfix">
             <li>
@@ -115,8 +118,7 @@
     </section>
     <section id="section_03" class="section_03">
       <div class="inner">
-        <h2 class="title_01">特別コース<span>痩せたあとの、魅せる体づくり。</span></h2>
-        <p class="text_01">体のラインを細くするだけでなく、しっかり魅せる体として筋力アップを図ります。</p>
+        <?php echo $special_learning; ?>
       </div>
       <div class="inner list_01">
         <ul class="clearfix">
