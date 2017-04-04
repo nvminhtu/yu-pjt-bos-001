@@ -25,48 +25,39 @@
     <div class="inner">
       <div class="list_02">
         <ul class="clearfix">
-          <?php if( have_rows('feature_items') ): ?>
+          <?php $i = 1;
+              if( have_rows('feature_items') ): ?>
             <?php while( have_rows('feature_items') ): the_row();
               $feature_title = get_sub_field('feature_title');
               $feature_content = get_sub_field('feature_content');
               $feature_link = get_sub_field('feature_link');
               $feature_link_title = get_sub_field('feature_link_title');
+
+              if($i % 3 == 0 && $i!= 1) {
+                $class = "last";
+              } else {
+                $class = "";
+              }
             ?>
-            <li>
+            <li class="<?php echo $class; ?>">
               <h3><?php echo $feature_title; ?></h3>
               <p><?php echo $feature_content; ?></p>
+                <?php if(isset($feature_link)&&$feature_link!='') { ?>
+                  <p><a href="#">
+                <?php }
+                  if(isset($feature_link_title)&&$feature_link_title!='') {
+                    echo $feature_link_title;
+                  }
+                 if(isset($feature_link)&&$feature_link!='') { ?>
+                  </a></p>
+                <?php }?>
             </li>
-            <?php endwhile; ?>
+            <?php if($i % 2 == 0) { ?>
+              <div class="clearfix tablet"></div>
+              <div class="clearfix sp"></div>
+            <?php } ?>
+            <?php $i++; endwhile; ?>
           <?php endif; ?>
-          <!-- <li>
-            <h3>完全予約制</h3>
-            <p>お客様のご都合に合わせてご予約いただきます。</p>
-          </li>
-          <li>
-            <h3>各種レンタル可能</h3>
-            <p>レンタルウェア・タオル・アメニティ・水素水などの無料貸与、シャワールーム完備シューズの預かりも可能</p>
-          </li>
-          <div class="clearfix tablet"></div>
-          <div class="clearfix sp"></div>
-          <li class="last">
-            <h3>プロテイン、サプリメント</h3>
-            <p>お客様のトレーニング内容に応じ、プロテイン・サプリメントをご提案しています。自社販売は行っていませんので、安心できる最適な情報をお伝えします。</p>
-          </li>
-          <li>
-            <h3>深夜、早朝対応</h3>
-            <p>通勤前や通勤後もご利用いただけるよう、営業時間も柔軟に対応しております。</p>
-            <p><a href="#">各スタジオの詳細を確認する</a></p>
-          </li>
-          <div class="clearfix tablet"></div>
-          <div class="clearfix sp"></div>
-          <li>
-            <h3>便利な支払い方法</h3>
-            <p>現金分割払い、各種クレジットカードのご利用が可能です。</p>
-          </li>
-          <li class="last">
-            <h3>アフターフォロー</h3>
-            <p>会員様は特別価格でのコース延長が可能です。月1〜2回のビジタートレーニングのご利用も可能です。</p>
-          </li> -->
         </ul>
       </div>
     </div>
@@ -108,102 +99,39 @@
 			<h2 class="title_01">プロトレーナー陣</h2>
 			<div class="list_04">
 				<ul class="clearfix">
-					<li>
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_07.jpg" alt="リンジー　ロジャーソン" />
-						<h3>リンジー　ロジャーソン</h3>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>加国（カナダ）</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>ブリティッシュコロンビア大学。カナダ第二位。</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>小、中学生の興味を惹くクリエイティブなコンテンツ作成や、ネイティブならではの自然な英語表現や発音の強化を得意とする。</dd>
-						</dl>
-					</li>
-					<li>
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_08.jpg" alt="リンジー　ロジャーソン" />
-						<h3>リンジー　ロジャーソン</h3>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>加国（カナダ）</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>ブリティッシュコロンビア大学。カナダ第二位。</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>小、中学生の興味を惹くクリエイティブなコンテンツ作成や、ネイティブならではの自然な英語表現や発音の強化を得意とする。</dd>
-						</dl>
-					</li>
-					<li class="last">
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_09.jpg" alt="リンジー　ロジャーソン" />
-						<h3>リンジー　ロジャーソン</h3>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>加国（カナダ）</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>ブリティッシュコロンビア大学。カナダ第二位。</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>小、中学生の興味を惹くクリエイティブなコンテンツ作成や、ネイティブならではの自然な英語表現や発音の強化を得意とする。</dd>
-						</dl>
-					</li>
-					<li>
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_07.jpg" alt="リンジー　ロジャーソン" />
-						<h3>リンジー　ロジャーソン</h3>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>加国（カナダ）</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>ブリティッシュコロンビア大学。カナダ第二位。</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>小、中学生の興味を惹くクリエイティブなコンテンツ作成や、ネイティブならではの自然な英語表現や発音の強化を得意とする。</dd>
-						</dl>
-					</li>
-					<li>
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_08.jpg" alt="リンジー　ロジャーソン" />
-						<h3>リンジー　ロジャーソン</h3>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>加国（カナダ）</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>ブリティッシュコロンビア大学。カナダ第二位。</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>小、中学生の興味を惹くクリエイティブなコンテンツ作成や、ネイティブならではの自然な英語表現や発音の強化を得意とする。</dd>
-						</dl>
-					</li>
-					<li class="last">
-						<img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_09.jpg" alt="リンジー　ロジャーソン" />
-						<h3>リンジー　ロジャーソン</h3>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>加国（カナダ）</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>ブリティッシュコロンビア大学。カナダ第二位。</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="リンジー　ロジャーソン" /></dt>
-							<dd>小、中学生の興味を惹くクリエイティブなコンテンツ作成や、ネイティブならではの自然な英語表現や発音の強化を得意とする。</dd>
-						</dl>
-					</li>
+          <?php $i = 1;
+              if( have_rows('trainers') ): ?>
+            <?php while( have_rows('trainers') ): the_row();
+              $trainer_name = get_sub_field('trainer_name');
+              $trainer_country = get_sub_field('trainer_country');
+              $trainer_university = get_sub_field('trainer_university');
+              $trainer_content = get_sub_field('trainer_content');
+              $trainer_picture = get_sub_field('trainer_picture');
+
+              if($i % 3 == 0 && $i!= 1) {
+                $class = "last";
+              } else {
+                $class = "";
+              }
+            ?>
+            <li class="<?php echo $class; ?>">
+              <img src="<?php echo $trainer_picture; ?>" alt="<?php echo $trainer_name; ?>" />
+              <h3><?php echo $trainer_name; ?></h3>
+              <dl class="clearfix">
+                <dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="<?php echo $trainer_country; ?>" /></dt>
+                <dd><?php echo $trainer_country; ?></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="<?php echo $trainer_university; ?>" /></dt>
+                <dd><?php echo $trainer_university; ?></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="<?php echo $trainer_content; ?>" /></dt>
+                <dd><?php echo $trainer_content; ?></dd>
+              </dl>
+            </li>
+            <?php $i++; endwhile; ?>
+          <?php endif; ?>
 				</ul>
 			</div>
 		</div>
