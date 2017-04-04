@@ -43,11 +43,13 @@ get_header(); ?>
       ?>
       <?php if($i==1) { ?>
       <div class="big_article clearfix">
-        <?php if(has_post_thumbnail()) { ?>
-          <img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" />
-        <?php } else { ?>
-          <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_bigimg.png" alt="<?php the_title(); ?>" />
-        <?php } ?>
+        <p class="bigimg">
+          <?php if(has_post_thumbnail()) { ?>
+            <img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" />
+          <?php } else { ?>
+            <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_bigimg.png" alt="<?php the_title(); ?>" />
+          <?php } ?>
+        </p>
         <div class="bigcontent">
           <p class="userinfo">
             <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
