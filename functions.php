@@ -97,7 +97,7 @@ function get_custom_page_slug() {
     $id_page = $current_page_slug;
   } elseif(is_page() && is_page('blog')) {
     $id_page = 'bloglist';
-  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_post_type_archive('news')||is_singular('news')||is_search()) {
+  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_post_type_archive('news')||is_singular('news')||is_search()||is_tag()) {
     $id_page = "bloglist";
   } elseif (is_singular('qa') || is_tax( 'qacat' ) || is_post_type_archive('qa')) {
     $id_page = "qa";
