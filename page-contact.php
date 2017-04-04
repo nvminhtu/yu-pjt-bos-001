@@ -29,4 +29,4 @@
       get_template_part('parts/list-pages');
       get_template_part('parts/contact-information');
 ?>
-<?php get_footer('contact'); ?>
+<?php get_footer(); ?>
