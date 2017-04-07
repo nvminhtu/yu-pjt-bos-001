@@ -143,10 +143,10 @@ $(document).ready(function() {
 	$('.header .search_box input').click(function(event) {
 		event.stopPropagation();
 	});
-	$('#submit').click(function(event) {
-		$('#popup_area').fadeIn();
-		$('body').css('overflow', 'hidden');
-	});
+	// $('#submit').click(function(event) {
+	// 	$('#popup_area').fadeIn();
+	// 	$('body').css('overflow', 'hidden');
+	// });
 	
 	
 	var url_share = window.location.href;

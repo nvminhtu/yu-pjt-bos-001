@@ -1,10 +1,14 @@
 .div_date_01, 
 .div_date_02,
 .div_date_03{position: relative;}
-
+.ui-datepicker .ui-datepicker-title{line-height: normal;}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year{font-weight: bold;}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-month{font-weight: bold;}
 .box_input_fcal {
 	position: relative;
 }
+.form_contact table.ui-datepicker-calendar td{font-size: 14px;}
+.form_contact table.ui-datepicker-calendar td a{color: #666}
 /* css popup time */
 .popup_time {
 	display: none;
@@ -19,7 +23,7 @@
 }
 .popup_time_inner {
 	position: relative;
-	padding: 30px 30px 25px 30px;
+	padding: 30px 30px 20px 30px;
 }
 .popup_time_inner:before {
 	content: "";
@@ -40,12 +44,15 @@
 	margin: 0 5px 0 5px;
 	line-height: 32px;
 }
+.popup_time .icon_line02{font-size: 14px; margin:0;}
 .popup_time select {
-	width: 85px;
 	text-align: center;
 	height: 32px;
+	font-size: 19px;
 	border: 0;
 	background: #f2ebcc;
+	padding:0 18px;
+	-webkit-appearance: none;
 }
 .col_done {
 	background: #0085CC;
@@ -53,8 +60,9 @@
 	color: #fff;
 	font-size: 16px;
 	text-align: center;
-	line-height: 22px;
-	width: 70px;
+	line-height: 32px;
+	height: 32px;
+	width: 88px;
 	float: right;
 	font-weight: bold;
 	cursor: pointer;
