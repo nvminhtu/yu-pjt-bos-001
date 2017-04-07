@@ -10,10 +10,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <?php if(is_page('contact')) { ?>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
- <link  href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet" type="text/css" />
- <link href="<?php bloginfo('template_url'); ?>/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-  <link href="<?php bloginfo('template_url'); ?>/css/custom_datetimepicker.css" rel="stylesheet" type="text/css" />
+<link href="<?php bloginfo('template_url'); ?>/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="<?php bloginfo('template_url'); ?>/css/custom_datetimepicker.css" rel="stylesheet" type="text/css" />
  <?php } ?>
 <link href="<?php bloginfo('template_url'); ?>/css/import.css" rel="stylesheet" type="text/css" />
 <link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" type="text/css" />
