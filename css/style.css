@@ -1606,9 +1606,10 @@ body {
 
 #contact .form_contact .date input {
   background: url(../images/contact/date_bg.png) right no-repeat;
-  padding-right: 25%;
-  padding-left: 2%;
-  font-size: 14px;
+	padding-right: 25%;
+	padding-left: 2%;
+	font-size: 14px;
+	box-sizing:border-box;
 }
 
 #contact .form_contact .ask label {
@@ -2900,13 +2901,13 @@ body {
 
 /* #contact form */
 .btn_02 #submit {
-  height: 100%; 
+  height: 100%;
   background-size: 100% auto;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: #fff; 
-  display: block; 
+  color: #fff;
+  display: block;
   position: relative; }
 
 
