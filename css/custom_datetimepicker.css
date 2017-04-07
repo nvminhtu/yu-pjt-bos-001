@@ -1,0 +1,110 @@
+.div_date_01, 
+.div_date_02,
+.div_date_03{position: relative;}
+
+.box_input_fcal {
+	position: relative;
+}
+/* css popup time */
+.popup_time {
+	display: none;
+	position: absolute;
+	width: 355px;
+	box-sizing: border-box;
+	border: 1px solid #BCBCBC;
+	background: rgba(255,255,255,0.95);
+	top: 71px;
+	right: 0;
+	z-index: 5;
+}
+.popup_time_inner {
+	position: relative;
+	padding: 30px 30px 25px 30px;
+}
+.popup_time_inner:before {
+	content: "";
+	width: 20px;
+	height: 11px;
+	position: absolute;
+	right: 12px;
+	top: -11px;
+	background: url(../images/contact/icon_arrow_top01.png) no-repeat;
+	background-size: 20px auto;
+	z-index: 5;
+}
+/*#popup_time01{
+	display:block;
+}*/
+.popup_time select, .popup_time .icon_line02 {
+	float: left;
+	margin: 0 5px 0 5px;
+	line-height: 32px;
+}
+.popup_time select {
+	width: 85px;
+	text-align: center;
+	height: 32px;
+	border: 0;
+	background: #f2ebcc;
+}
+.col_done {
+	background: #0085CC;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 22px;
+	width: 70px;
+	float: right;
+	font-weight: bold;
+	cursor: pointer;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+}
+.col_done:hover {
+	opacity: 0.8;
+}
+.form_box input[type="text"], .form_box input[type="email"], .text_confirm {
+	background: #fcecec;
+	box-sizing: border-box;
+	font-size: 16px;
+	height: 48px;
+	line-height: 48px;
+	margin: 0;
+	padding: 0 15px;
+	width: 100%;
+}
+.form_box textarea, .textarea_confirm {
+	padding: 6px 10px 0 15px;
+}
+
+@media screen and (max-width:768px) {
+	.popup_time select {
+		-webkit-appearance: none;
+	}
+}
+@media screen and (max-width:640px) {
+.popup_time_inner {
+	position: relative;
+	padding: 15px 10px 10px 10px;
+}
+.popup_time {
+	width: 100%;
+	box-sizing: border-box;
+}
+.popup_time select {
+	width: 80px;
+}
+
+}
+
+@media screen and (max-width:480px){
+	.col_done{float:left; margin-left: 5px;}
+}
+
+@media screen and (max-width: 320px){
+	.col_done{width: 55px;}
+}

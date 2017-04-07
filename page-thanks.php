@@ -26,6 +26,11 @@
     </section>
 <?php endwhile; ?>
 
+
+
+
+
+
 <?php
   // common area for all sub pages and posts
   get_template_part('parts/list-pages');

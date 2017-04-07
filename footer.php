@@ -58,15 +58,17 @@
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
 <?php if (is_page( 'contact' )): ?>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/daterangepicker.js"></script>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.ui.datepicker-ja.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/datetimepicker.js"></script>
+  <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/daterangepicker.js"></script> -->
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" /> -->
 <?php endif ?>
 
 <script src="<?php bloginfo('template_url'); ?>/js/custom.js" type="text/javascript"></script>
 
 <?php if (is_page('contact')) { ?>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
   $(function() {
       $('input[name="date_01"]').daterangepicker({
           timePicker: true,
@@ -94,7 +96,7 @@
       });
 
   });
-  </script>
+  </script> -->
   <?php } ?>
 
 <?php if(is_page('confirmation')) { ?>
