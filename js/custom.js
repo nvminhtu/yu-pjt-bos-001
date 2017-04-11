@@ -143,15 +143,68 @@ $(document).ready(function() {
 	$('.header .search_box input').click(function(event) {
 		event.stopPropagation();
 	});
-	$('#submit').click(function(event) {
-		$('#popup_area').fadeIn();
-		$('body').css('overflow', 'hidden');
-	});
+	// $('#submit').click(function(event) {
+	// 	$('#popup_area').fadeIn();
+	// 	$('body').css('overflow', 'hidden');
+	// });
 	
 	
 	var url_share = window.location.href;
 	$('.share_facebook').attr('href', 'https://www.facebook.com/sharer.php?u='+url_share);
 	$('.share_twitter').attr('href', 'https://twitter.com/intent/tweet?url='+url_share);
+
+	/*TNT CUSTOM JS FOR CONTACT FORM*/
+	
+	function checkNotNullInput()
+	{
+		var check = true;
+		$('.form_contact input.wpcf7-text').each(function(index, el) {
+			if($(this).val() == "")
+			{
+				check = false;
+				// console.log("Input text" + index + ' : ' + check);
+			}	
+		});
+
+		if($('.form_contact textarea.wpcf7-textarea').val() == "")
+		{
+			check = false;
+		}
+
+		return check;
+	}
+	
+	setInterval(function(){
+		var checkNotNUll = true; 
+		checkNotNull = checkNotNullInput();
+		if(checkNotNull == true)
+		{
+			$('.form_contact input.wpcf7-submit').attr('value','送信');
+		}
+		else
+		{
+			$('.form_contact input.wpcf7-submit').attr('value','未入力の項目があります');
+		}
+	}, 500);
+	
+
+	// $('.form_contact input.wpcf7-text, .form_contact textarea.wpcf7-textarea').blur(function(event) {
+	// 	var checkNotNUll = true; 
+	// 	checkNotNull = checkNotNullInput();
+	// 	if(checkNotNull == true)
+	// 	{
+	// 		$('.form_contact input.wpcf7-submit').attr('value','送信');
+	// 	}
+	// 	else
+	// 	{
+	// 		$('.form_contact input.wpcf7-submit').attr('value','未入力の項目があります');
+	// 	}
+	// });
+
+
+
+	
+	/*END TNT CUSTOM JS FOR CONTACT FORM*/
 
 });
 

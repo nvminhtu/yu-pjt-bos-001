@@ -1587,16 +1587,16 @@ body {
 }
 
 #contact .form_contact input {
-  width: 100%;
-  padding: 0 5% 0 2%;
+  width: 96%;
+  padding: 0 2% 0 2%;
   height: 60px;
   font-size: 20px;
   border: 1px solid #E1DCC4;
 }
 
 #contact .form_contact .date dd > div {
-  width: 31%;
-  margin-left: 3.5%;
+  width: 32%;
+  margin-left: 2%;
   float: left;
 }
 
@@ -1606,6 +1606,7 @@ body {
 
 #contact .form_contact .date input {
   background: url(../images/contact/date_bg.png) right no-repeat;
+  width: 100%;
 	padding-right: 25%;
 	padding-left: 2%;
 	font-size: 14px;
