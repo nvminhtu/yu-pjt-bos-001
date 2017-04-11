@@ -2974,7 +2974,7 @@ body {
 }
 
 body#confirmation{overflow-y: hidden;}
-body#confirmation .inner{width: 100%;}
+body#confirmation .popup_area_inner .inner{width: 100%;}
 body#confirmation .menu-top-menu-container{}
 body#confirmation .menu-top-menu-container ul{margin-bottom:1px;}
 body#confirmation #submitconfirm{background: url(../images/btn-form.png); width: 300px; height: 60px; line-height: 60px; padding: 0; cursor: pointer; background-size: 100% auto; text-align: center; font-size: 18px; font-weight: bold; color: #fff; display: inline-block; position: relative;}
