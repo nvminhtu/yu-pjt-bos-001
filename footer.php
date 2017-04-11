@@ -74,9 +74,9 @@
     {
         $contactURL = home_url()."/contact";
         ?>
-      <script>
-        window.location.href = "<?php echo $contactURL; ?>";
-      </script>
+        <script>
+          window.location.href = "<?php echo $contactURL; ?>";
+        </script>
         <?php
     }
  ?>
