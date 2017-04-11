@@ -11,18 +11,14 @@
 <div class="com_mainvisual">
   <div class="inner">
     <h2 id="title-background" data-pc="<?php echo $page_main_visual_pc; ?>" data-tb="<?php echo $page_main_visual_tablet; ?>" data-sp="<?php echo $page_main_visual_sp; ?>"><span>   <?php
-          if(is_single())
-          {
+          if(is_single()||is_page()) {
             the_title();
           } 
-          elseif(is_archive())
-          {
-            if(is_post_type_archive('qa'))
-            {
+          elseif(is_archive()) {
+            if(is_post_type_archive('qa')) {
               echo "QA";
             }
-            elseif(is_tax('qacat'))
-            {
+            elseif(is_tax('qacat')) {
               single_term_title();
             }
 

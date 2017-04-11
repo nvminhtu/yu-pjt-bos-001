@@ -8,7 +8,7 @@
  */ ?>
 <?php get_header(); ?>
 
-<?php get_template_part('parts/main-visual-sec');?>
+<?php get_template_part('parts/main-visual-qa'); // use global visual ?>
 
 <?php  while ( have_posts() ) : the_post();?>
     <section class="section01">
