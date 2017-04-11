@@ -10,16 +10,6 @@
 
 <?php get_template_part('parts/main-visual-sec');?>
 
-<style>
-	body#confirmation .inner{width: 100%;}
-	body#confirmation .menu-top-menu-container{}
-	body#confirmation .menu-top-menu-container ul{margin-bottom:1px;}
-	
-	body#confirmation #submitconfirm{background: url(<?php bloginfo('template_url') ; ?>/images/btn-form.png); width: 300px; height: 60px; line-height: 60px; padding: 0; cursor: pointer; background-size: 100% auto; text-align: center; font-size: 18px; font-weight: bold; color: #fff; display: inline-block; position: relative;}
-	.btn_02 .arrow{display: block; position: absolute; width: 15px; height: 15px; background: url(<?php bloginfo('template_url') ; ?>/images/btn_02_right.png) center no-repeat; top: 24px; margin-top: 0; right: 10px;} 
-	#contact .btn_02 #submit{height: 100%; background-size: 100% auto; text-align: center; font-size: 18px;font-weight: bold; color: #fff; display: block; position: relative;}
-</style>
-
 <?php  while ( have_posts() ) : the_post();?>
     <section class="section01">
         <div class="inner">
