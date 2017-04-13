@@ -26,6 +26,7 @@ function prefix_register_all() {
 				'parent_item_colon'  => __('Parent Items:', 'custom_text_posttype'),
 			),
 			'public'        => true,
+			'publicly_queryable'  => false,
 			'menu_position' => 3,
 			'supports'      => array(
 				'title',
