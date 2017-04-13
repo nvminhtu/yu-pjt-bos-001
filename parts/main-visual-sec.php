@@ -32,7 +32,6 @@
 			background: url('<?php echo $img_visual_sp_src; ?>') bottom center no-repeat!important;	
 		} 
 	}
-	
 </style>
 <div class="com_mainvisual">
   <div class="inner">
