@@ -129,14 +129,6 @@
               <img src="<?php echo $trainer_picture; ?>" alt="<?php echo $trainer_name; ?>" />
               <h3><?php echo $trainer_name; ?></h3>
               <dl class="clearfix">
-                <dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_10.png" alt="<?php echo $trainer_country; ?>" /></dt>
-                <dd><?php echo $trainer_country; ?></dd>
-              </dl>
-              <dl class="clearfix">
-                <dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_11.png" alt="<?php echo $trainer_university; ?>" /></dt>
-                <dd><?php echo $trainer_university; ?></dd>
-              </dl>
-              <dl class="clearfix">
                 <dt><img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_12.png" alt="<?php echo $trainer_content; ?>" /></dt>
                 <dd><?php echo $trainer_content; ?></dd>
               </dl>
