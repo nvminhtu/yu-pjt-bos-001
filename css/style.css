@@ -878,12 +878,12 @@ body {
 #feature .mainvisual p span {
   position: absolute;
   font-size: 36px;
-  top: 570px;
+  top: 460px;
   left: 50%;
   text-align: center;
-  width: 620px;
+  width: 560px;
   font-weight: bold;
-  margin-left: -240px;
+  margin-left: -250px;
 }
 
 #feature .out_instagram {
@@ -934,7 +934,6 @@ body {
 }
 
 #feature .section_01 .list_01 p {
-  padding-left: 90px;
   font-size: 16px;
 }
 
@@ -2576,10 +2575,9 @@ body {
 }
 
 #feature .mainvisual h2 > span.h2_01 {
-  width: 410px;
+  width: 560px;
   top: 185px;
   left: 0;
-  letter-spacing: 9px;
 }
 
 #feature .mainvisual h2 > span.h2_02 {
@@ -2981,3 +2979,8 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 .confirmWrap{padding: 20px 0; text-align: center;}
 .btn_02 .arrow{display: block; position: absolute; width: 15px; height: 15px; background: url(../images/btn_02_right.png) center no-repeat; top: 24px; margin-top: 0; right: 10px;} 
 #contact .btn_02 #submit{height: 100%; background-size: 100% auto; text-align: center; font-size: 18px;font-weight: bold; color: #fff; display: block; position: relative;}
+.remake {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+}

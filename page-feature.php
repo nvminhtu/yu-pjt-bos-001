@@ -11,13 +11,12 @@
   while ( have_posts() ) : the_post(); ?>
     <div class="mainvisual">
 		<p>
-			<span>面倒な食事管理もせず、<br>独自の最新トレーニング法で、<br>しっかりあなたの体作りをサポート。</span>
+			<span>トレーニング経験ゼロから<br>上級者・アスリートまで<br>あなたの目的に合わせて<br>「短期間で叶える」理想のカラダ</span>
 		</p>
 		<h2 class="inner">
-			<span class="h2_01">あなたの</span>
-			<span class="h2_02"><span>体づくり</span>に</span>
-			<span class="h2_03"><span>戦略</span>を。</span>
-		</h2>
+      <span class="h2_01">はじめよう</span>
+      <span class="h2_02"><span>BOSTY</span></span>
+    </h2>
 	</div>
 	<?php the_content(); ?>
 
