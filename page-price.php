@@ -65,6 +65,7 @@
     <section id="section_01" class="section_01">
       <div class="inner">
         <?php echo $experienced_learning; ?>
+        <?php /* 2 columns */ ?>
         <div class="list_01">
           <ul class="clearfix">
             <li>
@@ -81,12 +82,68 @@
             </li>
           </ul>
         </div>
+        <?php /* end 2 columns */ ?>
+        
+        <?php /* 3 columns */ ?>
+        <div class="list_02">
+          <ul class="clearfix">
+            <li>
+              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span>ビジターコース</h3>
+              <img src="images/price/price_img_02.jpg" alt="ビジターコース" />
+              <p class="lineh_01  heightLine-a9 h_resauto">はじめてのボディメイク<br>まずは体感してみたい貴方へ</p>
+              <table class="table_01  heightLine-a3 h_resauto" cellpadding="0" cellspacing="0">
+                <tr>
+                  <th>入会金</th>
+                  <td>0円</td>
+                </tr>
+                <tr>
+                  <th>1回コース料金</th>
+                  <td>12,000円（税別）50分1回</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース2" /><span>コース</span><span class="number">2</span>ペアコース</h3>
+              <img src="images/price/price_img_04.jpg" alt="ペアコース" />
+              <p class="lineh_01 heightLine-a9 h_resauto">お友達やカップル参加で<br>気軽にボディメイクを体感したい貴方へ</p>
+              <table class="table_01  heightLine-a3 h_resauto">
+                <tr>
+                  <th>入会金</th>
+                  <td>0円</td>
+                </tr>
+                <tr>
+                  <th>1回コース料金</th>
+                  <td>9,000円（税別）50分1回</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース3" /><span>コース</span><span class="number">3</span>カウンセリング付きコース</h3>
+              <img src="http://placehold.it/574x340" alt="カウンセリング付きコース" />
+              <p class="lineh_01  heightLine-a9 h_resauto">トレーニングとカラダ作りについての相談をしたい方へ　気になる部位をトレーニング 20分<br>現在の課題や目標をプロと相談 30分</p>
+              <table class="table_01  heightLine-a3 h_resauto">
+                <tr>
+                  <th>入会金</th>
+                  <td>0円</td>
+                </tr>
+                <tr>
+                  <th>1回コース料金</th>
+                  <td>6,000円（税別）50分1回</td>
+                </tr>
+              </table>
+              <p class="note">※おひとり様1回限りとなります。</p>
+            </li>
+          </ul>
+        </div>
+        <?php /* end 3 columns */ ?>
+
       </div>
     </section>
 
     <section id="section_02" class="section_02">
       <div class="inner">
         <?php echo $eating_learning; ?>
+
         <div class="list_02">
           <ul class="clearfix">
             <li>
@@ -112,9 +169,28 @@
                 <?php echo $two_months_course_content; ?>
               </div>
             </li>
+            <li>
+              <div class="list_02_inner">
+                <h3><img src="images/price/price_img_05.png" alt="コース1" /><span>コース</span><span class="number">1</span>2週間コース</h3>
+                <img src="images/price/price_img_08.jpg" alt="コース1 2週間コース" />
+                <p class="lineh_02 heightLine-a4 h_resauto02">業界初！最速ダイエットプラン！<br>2週間60,000円入会金ナシ！</p>
+                <table class="table_02  heightLine-a5 h_resauto02" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <th>入会金</th>
+                    <td>0円</td>
+                  </tr>
+                  <tr>
+                    <th>コース料金</th>
+                    <td>60,000円<span>（税別）2週間全4回（1回50分）</span></td>
+                  </tr>
+                </table>
+              </div>
+            </li>
           </ul>
         </div>
+
       </div>
+      
     </section>
     <section id="section_03" class="section_03">
       <div class="inner">

@@ -731,6 +731,25 @@
   #index .section_05_02 span {
     font-size: 50px;
   }
+
+  #price .list_02 li, #price .list_02 li:first-child {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    float: none;
+  }
+  #price .list_02 .h_resauto{
+    height: auto!important;
+  }
+  
+  #price .section_02 .list_02 li, #price .section_02 .list_02 li:nth-child(odd), #price .section_02 .list_02 li:nth-child(even), #price .section_02 .list_02 li:first-child{
+    width: 80%;
+    margin-left: 0;
+    margin:  20px auto 0;
+    float: none;
+  }
+
 }
 
 @media screen and (max-width:768px) {
@@ -1102,6 +1121,14 @@
   }
 
   #price .list_01 li, #price .list_01 li:first-child {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    float: none;
+  }
+  
+  #price .list_01 li, #price .list_01 li:first-child{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -1538,6 +1565,10 @@
   }
 
   #price .list_01 li, #price .list_01 li:first-child {
+    width: 100%;
+  }
+
+  #price .list_02 li, #price .list_02 li:first-child {
     width: 100%;
   }
 
