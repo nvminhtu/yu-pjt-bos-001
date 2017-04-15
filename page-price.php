@@ -113,10 +113,10 @@
               </div>
             </li>
           <?php $i++; endwhile; ?>
-          <?php endif; ?>
+          
           </ul>
         </div>
-
+        <?php endif; ?>
       </div>
 
     </section>
@@ -124,22 +124,30 @@
       <div class="inner">
         <?php echo $special_learning; ?>
       </div>
+      <?php
+          $i = 1; 
+          if( have_rows('course_information_sec3') ):
+        ?>
       <div class="inner list_01">
         <ul class="clearfix">
+          <?php while( have_rows('course_information_sec3') ): the_row();
+            $course_title = get_sub_field('course_title');
+            $course_description = get_sub_field('course_description');
+            $course_content = get_sub_field('course_content');
+            $course_picture_id = get_sub_field('course_picture');
+            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col3', "", array( "class" => "img-responsive" ) );
+          ?>
           <li>
-            <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span>筋力アップ 3ヶ月コース</h3>
-            <img src="<?php echo $mustle_up_course_pic; ?>" alt="ビジターコース" />
-            <p class="lineh_03  heightLine-a7 h_resauto"><?php echo $mustle_up_course_description; ?></p>
-            <?php echo $mustle_up_course_content; ?>
+            <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span></span><?php echo $course_title; ?></h3>
+            <?php echo $course_picture_src; ?>
+            <?php echo $course_description; ?>
+            <?php echo $course_content; ?>
           </li>
-          <li>
-            <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース2" /><span>コース</span><span class="number">2</span>美BOSY 3ヶ月コース</h3>
-            <img src="<?php echo $beauty_3months_course_pic; ?>" alt="ペアコース" />
-            <p class="lineh_03  heightLine-a7 h_resauto"><?php echo $beauty_3months_course_description; ?></p>
-            <?php echo $beauty_3months_course_content; ?>
-          </li>
+          
+           <?php $i++; endwhile; ?>
         </ul>
       </div>
+      <?php endif; ?>
     </section>
     <section id="section_04" class="section_04">
       <div class="inner">
