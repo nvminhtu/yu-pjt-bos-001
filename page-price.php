@@ -17,38 +17,6 @@
       $eating_learning = get_field('eating_learning');
       $special_learning = get_field('special_learning');
       // -----------------------------------------------------------------------------
-
-      // 2 Weeks
-      $w_course_pic = get_field('w_course_pic');
-      $w_course_description = get_field('w_course_description');
-      $w_course_description  = str_replace($tags, "", $w_course_description );
-      $w_course_content = get_field('w_course_content');
-
-      // 1 month
-      $one_month_course_pic = get_field('1month_course_pic');
-      $one_month_course_description = get_field('1month_course_description');
-      $one_month_course_description  = str_replace($tags, "", $one_month_course_description );
-      $one_month_course_content = get_field('1month_course_content');
-
-      // 2 months
-      $two_months_course_pic = get_field('2months_course_pic');
-      $two_months_course_description = get_field('2months_course_description');
-      $two_months_course_description  = str_replace($tags, "", $two_months_course_description );
-      $two_months_course_content = get_field('2months_course_content');
-      // -----------------------------------------------------------------------------
-
-      // mustle
-      $mustle_up_course_pic = get_field('mustle_up_course_pic');
-      $mustle_up_course_description = get_field('mustle_up_course_description');
-      $mustle_up_course_description  = str_replace($tags, "",  $mustle_up_course_description );
-      $mustle_up_course_content = get_field('mustle_up_course_content');
-
-      // Beauty Course
-      $beauty_3months_course_pic = get_field('beauty_3months_course_pic');
-      $beauty_3months_course_description = get_field('beauty_3months_course_description');
-      $beauty_3months_course_description  = str_replace($tags, "",  $beauty_3months_course_description );
-      $beauty_3months_course_content = get_field('beauty_3months_course_content');
-
     ?>
     <section id="section_01" class="section_01">
       <div class="inner">
