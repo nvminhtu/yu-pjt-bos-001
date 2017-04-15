@@ -16,18 +16,6 @@
       $experienced_learning = get_field('experienced_learning');
       $eating_learning = get_field('eating_learning');
       $special_learning = get_field('special_learning');
-
-      // Visitor
-      $visitor_course_pic = get_field('visitor_course_pic');
-      $visitor_course_description = get_field('visitor_course_description');
-      $visitor_course_description = str_replace($tags, "", $visitor_course_description);
-      $visitor_course_content = get_field('visitor_course_content');
-
-      // Pair
-      $pair_course_pic = get_field('pair_course_pic');
-      $pair_course_description = get_field('pair_course_description');
-      $pair_course_description = str_replace($tags, "", $pair_course_description);
-      $pair_course_content = get_field('pair_course_content');
       // -----------------------------------------------------------------------------
 
       // 2 Weeks
@@ -65,77 +53,37 @@
     <section id="section_01" class="section_01">
       <div class="inner">
         <?php echo $experienced_learning; ?>
-        <?php /* 2 columns */ ?>
-        <div class="list_01">
+        <?php 
+            $i= 0;
+            $class_row = "";
+            $count_rows = count( get_field('course_information') );
+            if( have_rows('course_information') ): 
+              if($count_rows % 2 == 0 ) { 
+                $class_row = "list_01";
+              } else {
+                $class_row = "list_02";
+              }
+        ?>
+        <div class="<?php echo $class_row; ?>">
           <ul class="clearfix">
-            <li>
-              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span>ビジターコース</h3>
-              <img src="<?php echo $visitor_course_pic; ?>" alt="ビジターコース" />
-              <p class="lineh_01 heightLine-a2 h_resauto"><?php echo $visitor_course_description; ?></p>
-              <?php echo $visitor_course_content; ?>
-            </li>
-            <li>
-              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース2" /><span>コース</span><span class="number">2</span>ペアコース</h3>
-              <img src="<?php echo $pair_course_pic; ?>" alt="ペアコース" />
-              <p class="lineh_01  heightLine-a2 h_resauto"><?php echo $pair_course_description; ?></p>
-              <?php echo $pair_course_content; ?>
-            </li>
+          <?php while( have_rows('course_information') ): the_row();
+            $course_title = get_sub_field('course_title');
+            $course_description = get_sub_field('course_description');
+            $course_content = get_sub_field('course_content');
+            $course_picture_id = get_sub_field('course_picture');
+            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col3', "", array( "class" => "img-responsive" ) );
+          ?>
+          <li>
+            <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span><?php echo $course_title; ?></h3>
+            
+            <?php echo $course_picture_src; ?>
+            <?php echo $course_description; ?>
+            <?php echo $course_content = get_sub_field('course_content'); ?>
+          </li>
+          <?php $i++; endwhile; ?>
           </ul>
         </div>
-        <?php /* end 2 columns */ ?>
-        
-        <?php /* 3 columns */ ?>
-        <div class="list_02">
-          <ul class="clearfix">
-            <li>
-              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span>ビジターコース</h3>
-              <img src="images/price/price_img_02.jpg" alt="ビジターコース" />
-              <p class="lineh_01  heightLine-a9 h_resauto">はじめてのボディメイク<br>まずは体感してみたい貴方へ</p>
-              <table class="table_01  heightLine-a3 h_resauto" cellpadding="0" cellspacing="0">
-                <tr>
-                  <th>入会金</th>
-                  <td>0円</td>
-                </tr>
-                <tr>
-                  <th>1回コース料金</th>
-                  <td>12,000円（税別）50分1回</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース2" /><span>コース</span><span class="number">2</span>ペアコース</h3>
-              <img src="images/price/price_img_04.jpg" alt="ペアコース" />
-              <p class="lineh_01 heightLine-a9 h_resauto">お友達やカップル参加で<br>気軽にボディメイクを体感したい貴方へ</p>
-              <table class="table_01  heightLine-a3 h_resauto">
-                <tr>
-                  <th>入会金</th>
-                  <td>0円</td>
-                </tr>
-                <tr>
-                  <th>1回コース料金</th>
-                  <td>9,000円（税別）50分1回</td>
-                </tr>
-              </table>
-            </li>
-            <li>
-              <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース3" /><span>コース</span><span class="number">3</span>カウンセリング付きコース</h3>
-              <img src="http://placehold.it/574x340" alt="カウンセリング付きコース" />
-              <p class="lineh_01  heightLine-a9 h_resauto">トレーニングとカラダ作りについての相談をしたい方へ　気になる部位をトレーニング 20分<br>現在の課題や目標をプロと相談 30分</p>
-              <table class="table_01  heightLine-a3 h_resauto">
-                <tr>
-                  <th>入会金</th>
-                  <td>0円</td>
-                </tr>
-                <tr>
-                  <th>1回コース料金</th>
-                  <td>6,000円（税別）50分1回</td>
-                </tr>
-              </table>
-              <p class="note">※おひとり様1回限りとなります。</p>
-            </li>
-          </ul>
-        </div>
-        <?php /* end 3 columns */ ?>
+        <?php endif; ?>
 
       </div>
     </section>
@@ -190,7 +138,7 @@
         </div>
 
       </div>
-      
+
     </section>
     <section id="section_03" class="section_03">
       <div class="inner">
@@ -225,3 +173,4 @@
   get_template_part('parts/contact-information');
 ?>
 <?php get_footer(); ?>
+ 
