@@ -39,11 +39,11 @@
             $course_description = get_sub_field('course_description');
             $course_content = get_sub_field('course_content');
             $course_picture_id = get_sub_field('course_picture');
-            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col3', "", array( "class" => "img-responsive" ) );
+            $course_picture_src = wp_get_attachment_image_src( $course_picture_id, 'img_price_col3');
           ?>
           <li>
             <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span><?php echo $course_title; ?></h3>
-            <?php echo $course_picture_src; ?>
+            <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
             <?php echo $course_description; ?>
             <?php echo $course_content; ?>
           </li>
@@ -70,12 +70,12 @@
             $course_description = get_sub_field('course_description');
             $course_content = get_sub_field('course_content');
             $course_picture_id = get_sub_field('course_picture');
-            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col2_sec2', "", array( "class" => "img-responsive" ) );
+            $course_picture_src = wp_get_attachment_image_src( $course_picture_id, 'img_price_col2_sec2');
           ?>
             <li>
               <div class="list_02_inner">
                 <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span><?php echo $course_title; ?></h3>
-                <?php echo $course_picture_src; ?>
+                <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
                 <?php echo $course_description; ?>
                 <?php echo $course_content; ?>
               </div>
@@ -103,11 +103,11 @@
             $course_description = get_sub_field('course_description');
             $course_content = get_sub_field('course_content');
             $course_picture_id = get_sub_field('course_picture');
-            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col2', "", array( "class" => "img-responsive" ) );
+            $course_picture_src = wp_get_attachment_image_src( $course_picture_id, 'img_price_col2');
           ?>
           <li>
             <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span></span><?php echo $course_title; ?></h3>
-            <?php echo $course_picture_src; ?>
+            <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
             <?php echo $course_description; ?>
             <?php echo $course_content; ?>
           </li>
