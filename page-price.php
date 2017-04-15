@@ -102,7 +102,7 @@
             $course_description = get_sub_field('course_description');
             $course_content = get_sub_field('course_content');
             $course_picture_id = get_sub_field('course_picture');
-            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col3', "", array( "class" => "img-responsive" ) );
+            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col2_sec2', "", array( "class" => "img-responsive" ) );
           ?>
             <li>
               <div class="list_02_inner">
@@ -135,7 +135,7 @@
             $course_description = get_sub_field('course_description');
             $course_content = get_sub_field('course_content');
             $course_picture_id = get_sub_field('course_picture');
-            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col3', "", array( "class" => "img-responsive" ) );
+            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col2', "", array( "class" => "img-responsive" ) );
           ?>
           <li>
             <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span></span><?php echo $course_title; ?></h3>
