@@ -22,6 +22,9 @@ add_image_size( 'img_feature_gallery', 668, 449, true );
 add_image_size( 'img_visual_pc', 1212, 501, true );
 add_image_size( 'img_visual_sp', 768, 258, true );
 add_image_size( 'img_visual_tb', 992, 360, true );
+add_image_size( 'img_price_col3', 360, 213, true );
+add_image_size( 'img_price_col2', 574, 340, true );
+add_image_size( 'img_price_col2_sec2', 564, 318, true );
 
 /** -------------- 02.Add included files -------------- **/
 require_once (dirname(__FILE__) . '/includes/add-image-size.php');
