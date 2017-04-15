@@ -75,10 +75,9 @@
           ?>
           <li>
             <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span><?php echo $course_title; ?></h3>
-            
             <?php echo $course_picture_src; ?>
             <?php echo $course_description; ?>
-            <?php echo $course_content = get_sub_field('course_content'); ?>
+            <?php echo $course_content; ?>
           </li>
           <?php $i++; endwhile; ?>
           </ul>
@@ -91,49 +90,30 @@
     <section id="section_02" class="section_02">
       <div class="inner">
         <?php echo $eating_learning; ?>
-
+        
+        <?php
+          $i = 1; 
+          if( have_rows('course_information_section2') ):
+        ?>
         <div class="list_02">
           <ul class="clearfix">
+          <?php while( have_rows('course_information_section2') ): the_row();
+            $course_title = get_sub_field('course_title');
+            $course_description = get_sub_field('course_description');
+            $course_content = get_sub_field('course_content');
+            $course_picture_id = get_sub_field('course_picture');
+            $course_picture_src = wp_get_attachment_image( $course_picture_id, 'img_price_col3', "", array( "class" => "img-responsive" ) );
+          ?>
             <li>
               <div class="list_02_inner">
-                <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース1" /><span>コース</span><span class="number">1</span>2週間コース</h3>
-                <img src="<?php echo $w_course_pic; ?>" alt="コース1 2週間コース" />
-                <p class="lineh_02 heightLine-a4 h_resauto02"><?php echo $w_course_description; ?></p>
-                <?php echo $w_course_content; ?>
+                <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span><?php echo $course_title; ?></h3>
+                <?php echo $course_picture_src; ?>
+                <?php echo $course_description; ?>
+                <?php echo $course_content; ?>
               </div>
             </li>
-            <li>
-              <div class="list_02_inner">
-                <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース2" /><span>コース</span><span class="number">2</span>1ヶ月コース</h3>
-                <img src="<?php echo $one_month_course_pic; ?>" alt="コース2 1ヶ月コース" />
-                <p class="lineh_02 heightLine-a4 h_resauto02"><?php echo $one_month_course_description; ?></p><?php echo $one_month_course_content; ?>
-              </div>
-            </li>
-            <li>
-              <div class="list_02_inner">
-                <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース3" /><span>コース</span><span class="number">3</span>2ヶ月コース</h3>
-                <img src="<?php echo $two_months_course_pic; ?>" alt="コース3 2ヶ月コース" />
-                <p class="lineh_02 heightLine-a4 h_resauto02"><?php echo $two_months_course_description; ?></p>
-                <?php echo $two_months_course_content; ?>
-              </div>
-            </li>
-            <li>
-              <div class="list_02_inner">
-                <h3><img src="images/price/price_img_05.png" alt="コース1" /><span>コース</span><span class="number">1</span>2週間コース</h3>
-                <img src="images/price/price_img_08.jpg" alt="コース1 2週間コース" />
-                <p class="lineh_02 heightLine-a4 h_resauto02">業界初！最速ダイエットプラン！<br>2週間60,000円入会金ナシ！</p>
-                <table class="table_02  heightLine-a5 h_resauto02" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <th>入会金</th>
-                    <td>0円</td>
-                  </tr>
-                  <tr>
-                    <th>コース料金</th>
-                    <td>60,000円<span>（税別）2週間全4回（1回50分）</span></td>
-                  </tr>
-                </table>
-              </div>
-            </li>
+          <?php $i++; endwhile; ?>
+          <?php endif; ?>
           </ul>
         </div>
 
