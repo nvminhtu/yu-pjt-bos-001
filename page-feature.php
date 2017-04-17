@@ -9,15 +9,15 @@
 <?php get_header(); ?>
 <?php // Start the loop.
   while ( have_posts() ) : the_post(); ?>
-    <div class="mainvisual">
-		<p>
-			<span>トレーニング経験ゼロから<br>上級者・アスリートまで<br>あなたの目的に合わせて<br>「短期間で叶える」理想のカラダ</span>
-		</p>
-		<h2 class="inner">
-      <span class="h2_01">はじめよう</span>
-      <span class="h2_02"><span>BOSTY</span></span>
-    </h2>
-	</div>
+    <div class="mainvisual_feature">
+      <h2>
+        <span class="h2_01">はじめよう</span>
+        <span class="h2_02">BOSTY</span>
+      </h2>
+      <p>
+        トレーニング経験ゼロから<br>上級者・アスリートまで<br>あなたの目的に合わせて<br>「短期間で叶える」理想のカラダ
+      </p>
+    </div>
 	<?php the_content(); ?>
 
   <!-- Feature Content -->
