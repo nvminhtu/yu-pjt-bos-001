@@ -1,19 +1,14 @@
 $(document).ready(function() {
-	// $('#instagram').jqinstapics({
-	// 	"user_id": "188981642",
-	// 	"access_token": "188981642.1677ed0.a5a0099658fa4c8da157ca4c3016e89e ",
-	// 	"count": 10
-	// });
 	$('#list_footer').slick({
 	  speed: 300,
 	  slidesToShow: 4,
-	  slidesToScroll: 4,
+	  slidesToScroll: 1,
 	  responsive: [
 		{
 		  breakpoint: 1200,
 		  settings: {
 			slidesToShow: 4,
-			slidesToScroll: 4,
+			slidesToScroll: 1,
 			infinite: true,
 			dots: true
 		  }
@@ -22,14 +17,14 @@ $(document).ready(function() {
 		  breakpoint: 890,
 		  settings: {
 			slidesToShow: 3,
-			slidesToScroll: 3
+			slidesToScroll: 1
 		  }
 		},
 		{
 		  breakpoint: 640,
 		  settings: {
 			slidesToShow: 2,
-			slidesToScroll: 2
+			slidesToScroll: 1
 		  }
 		},
 		{
@@ -44,13 +39,13 @@ $(document).ready(function() {
 	$('.magazin_sl').slick({
 	  speed: 300,
 	  slidesToShow: 4,
-	  slidesToScroll: 4,
+	  slidesToScroll: 1,
 	  responsive: [
 		{
 		  breakpoint: 1200,
 		  settings: {
 			slidesToShow: 4,
-			slidesToScroll: 4,
+			slidesToScroll: 1,
 			infinite: true,
 			dots: true
 		  }
@@ -59,14 +54,14 @@ $(document).ready(function() {
 		  breakpoint: 890,
 		  settings: {
 			slidesToShow: 3,
-			slidesToScroll: 3
+			slidesToScroll: 1
 		  }
 		},
 		{
 		  breakpoint: 640,
 		  settings: {
 			slidesToShow: 2,
-			slidesToScroll: 2
+			slidesToScroll: 1
 		  }
 		},
 		{
@@ -82,13 +77,13 @@ $(document).ready(function() {
 	$('#feature .section_04 .list_03').slick({
 	  speed: 300,
 	  slidesToShow: 3,
-	  slidesToScroll: 3,
+	  slidesToScroll: 1,
 	  responsive: [
 		{
 		  breakpoint: 890,
 		  settings: {
 			slidesToShow: 2,
-			slidesToScroll: 2
+			slidesToScroll: 1
 		  }
 		},
 		{
@@ -147,14 +142,14 @@ $(document).ready(function() {
 	// 	$('#popup_area').fadeIn();
 	// 	$('body').css('overflow', 'hidden');
 	// });
-	
-	
+
+
 	var url_share = window.location.href;
 	$('.share_facebook').attr('href', 'https://www.facebook.com/sharer.php?u='+url_share);
 	$('.share_twitter').attr('href', 'https://twitter.com/intent/tweet?url='+url_share);
 
 	/*TNT CUSTOM JS FOR CONTACT FORM*/
-	
+
 	function checkNotNullInput()
 	{
 		var check = true;
@@ -163,7 +158,7 @@ $(document).ready(function() {
 			{
 				check = false;
 				// console.log("Input text" + index + ' : ' + check);
-			}	
+			}
 		});
 
 		if($('.form_contact textarea.wpcf7-textarea').val() == "")
@@ -173,9 +168,9 @@ $(document).ready(function() {
 
 		return check;
 	}
-	
+
 	setInterval(function(){
-		var checkNotNUll = true; 
+		var checkNotNUll = true;
 		checkNotNull = checkNotNullInput();
 		if(checkNotNull == true)
 		{
@@ -186,10 +181,10 @@ $(document).ready(function() {
 			$('.form_contact input.wpcf7-submit').attr('value','未入力の項目があります');
 		}
 	}, 500);
-	
+
 
 	// $('.form_contact input.wpcf7-text, .form_contact textarea.wpcf7-textarea').blur(function(event) {
-	// 	var checkNotNUll = true; 
+	// 	var checkNotNUll = true;
 	// 	checkNotNull = checkNotNullInput();
 	// 	if(checkNotNull == true)
 	// 	{
@@ -203,7 +198,7 @@ $(document).ready(function() {
 
 
 
-	
+
 	/*END TNT CUSTOM JS FOR CONTACT FORM*/
 
 });
@@ -260,8 +255,6 @@ $(function(){
 			if ((xPageHeight - xPosition) / xPageHeight >= 0) {
 				$("#side").addClass("side--fixed");
 			}else{
-				//$("#side").removeClass("side--fixed");
-				//$("#side").addClass("side--bottom");
 			}
 		}else{
 			$("#side").removeClass("side--fixed");

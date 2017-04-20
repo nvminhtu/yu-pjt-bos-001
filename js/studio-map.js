@@ -26,7 +26,8 @@ $(function() {
       el: idMap,
       lat: latitude,
       lng: longitude,
-      zoom: 17
+      zoom: 17,
+      scrollwheel: false,
     });
 
     mapItem[i].addMarker({
