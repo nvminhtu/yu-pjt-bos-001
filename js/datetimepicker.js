@@ -7,13 +7,6 @@ function check_weekdays(date) {
 	}
     return a ;
 }
-// $(document).on('click touch touchstart', function (e) {
-// 	"use strict";
-// 		if ($(e.target).closest("#popup_time01 ,.box_input_fcal input").length === 0) {
-// 		   $(".popup_time").fadeOut();
-// 		 // alert("touch");
-// 	}
-// });
 
 $("body").click(function(event) {
 	$(".popup_time").fadeOut();
@@ -49,14 +42,6 @@ $(document).ready(function() {
 /* script date col01 */
 $(function() {
 "use strict";
-/*       var weekday=new Array();
-            weekday['Mon']="Monday";
-            weekday['Tue']="Tuesday";
-            weekday['Wed']="Wednesday";
-            weekday['Thu']="Thursday";
-            weekday['Fri']="Friday";
-            weekday['Sat']="Saturday";
-            weekday['Sun']="Sunday";*/
 	 
     $("#col01_datepicker" ).datepicker({ 
 		minDate: 0,
