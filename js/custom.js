@@ -74,12 +74,13 @@ $(document).ready(function() {
 	  ]
 	});
 
+
+
 	$('#feature .section_04 .list_03').slick({
 	  speed: 300,
 	  slidesToShow: 3,
 	  slidesToScroll: 1,
-	  responsive: [
-		{
+	  responsive: [{
 		  breakpoint: 890,
 		  settings: {
 			slidesToShow: 2,
@@ -92,8 +93,55 @@ $(document).ready(function() {
 			slidesToShow: 1,
 			slidesToScroll: 1
 		  }
-		}
-	  ]
+		}]
+	});
+	// create event for slider
+	// $('#feature .section_04 .list_03').on('reInit', function(slick){
+	//
+	// });
+	$('#feature .section_04 .list_03').on('beforeChange', function(event, slick, currentSlide){
+		console.log('dm');
+		var map, latitude, longitude;
+		var viewMapLarger;
+		var idMap = '.gmap';
+		var idPlaceName, idPlaceAddress;
+		var numberMap = $('#studio-list').data('number');
+		console.log(nextSlide);
+		var mapItem = {};
+
+		for(var i = 0 ; i < numberMap; i++) {
+			idMap = '.gmap_' + i;
+			idPlaceName = '.place_name_' + i;
+			idPlaceAddress = '.place_address_' + i;
+
+			latitude = $(idMap).data('lat');
+			longitude = $(idMap).data('long');
+			var placeName = $(idPlaceName).data('content');
+			var placeAddress = $(idPlaceAddress).data('content');
+			viewMapLarger = 'https://www.google.com/maps/place/' + latitude + ',' + longitude;
+			var html = '<div class="place-name">'+ placeName +'</div>'+
+										'<div class="place-address">'+ placeAddress +'</div>'
+										 + '<div class="place-view"><a target="_blank" href="'+ viewMapLarger +'">Google Mapで見る</a></div>';
+
+			// init map
+			mapItem[i] = new GMaps({
+				el: idMap,
+				lat: latitude,
+				lng: longitude,
+				zoom: 17,
+				scrollwheel: false,
+			});
+
+			mapItem[i].addMarker({
+					lat: latitude,
+					lng: longitude,
+					infoWindow: {
+						content: html
+					}
+			});
+
+
+		} // end loop
 	});
 
 	$('.h_share').click(function(event) {

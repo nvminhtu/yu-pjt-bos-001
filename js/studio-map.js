@@ -1,17 +1,17 @@
 $(function() {
   var map, latitude, longitude;
   var viewMapLarger;
-  var idMap = '#gmap';
+  var idMap = '.gmap';
   var idPlaceName, idPlaceAddress;
   var numberMap = $('#studio-list').data('number');
 
   var mapItem = {};
 
   for(var i = 0 ; i < numberMap; i++) {
-    idMap = '#gmap_' + i;
-    idPlaceName = '#place_name_' + i;
-    idPlaceAddress = '#place_address_' + i;
-    //console.log(idMapArea);
+    idMap = '.gmap_' + i;
+    idPlaceName = '.place_name_' + i;
+    idPlaceAddress = '.place_address_' + i;
+
     latitude = $(idMap).data('lat');
     longitude = $(idMap).data('long');
     var placeName = $(idPlaceName).data('content');

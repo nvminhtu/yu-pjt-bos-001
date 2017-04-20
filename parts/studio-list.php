@@ -42,9 +42,9 @@
         <h3><?php the_title(); ?></h3>
         <div class="map">
           <div class="maparea">
-            <div id="gmap_<?php echo $i; ?>" data-lat="<?php echo $latitude; ?>" data-long="<?php echo $longitude; ?>" style="with:100%; height:204px;border:0;"></div>
-            <span id="place_name_<?php echo $i; ?>" data-content="<?php echo $place_name; ?>"></span>
-            <span id="place_address_<?php echo $i; ?>" data-content="<?php echo $place_address; ?>"></span>
+            <div class="gmap_<?php echo $i; ?>" data-lat="<?php echo $latitude; ?>" data-long="<?php echo $longitude; ?>" style="with:100%; height:204px;border:0;"></div>
+            <span class="place_name_<?php echo $i; ?>" data-content="<?php echo $place_name; ?>"></span>
+            <span class="place_address_<?php echo $i; ?>" data-content="<?php echo $place_address; ?>"></span>
           </div>
           <dl class="clearfix">
             <dt>住所</dt>
