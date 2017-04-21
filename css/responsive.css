@@ -761,7 +761,7 @@
   #price .list_02 .h_resauto{
     height: auto!important;
   }
-  
+
   #price .section_02 .list_02 li, #price .section_02 .list_02 li:nth-child(odd), #price .section_02 .list_02 li:nth-child(even), #price .section_02 .list_02 li:first-child{
     width: 80%;
     margin-left: 0;
@@ -784,6 +784,9 @@
 }
 
 @media screen and (max-width:768px) {
+  .map_footer_area {
+    width: 100%;
+  }
   .h_resauto02 {
     height: auto!important;
   }
@@ -839,8 +842,8 @@
               background-size: auto 90%;
 
   }
-  
- .main_pic { 
+
+ .main_pic {
     height: 250px;
       -webkit-background-size: auto 90%;
          -moz-background-size: auto 90%;
@@ -1175,7 +1178,7 @@
     margin-bottom: 30px;
     float: none;
   }
-  
+
   #price .list_01 li, #price .list_01 li:first-child{
     width: 80%;
     margin-left: auto;

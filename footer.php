@@ -33,7 +33,11 @@
       <p class="btn_02 index_img_13"><a href="<?php bloginfo('siteurl'); ?>/contact/"><img src="<?php bloginfo('template_url'); ?>/images/index_img_13.png">問い合わせはこちら</a></p><br>
     </div>
     <div class="f_column_04">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2725.6407232018696!2d139.74793133241303!3d35.668350020053715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b924f7c38d5:0xa54fe3fcd884da49!2z5pel5pysLCDjgJIxMDUtMDAwMSDmnbHkuqzpg73muK_ljLromY7jg47ploDvvJHkuIHnm67vvJHvvJbiiJLvvJHvvJEg5qGc5bed44Ki44ON44OD44Kv44K5!5e0!3m2!1sja!2s!4v1487078167072" width="100%" height="204" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="map_footer_area">
+          <div id="map_footer" data-lat="35.668235" data-long="139.749057" style="with:100%; height:204px;border:0;"></div>
+          <span class="map_place_name" data-content="桜川アネックス"></span>
+          <span class="map_place_address" data-content=""></span>
+      </div>
     </div>
   </div>
   <div class="copyright">© BOSTY</div>
@@ -41,13 +45,13 @@
 
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/page-scroller.js" type="text/javascript"></script>
 <?php if(is_front_page()||is_home()) { ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jqinstapics.js" type="text/javascript"></script>
 <?php } ?>
 <?php if(is_page('studio') || is_page('feature')) { ?>
-  <script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/studio-map.js" type="text/javascript"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox.min.js" type="text/javascript"></script>
 <?php } ?>
@@ -57,18 +61,15 @@
 <script src="<?php bloginfo('template_url'); ?>/js/slick.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/heightLine.js" type="text/javascript"></script>
 <?php if (is_page( 'contact' )): ?>
-  <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.ui.datepicker-ja.min.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/datetimepicker.js"></script>
-  <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/daterangepicker.js"></script> -->
-  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" /> -->
 <?php endif ?>
 <script src="<?php bloginfo('template_url'); ?>/js/custom.js" type="text/javascript"></script>
-
+<script src="<?php bloginfo('template_url'); ?>/js/map-footer.js" type="text/javascript"></script>
 <?php if (is_page('confirmation')) { ?>
 
-<?php 
+<?php
     $checkConfirm = $_COOKIE["cf7msm_posted_data"];
     if($checkConfirm == "")
     {
@@ -81,7 +82,7 @@
     }
  ?>
 
-  
+
   <?php } ?>
 
 <?php if(is_page('confirmation')) { ?>
@@ -90,7 +91,7 @@
     jQuery(document).ready(function($) {
       $('#btn_close_popup_area').click(function(e) {
           window.location = "<?php echo home_url(); ?>/contact";
-        });  
+        });
     });
   </script>
 <?php } ?>
