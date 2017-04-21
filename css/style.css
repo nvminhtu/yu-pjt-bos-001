@@ -306,7 +306,7 @@ body {
 }
 
 .com_mainvisual {
-  background: url(../images/under_h2_t.jpg) bottom center no-repeat;
+  background: url(../images/mainvisual_pc-2.jpg) bottom center no-repeat;
   background-size:cover!important;
   margin-top:50px;
 }
@@ -3113,5 +3113,7 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 
 .sm_price
 {
-	font-size:16px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #363636;
 }
