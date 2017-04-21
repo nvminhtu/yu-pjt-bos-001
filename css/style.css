@@ -305,9 +305,14 @@ body {
   display: table;
 }
 
+.com_mainvisual {
+  background: url(../images/under_h2_t.jpg) bottom center no-repeat;
+  background-size:cover;
+  margin-top:50px;
+}
+
 .com_mainvisual h2 {
   height: 500px;
-  background: url(../images/mainvisual_pc.jpg) bottom center no-repeat;
   position: relative;
 }
 
@@ -2135,9 +2140,6 @@ body {
   box-sizing: border-box;
   font-size: 12px;
 }
-#bloglist .news_article .news_no.dateinfo {
-  width: 100%;
-}
 
 #bloglist .nav01 {
   border: 3px solid #dadada;
@@ -2972,7 +2974,7 @@ body#confirmation .menu-top-menu-container{}
 body#confirmation .menu-top-menu-container ul{margin-bottom:1px;}
 body#confirmation #submitconfirm{background: url(../images/btn-form.png); width: 300px; height: 60px; line-height: 60px; padding: 0; cursor: pointer; background-size: 100% auto; text-align: center; font-size: 18px; font-weight: bold; color: #fff; display: inline-block; position: relative;}
 .confirmWrap{padding: 20px 0; text-align: center;}
-.btn_02 .arrow{display: block; position: absolute; width: 15px; height: 15px; background: url(../images/btn_02_right.png) center no-repeat; top: 24px; margin-top: 0; right: 10px;}
+.btn_02 .arrow{display: block; position: absolute; width: 15px; height: 15px; background: url(../images/btn_02_right.png) center no-repeat; top: 24px; margin-top: 0; right: 10px;} 
 #contact .btn_02 #submit{height: 100%; background-size: 100% auto; text-align: center; font-size: 18px;font-weight: bold; color: #fff; display: block; position: relative;}
 .remake {
   margin: 10px 0;
@@ -3107,9 +3109,4 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 .mainvisual_feature p{
   font-size: 36px;
   font-weight: bold;
-}
-.map_footer_area {
-  width: 300px;
-  height: 204px;
-  position: relative;
 }
