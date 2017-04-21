@@ -99,19 +99,19 @@ function get_custom_page_slug() {
   //check what type of page?
   if(is_front_page()||is_home()) {
     $id_page = "index";
-  } elseif(is_page() && !is_page('blog')) {
+  } elseif(is_page() && !is_page('blog') && !is_page('news')) {
     $id_page = $current_page_slug;
   } elseif(is_page() && is_page('blog')) {
     $id_page = 'bloglist';
-  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_post_type_archive('news')||is_singular('news')||is_search()||is_tag()) {
+  } elseif(is_page() && is_page('news')) {
+    $id_page = 'bloglist';
+  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_search()||is_tag()) {
     $id_page = "bloglist";
   } elseif (is_singular('qa') || is_tax( 'qacat' ) || is_post_type_archive('qa')) {
     $id_page = "qa";
-  } elseif (is_search()&&$post_type=='qa') {
+  } elseif (is_search() && $post_type=='qa') {
     $id_page = "qa";
-  } else {
-
-  }
+  } else { }
   return $id_page;
 }
 

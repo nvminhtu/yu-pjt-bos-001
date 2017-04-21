@@ -2135,6 +2135,9 @@ body {
   box-sizing: border-box;
   font-size: 12px;
 }
+#bloglist .news_article .news_no.dateinfo {
+  width: 100%;
+}
 
 #bloglist .nav01 {
   border: 3px solid #dadada;

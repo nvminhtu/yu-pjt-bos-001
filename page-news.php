@@ -1,12 +1,13 @@
 <?php
 /**
- * Archive News
- * Bosty theme
- */
-
-get_header(); ?>
+ * Template Name: News
+ * @package WordPress
+ * @subpackage Bosty
+ * @since Bosty
+ * Content will be gotten from admin editor
+ */ ?>
+<?php get_header(); ?>
 <div class="main">
-
   <div class="inner clearfix">
     <div class="left_content">
         <?php get_template_part('parts/breadcrumbs'); ?>
@@ -47,12 +48,7 @@ get_header(); ?>
           <?php } ?>
         </p>
         <div class="bigcontent">
-          <p class="userinfo">
-            <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
-            <span><?php echo $fullname; ?></span>
-          </p>
           <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-          <p>
             <?php
                 //show content limited
                $content_display = mb_substr(wp_strip_all_tags( get_the_content()), 0, 80 , 'UTF-8');
@@ -66,10 +62,8 @@ get_header(); ?>
                  echo $content_display;
                }
             ?>
-          </p>
-          <p class="dateinfo">
+          <p class="news_no dateinfo">
             <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
-            <span class="like"><?php if( function_exists('zilla_likes') ) zilla_likes(); ?></span>
           </p>
         </div>
       </div>
@@ -86,13 +80,8 @@ get_header(); ?>
             <dd>
               <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
               <div class="clearfix">
-                <p class="userinfo">
-                  <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
-                  <span><?php echo $fullname; ?></span>
-                </p>
-                <p class="dateinfo">
+                <p class="news_no dateinfo">
                   <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
-                  <span class="like"><?php if( function_exists('zilla_likes') ) zilla_likes(); ?></span>
                 </p>
               </div>
             </dd>
@@ -112,10 +101,9 @@ get_header(); ?>
     <?php get_sidebar(); ?>
   </div>
 </div>
-
 <?php
-      // common area for all sub pages and posts
-      get_template_part('parts/list-pages');
-      get_template_part('parts/contact-information');
+  // common area for all sub pages and posts
+  get_template_part('parts/list-pages');
+  get_template_part('parts/contact-information');
 ?>
 <?php get_footer(); ?>
