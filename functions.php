@@ -19,7 +19,7 @@ add_image_size( 'img_related_blog_large', 376, 197, true );
 add_image_size( 'img_related_blog_small', 230, 135, true );
 add_image_size( 'img_user_avatar_small', 40, 40, true );
 add_image_size( 'img_feature_gallery', 668, 449, true );
-add_image_size( 'img_visual_pc', 1212, 501, true );
+add_image_size( 'img_visual_pc', 2000, 501, true );
 add_image_size( 'img_visual_sp', 768, 258, true );
 add_image_size( 'img_visual_tb', 992, 360, true );
 add_image_size( 'img_price_col3', 360, 213, true );
