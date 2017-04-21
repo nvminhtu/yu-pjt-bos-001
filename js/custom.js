@@ -78,6 +78,7 @@ $(document).ready(function() {
 
 	$('#feature .section_04 .list_03').slick({
 	  speed: 300,
+		infinite: false,
 	  slidesToShow: 3,
 	  slidesToScroll: 1,
 	  responsive: [{
@@ -95,6 +96,7 @@ $(document).ready(function() {
 		  }
 		}]
 	});
+<<<<<<< HEAD
 	// create event for slider
 	// $('#feature .section_04 .list_03').on('reInit', function(slick){
 	//
@@ -143,6 +145,8 @@ $(document).ready(function() {
 			});
 
 	});
+=======
+>>>>>>> cd000b2cadc5a9cacc5a768d2402141a78c7f0d1
 
 	$('.h_share').click(function(event) {
 		$('.header .share_box').slideToggle();
