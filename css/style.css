@@ -307,7 +307,7 @@ body {
 
 .com_mainvisual {
   background: url(../images/under_h2_t.jpg) bottom center no-repeat;
-  background-size:cover;
+  background-size:cover!important;
   margin-top:50px;
 }
 

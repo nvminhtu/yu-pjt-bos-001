@@ -13,7 +13,7 @@
   ];
   $pages = get_posts( $args );
 
-  foreach ( $pages as $page ) 
+  foreach ( $pages as $page )
     $page_qa_id = $page;
 
   $img_visual_pc = wp_get_attachment_image_src(get_post_thumbnail_id($page_qa_id),'img_visual_pc');
@@ -28,20 +28,23 @@
 ?>
 <style>
   /* pc */
-  .com_mainvisual h2 {
-    background: url('<?php echo $img_visual_pc_src; ?>') bottom center no-repeat!important; 
-  } 
+  .com_mainvisual {
+    background: url('<?php echo $img_visual_pc_src; ?>') bottom center no-repeat!important;
+    background-size: cover!important;
+  }
   /* tablet*/
   @media screen and (max-width: 1200px) {
-    .com_mainvisual h2 {
+    .com_mainvisual {
       background: url('<?php echo $img_visual_tb_src; ?>') bottom center no-repeat!important;
-    } 
+      background-size: cover!important;
+    }
   }
   /* mobile */
   @media screen and (max-width: 768px) {
-    .com_mainvisual h2 {
-      background: url('<?php echo $img_visual_sp_src; ?>') bottom center no-repeat!important; 
-    } 
+    .com_mainvisual {
+      background: url('<?php echo $img_visual_sp_src; ?>') bottom center no-repeat!important;
+      background-size: cover!important;
+    }
   }
 </style>
 <div class="com_mainvisual">
@@ -49,7 +52,7 @@
     <h2 id="title-background" data-pc="<?php echo $page_main_visual_pc; ?>" data-tb="<?php echo $page_main_visual_tablet; ?>" data-sp="<?php echo $page_main_visual_sp; ?>"><span>   <?php
           if(is_single()||is_page()) {
             the_title();
-          } 
+          }
           elseif(is_archive()) {
             if(is_post_type_archive('qa')) {
               echo "QA";

@@ -19,20 +19,20 @@
 	/* pc */
 	.com_mainvisual {
 		background: url('<?php echo $img_visual_pc_src; ?>') bottom center no-repeat!important;
-    background-size: cover;
+    background-size: cover!important;
 	}
 	/* tablet*/
 	@media screen and (max-width: 1200px) {
 		.com_mainvisual {
 			background: url('<?php echo $img_visual_tb_src; ?>') bottom center no-repeat!important;
-      background-size: cover;
+      background-size: cover!important;
 		}
 	}
 	/* mobile */
 	@media screen and (max-width: 768px) {
 		.com_mainvisual {
 			background: url('<?php echo $img_visual_sp_src; ?>') bottom center no-repeat!important;
-      background-size: cover;
+      background-size: cover!important;
 		}
 	}
 </style>
