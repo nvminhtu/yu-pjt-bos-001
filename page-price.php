@@ -21,12 +21,12 @@
     <section id="section_01" class="section_01">
       <div class="inner">
         <?php echo $experienced_learning; ?>
-        <?php 
-            $i= 0;
+        <?php
+            $i= 1;
             $class_row = "";
             $count_rows = count( get_field('course_information') );
-            if( have_rows('course_information') ): 
-              if($count_rows % 2 == 0 ) { 
+            if( have_rows('course_information') ):
+              if($count_rows % 2 == 0 ) {
                 $class_row = "list_01";
               } else {
                 $class_row = "list_02";
@@ -42,7 +42,7 @@
             $course_picture_src = wp_get_attachment_image_src( $course_picture_id, 'img_price_col3');
           ?>
           <li>
-            <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number">1</span><?php echo $course_title; ?></h3>
+            <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number"><?php echo $i; ?></span><?php echo $course_title; ?></h3>
             <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
             <?php echo $course_description; ?>
             <?php echo $course_content; ?>
@@ -58,9 +58,9 @@
     <section id="section_02" class="section_02">
       <div class="inner">
         <?php echo $eating_learning; ?>
-        
+
         <?php
-          $i = 1; 
+          $i = 1;
           if( have_rows('course_information_section2') ):
         ?>
         <div class="list_02">
@@ -81,7 +81,7 @@
               </div>
             </li>
           <?php $i++; endwhile; ?>
-          
+
           </ul>
         </div>
         <?php endif; ?>
@@ -93,7 +93,7 @@
         <?php echo $special_learning; ?>
       </div>
       <?php
-          $i = 1; 
+          $i = 1;
           if( have_rows('course_information_sec3') ):
         ?>
       <div class="inner list_01">
@@ -111,7 +111,7 @@
             <?php echo $course_description; ?>
             <?php echo $course_content; ?>
           </li>
-          
+
            <?php $i++; endwhile; ?>
         </ul>
       </div>
@@ -129,4 +129,3 @@
   get_template_part('parts/contact-information');
 ?>
 <?php get_footer(); ?>
- 
