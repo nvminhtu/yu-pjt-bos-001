@@ -110,7 +110,7 @@ $(document).ready(function() {
 		var idPlaceName, idPlaceAddress;
 		var numberMap = $('#studio-list').data('number');
 		console.log(nextSlide);
-		
+
 
 			idMap = '.gmap_' + nextSlide;
 			idPlaceName = '.place_name_' + nextSlide;
