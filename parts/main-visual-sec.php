@@ -17,20 +17,23 @@
 ?>
 <style>
 	/* pc */
-	.com_mainvisual h2 {
-		background: url('<?php echo $img_visual_pc_src; ?>') bottom center no-repeat!important;	
-	} 
+	.com_mainvisual {
+		background: url('<?php echo $img_visual_pc_src; ?>') bottom center no-repeat!important;
+    background-size: cover;
+	}
 	/* tablet*/
 	@media screen and (max-width: 1200px) {
-		.com_mainvisual h2 {
+		.com_mainvisual {
 			background: url('<?php echo $img_visual_tb_src; ?>') bottom center no-repeat!important;
-		} 
+      background-size: cover;
+		}
 	}
 	/* mobile */
 	@media screen and (max-width: 768px) {
-		.com_mainvisual h2 {
-			background: url('<?php echo $img_visual_sp_src; ?>') bottom center no-repeat!important;	
-		} 
+		.com_mainvisual {
+			background: url('<?php echo $img_visual_sp_src; ?>') bottom center no-repeat!important;
+      background-size: cover;
+		}
 	}
 </style>
 <div class="com_mainvisual">

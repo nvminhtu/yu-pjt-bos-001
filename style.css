@@ -21,6 +21,11 @@ Text Domain: Bosty
   }
 }
 
+@media screen and (max-width:768px) {
+ .map_footer_area {
+   width: 100%;
+ }
+}
 
 #bloglist .news_article .news_no.dateinfo {
   width: 100%;

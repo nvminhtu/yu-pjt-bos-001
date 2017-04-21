@@ -3110,3 +3110,8 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
   font-size: 36px;
   font-weight: bold;
 }
+
+.sm_price
+{
+	font-size:16px;
+}
