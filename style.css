@@ -36,3 +36,10 @@ Text Domain: Bosty
   height: 204px;
   position: relative;
 }
+
+#instagram .slick-slide {
+	background: #F5F5E9;
+}
+#instagram .slick-slide img {
+	margin: 0 auto;
+}

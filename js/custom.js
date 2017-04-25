@@ -96,57 +96,6 @@ $(document).ready(function() {
 		  }
 		}]
 	});
-<<<<<<< HEAD
-	// create event for slider
-	// $('#feature .section_04 .list_03').on('reInit', function(slick){
-	//
-	// });
-
-	var mapItem2 = {};
-
-	$('#feature .section_04 .list_03').on('beforeChange', function(event, slick, currentSlide,nextSlide){
-		console.log('dm');
-		var map, latitude, longitude;
-		var viewMapLarger;
-		var idMap = '.gmap';
-		var idPlaceName, idPlaceAddress;
-		var numberMap = $('#studio-list').data('number');
-		console.log(nextSlide);
-
-
-			idMap = '.gmap_' + nextSlide;
-			idPlaceName = '.place_name_' + nextSlide;
-			idPlaceAddress = '.place_address_' + nextSlide;
-
-			latitude = $(idMap).data('lat');
-			longitude = $(idMap).data('long');
-			var placeName = $(idPlaceName).data('content');
-			var placeAddress = $(idPlaceAddress).data('content');
-			viewMapLarger = 'https://www.google.com/maps/place/' + latitude + ',' + longitude;
-			var html = '<div class="place-name">'+ placeName +'</div>'+
-										'<div class="place-address">'+ placeAddress +'</div>'
-										 + '<div class="place-view"><a target="_blank" href="'+ viewMapLarger +'">Google Mapで見る</a></div>';
-
-			// init map
-			mapItem2[nextSlide] = new GMaps({
-				el: idMap,
-				lat: latitude,
-				lng: longitude,
-				zoom: 17,
-				scrollwheel: false,
-			});
-
-			mapItem2[nextSlide].addMarker({
-					lat: latitude,
-					lng: longitude,
-					infoWindow: {
-						content: html
-					}
-			});
-
-	});
-=======
->>>>>>> cd000b2cadc5a9cacc5a768d2402141a78c7f0d1
 
 	$('.h_share').click(function(event) {
 		$('.header .share_box').slideToggle();

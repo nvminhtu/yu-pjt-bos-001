@@ -67,6 +67,9 @@
 <?php endif ?>
 <script src="<?php bloginfo('template_url'); ?>/js/custom.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/map-footer.js" type="text/javascript"></script>
+<?php if (is_home() || is_front_page()) { ?>
+<script src="<?php bloginfo('template_url'); ?>/js/instagram.js" type="text/javascript"></script>
+<?php } ?>
 <?php if (is_page('confirmation')) { ?>
 
 <?php
