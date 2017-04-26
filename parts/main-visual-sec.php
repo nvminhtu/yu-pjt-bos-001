@@ -24,14 +24,14 @@
 	/* tablet*/
 	@media screen and (max-width: 1200px) {
 		.com_mainvisual {
-			background: url('<?php echo $img_visual_tb_src; ?>') no-repeat!important;
+			background: url('<?php echo $img_visual_tb_src; ?>') bottom center  no-repeat!important;
       background-size: cover!important;
 		}
 	}
 	/* mobile */
 	@media screen and (max-width: 768px) {
 		.com_mainvisual {
-			background: url('<?php echo $img_visual_sp_src; ?>') no-repeat!important;
+			background: url('<?php echo $img_visual_sp_src; ?>')  bottom center no-repeat!important;
       background-size: cover!important;
 		}
 	}

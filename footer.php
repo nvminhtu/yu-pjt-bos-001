@@ -45,7 +45,7 @@
 
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-<script src="https://maps.google.com/maps/api/js?sensor=true&libraries=geometry&v=3.22&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
+<script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/page-scroller.js" type="text/javascript"></script>
 <?php if(is_front_page()||is_home()) { ?>
