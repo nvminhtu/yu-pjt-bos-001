@@ -10,10 +10,10 @@ function prefix_register_all() {
 		'studio',
 		array(
 			'labels'        => array(
-				'name'               => __('スタジ', 'custom_text_posttype'),
-				'singular_name'      => __('スタジ', 'custom_text_posttype'),
-				'menu_name'          => __('スタジ', 'custom_text_posttype'),
-				'name_admin_bar'     => __('スタジ', 'custom_text_posttype'),
+				'name'               => __('スタジオ', 'custom_text_posttype'),
+				'singular_name'      => __('スタジオ', 'custom_text_posttype'),
+				'menu_name'          => __('スタジオ', 'custom_text_posttype'),
+				'name_admin_bar'     => __('スタジオ', 'custom_text_posttype'),
 				'all_items'          => __('All Items', 'custom_text_posttype'),
 				'add_new'            => _x('Add New', 'studio', 'custom_text_posttype'),
 				'add_new_item'       => __('Add New Item', 'custom_text_posttype'),
@@ -79,7 +79,7 @@ function prefix_register_all() {
 				'custom-fields'
 			),
 			'taxonomies'    => array(),
-			'has_archive'   => true,
+			'has_archive'   => false,
 			'menu_icon'   => 'dashicons-welcome-write-blog',
 			'rewrite'       => array(
 				'slug' => 'qa',

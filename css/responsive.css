@@ -1654,7 +1654,7 @@
   }
 
   #price .section_02 .list_02 li, #price .section_02 .list_02 li:first-child {
-    width: 100%;
+    width: 100%!important;
   }
 
   #price .section_01 {
