@@ -219,6 +219,7 @@
     width: 68%;
   }
 
+
   #index .section_04_left {
     width: 58%;
   }
@@ -308,6 +309,7 @@
   #price .mainvisual h2 span, #contact .mainvisual h2 span {
     left: 5%;
   }
+  
 
   .popup_area_inner {
     width: 96%;
@@ -962,9 +964,7 @@
     overflow-x: scroll;
   }
 
-  #price .scroll_table .table_03 {
-    width: 1000px;
-  }
+
 
   #feature .section_04 {
     background: none;
@@ -1101,6 +1101,18 @@
   .mainvisual_feature p{
     font-size: 18px;
   }
+  
+  
+
+
+#price .section_04 .table_03 th
+{
+	font-size:20px;
+}
+
+#price .section_04 .table_03 td span {
+    font-size:20px;
+}
 }
 
 @media screen and (min-width: 641px) {
@@ -1854,6 +1866,34 @@
   .mainvisual_feature p{
     font-size: 12px;
   }
+  
+  
+
+
+
+	
+	
+	  #price .scroll_table .table_03 {
+    width: 460px;
+  }
+  
+  #price .section_04 .table_03 th
+  {
+	  width:auto;
+  }
+}
+
+@media screen and (max-width: 479px){
+    #price .arrow_des
+{
+	background:url(../images/price/arrow_right.png) no-repeat right center;
+	font-size:14px;
+	text-align:right;
+	display:block;
+	padding:0 25px 5px 0;
+	font-weight:bold;
+}
+
 }
 
 @media screen and (max-width: 420px) {
