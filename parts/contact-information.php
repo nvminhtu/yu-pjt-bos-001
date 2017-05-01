@@ -4,6 +4,7 @@
   $contact_link     = get_field('contact_link','option');
   $contact_description = get_field('contact_description','option');
   $contact_phone = get_field('contact_phone','option');
+  $contact_note = get_field('contact_note','option');
 ?>
 <section id="section_07" class="footer_section_02">
   <div class="inner">
@@ -15,6 +16,11 @@
   <div class="inner"> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_18.png" alt="お電話からでも、お気軽にご相談ください。" class="pc" /> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_18_tb.png" alt="お電話からでも、お気軽にご相談ください。" class="tablet" /> <img src="<?php bloginfo('template_url'); ?>/images/feature/feature_img_18_tb.png" alt="お電話からでも、お気軽にご相談ください。" class="sp" />
     <div class="footer_tel"> <?php echo $contact_description; ?>
       <a href="tel:<?php echo $contact_phone; ?>"><?php echo $contact_phone; ?></a>
+      <?php if($contact_note) {
+          echo $contact_note;
+      } else { ?>
+        <p class="remake">＊大変混みあっている為、折返しのご対応となる場合がございます。</p>
+      <?php }?>
     </div>
   </div>
 </section>

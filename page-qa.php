@@ -13,7 +13,7 @@
 <div class="main">
   <div class="search_area">
     <div class="inner search_inner">
-      <p class="search_tit">テキストが入ります。テキストが入ります。</p>
+      <p class="search_tit">質問に関するキーワードを入力ください</p>
       <form action="<?php echo site_url('/'); ?>" method="get">
         <input type="text" name="s" class="text" placeholder="キーワードで検索">
         <input type="hidden" name="post_type" value="qa" />
@@ -25,7 +25,7 @@
 <div class="inner clearfix">
 <!-- left_content -->
 <div class="left_content">
-<h3 class="h3_ttl">タイトルが入ります。タイトルが入ります。</h3>
+<h3 class="h3_ttl">BOSTYに寄せられる質問</h3>
 
 <div class="qa_sec">
 <?php

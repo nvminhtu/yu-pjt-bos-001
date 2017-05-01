@@ -52,10 +52,10 @@ function prefix_register_all() {
 		'qa',
 		array(
 			'labels'        => array(
-				'name'               => __('QAs', 'custom_text_posttype'),
-				'singular_name'      => __('QA', 'custom_text_posttype'),
-				'menu_name'          => __('QA', 'custom_text_posttype'),
-				'name_admin_bar'     => __('QA', 'custom_text_posttype'),
+				'name'               => __('よくあるご質問', 'custom_text_posttype'),
+				'singular_name'      => __('よくあるご質問', 'custom_text_posttype'),
+				'menu_name'          => __('よくあるご質問', 'custom_text_posttype'),
+				'name_admin_bar'     => __('よくあるご質問', 'custom_text_posttype'),
 				'all_items'          => __('All Items', 'custom_text_posttype'),
 				'add_new'            => _x('Add New', 'studio', 'custom_text_posttype'),
 				'add_new_item'       => __('Add New Item', 'custom_text_posttype'),
