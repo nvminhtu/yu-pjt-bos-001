@@ -46,3 +46,10 @@ Text Domain: Bosty
 #price .list_02 li:nth-child(4n+4) {
   margin-left: 0%;
 }
+#bloglist .nav01 .small_des {
+  font-size: 20px;
+  font-weight: bold;
+}
+#bloglist .nav01 li a {
+  font-weight: normal;
+}
