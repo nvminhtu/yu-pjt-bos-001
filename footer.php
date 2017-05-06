@@ -70,6 +70,17 @@
 <?php if (is_home() || is_front_page()) { ?>
 <script src="<?php bloginfo('template_url'); ?>/js/instagram.js" type="text/javascript"></script>
 <?php } ?>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.equalColumn.js" type="text/javascript"></script>
+<?php if (is_page('price')) { ?>
+<script type="text/javascript">
+  $( document ).ready(function() {
+     var items_per_rows = $('#dataprice_3').data('rows');
+     $('#dataprice_3').equalColumn({
+         rows: items_per_rows
+     });
+   });
+</script>
+<?php } ?>
 <?php if (is_page('confirmation')) { ?>
 
 <?php

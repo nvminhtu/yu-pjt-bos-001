@@ -43,3 +43,6 @@ Text Domain: Bosty
 #instagram .slick-slide img {
 	margin: 0 auto;
 }
+#price .list_02 li:nth-child(4n+4) {
+  margin-left: 0%;
+}

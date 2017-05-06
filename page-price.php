@@ -93,7 +93,14 @@
         <p class="text_01"><?php echo strip_tags($eating_learning_content,'<br>,<br />'); ?></p>
         <?php
           $i = 1;
+          $class_row = "";
+          $count_rows = count( get_field('course_information_section2') );
           if( have_rows('course_information_section2') ):
+            if($count_rows % 2 == 0 ) {
+              $class_row = "list_01";
+            } else {
+              $class_row = "list_02";
+            }
         ?>
         <div class="list_02">
           <ul class="clearfix">
@@ -151,10 +158,19 @@
       </div>
       <?php
           $i = 1;
+          $class_row = "";
+          $count_rows = count( get_field('course_information_sec3') );
           if( have_rows('course_information_sec3') ):
+            if($count_rows % 2 == 0 ) {
+              $class_row = "list_01";
+              $rows = 2;
+            } else {
+              $class_row = "list_02";
+              $rows = 3;
+            }
         ?>
-      <div class="inner list_01">
-        <ul class="clearfix">
+      <div class="inner <?php echo $class_row; ?>">
+        <ul id="dataprice_3" class="clearfix" data-rows=<?php echo $rows; ?>>
           <?php while( have_rows('course_information_sec3') ): the_row();
             $course_title = get_sub_field('course_title');
             $course_description = get_sub_field('course_description');
