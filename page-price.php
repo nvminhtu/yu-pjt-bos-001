@@ -30,7 +30,7 @@
             $class_row = "";
             $count_rows = count( get_field('course_information') );
             if( have_rows('course_information') ):
-              if($count_rows % 2 == 0 ) {
+              if($count_rows <= 2 ) {
                 $class_row = "list_01";
                 $rows = 2;
               } else {
@@ -73,7 +73,7 @@
                 </tr>
               </tbody>
             </table>
-            <p class="note"><?php echo strip_tags($course_table_bottom); ?></p>
+            <p class="note take-note"><?php echo strip_tags($course_table_bottom); ?></p>
             <?php $j++; endwhile; ?>
           </li>
           <?php $i++; endwhile; ?>
@@ -97,6 +97,7 @@
           $i = 1;
           $class_row = "";
           $count_rows = count( get_field('course_information_section2') );
+
           if( have_rows('course_information_section2') ):
             if($count_rows % 2 == 0 ) {
               $class_row = "list_01";
@@ -118,7 +119,7 @@
               <div class="list_02_inner">
                 <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span><?php echo $course_title; ?></h3>
                 <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
-                <p class="lineh_02 heightLine-a4 h_resauto02"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
+                <p class="h-description"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
                 <?php
                   $j = 0;
                   while( have_rows('course_content_table') ): the_row();
@@ -206,7 +207,7 @@
                 </tr>
               </tbody>
             </table>
-            <p class="bottom"><?php echo strip_tags($course_table_bottom); ?></p>
+            <p class="bottom take-note"><?php echo strip_tags($course_table_bottom); ?></p>
             <?php $j++; endwhile; ?>
           </li>
 

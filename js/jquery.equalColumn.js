@@ -21,8 +21,8 @@
     function setHeightBox(object){
       object.each(function(index, el) {
         $item = $(this).find('li');
-        itemLen = $item.length;
 
+        itemLen = $item.length;
         for( var i = -1, len = Math.ceil( itemLen / rows); ++ i < len; ){
           var itemArray = [];
           for(var j = -1; ++ j < rows;){
@@ -36,14 +36,20 @@
     function setItemColumn(itemNum){
       var txtMaxHeight = 0;
       var txtDescript = 0;
+      var txtNote = 0;
 
       for( var i = 0; i < itemNum.length; i++){
-        txtMaxHeight = $item.eq(itemNum[i]).height() > txtMaxHeight ? $item.eq(itemNum[i]).height() : txtMaxHeight;
         txtDescript = $item.eq(itemNum[i]).find('.h-description').height() > txtDescript ? $item.eq(itemNum[i]).find('.h-description').height() : txtDescript;
+        txtNote =  $item.eq(itemNum[i]).find('.take-note').height() > txtNote ? $item.eq(itemNum[i]).find('.take-note').height() : txtNote;
+        txtMaxHeight = $item.eq(itemNum[i]).height() > txtMaxHeight ? $item.eq(itemNum[i]).height() : txtMaxHeight;
       }
       for(i = 0; i < itemNum.length; i++){
-        $item.eq(itemNum[i]).height(txtMaxHeight);
         $item.eq(itemNum[i]).find('.h-description').height(txtDescript);
+        $item.eq(itemNum[i]).find('.take-note').height(txtNote);
+        //$item.eq(itemNum[i]).height(txtMaxHeight);
+        $item.eq(itemNum[i]).css({
+            marginBottom: '20px'
+        });
       }
     }
     return this.each( function() {

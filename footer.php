@@ -72,27 +72,7 @@
 <?php } ?>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.equalColumn.js" type="text/javascript"></script>
 <?php if (is_page('price')) { ?>
-<script type="text/javascript">
-  $( document ).ready(function() {
-     var items_per_rows_1 = $('#dataprice_1').data('rows');
-     var items_per_rows_2 = $('#dataprice_2').data('rows');
-     var items_per_rows_3 = $('#dataprice_3').data('rows');
-
-     $('#dataprice_1').equalColumn({
-         rows: items_per_rows_1
-     });
-
-     $('#dataprice_2').equalColumn({
-         rows: items_per_rows_2
-     });
-
-     $('#dataprice_3').equalColumn({
-         rows: items_per_rows_3
-     });
-
-
-   });
-</script>
+<script src="<?php bloginfo('template_url'); ?>/js/price.js" type="text/javascript"></script>
 <?php } ?>
 <?php if (is_page('confirmation')) { ?>
 
