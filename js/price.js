@@ -13,9 +13,9 @@
 
          var winWidth = $(window).width();
          if(winWidth > 890) {
-          //  $('#dataprice_1').equalColumn({
-          //      rows: items_per_rows_1
-          //  });
+           $('#dataprice_1').equalColumn({
+               rows: items_per_rows_1
+           });
 
           //  $('#dataprice_2').equalColumn({
           //      rows: items_per_rows_2
