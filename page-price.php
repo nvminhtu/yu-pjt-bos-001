@@ -32,12 +32,14 @@
             if( have_rows('course_information') ):
               if($count_rows % 2 == 0 ) {
                 $class_row = "list_01";
+                $rows = 2;
               } else {
                 $class_row = "list_02";
+                $rows = 3;
               }
         ?>
         <div class="<?php echo $class_row; ?>">
-          <ul class="clearfix">
+          <ul id="dataprice_1" class="clearfix" data-rows="<?php echo $rows; ?>">
           <?php while( have_rows('course_information') ): the_row();
             $course_title = get_sub_field('course_title');
             $course_description = get_sub_field('course_description');
@@ -49,7 +51,7 @@
           <li>
             <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number"><?php echo $i; ?></span><?php echo $course_title; ?></h3>
             <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
-            <p class="lineh_01 heightLine-a9 h_resauto"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
+            <p class="h-description"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
             <?php
               $j = 0;
               while( have_rows('course_content_table') ): the_row();
@@ -98,12 +100,14 @@
           if( have_rows('course_information_section2') ):
             if($count_rows % 2 == 0 ) {
               $class_row = "list_01";
+              $rows = 2;
             } else {
               $class_row = "list_02";
+              $rows = 3;
             }
         ?>
         <div class="list_02">
-          <ul class="clearfix">
+          <ul id="dataprice_2" class="clearfix" data-rows="<?php echo $rows; ?>">
           <?php while( have_rows('course_information_section2') ): the_row();
             $course_title = get_sub_field('course_title');
             $course_description = get_sub_field('course_description');
@@ -170,7 +174,7 @@
             }
         ?>
       <div class="inner <?php echo $class_row; ?>">
-        <ul id="dataprice_3" class="clearfix" data-rows=<?php echo $rows; ?>>
+        <ul id="dataprice_3" class="clearfix" data-rows="<?php echo $rows; ?>">
           <?php while( have_rows('course_information_sec3') ): the_row();
             $course_title = get_sub_field('course_title');
             $course_description = get_sub_field('course_description');
@@ -180,7 +184,7 @@
           <li>
             <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span></span><?php echo $course_title; ?></h3>
             <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
-            <p class="lineh_03 heightLine-a7 h_resauto"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
+            <p class="h-description"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
             <?php
               $j = 0;
               while( have_rows('course_content_table') ): the_row();

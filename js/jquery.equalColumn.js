@@ -10,12 +10,13 @@
     // Establish our default settings
     var settings = $.extend({
       //setup options - according to requirement
+      rows: 2
     }, options);
 
     var
       $item,
       itemLen = 0,
-      rows = 4;
+      rows = settings.rows;
 
     function setHeightBox(object){
       object.each(function(index, el) {
@@ -34,11 +35,15 @@
 
     function setItemColumn(itemNum){
       var txtMaxHeight = 0;
+      var txtDescript = 0;
+
       for( var i = 0; i < itemNum.length; i++){
         txtMaxHeight = $item.eq(itemNum[i]).height() > txtMaxHeight ? $item.eq(itemNum[i]).height() : txtMaxHeight;
+        txtDescript = $item.eq(itemNum[i]).find('.h-description').height() > txtDescript ? $item.eq(itemNum[i]).find('.h-description').height() : txtDescript;
       }
       for(i = 0; i < itemNum.length; i++){
         $item.eq(itemNum[i]).height(txtMaxHeight);
+        $item.eq(itemNum[i]).find('.h-description').height(txtDescript);
       }
     }
     return this.each( function() {

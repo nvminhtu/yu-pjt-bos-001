@@ -74,10 +74,23 @@
 <?php if (is_page('price')) { ?>
 <script type="text/javascript">
   $( document ).ready(function() {
-     var items_per_rows = $('#dataprice_3').data('rows');
-     $('#dataprice_3').equalColumn({
-         rows: items_per_rows
+     var items_per_rows_1 = $('#dataprice_1').data('rows');
+     var items_per_rows_2 = $('#dataprice_2').data('rows');
+     var items_per_rows_3 = $('#dataprice_3').data('rows');
+
+     $('#dataprice_1').equalColumn({
+         rows: items_per_rows_1
      });
+
+     $('#dataprice_2').equalColumn({
+         rows: items_per_rows_2
+     });
+
+     $('#dataprice_3').equalColumn({
+         rows: items_per_rows_3
+     });
+
+
    });
 </script>
 <?php } ?>
