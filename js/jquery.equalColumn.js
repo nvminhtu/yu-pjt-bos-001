@@ -39,13 +39,21 @@
       var txtNote = 0;
 
       for( var i = 0; i < itemNum.length; i++){
-        txtDescript = $item.eq(itemNum[i]).find('.h-description').height() > txtDescript ? $item.eq(itemNum[i]).find('.h-description').height() : txtDescript;
-        txtNote =  $item.eq(itemNum[i]).find('.take-note').height() > txtNote ? $item.eq(itemNum[i]).find('.take-note').height() : txtNote;
+        if($item.eq(itemNum[i]).find('.h-description').length) {
+            txtDescript = $item.eq(itemNum[i]).find('.h-description').height() > txtDescript ? $item.eq(itemNum[i]).find('.h-description').height() : txtDescript;
+        }
+        if($item.eq(itemNum[i]).find('.take-note').length) {
+            txtNote =  $item.eq(itemNum[i]).find('.take-note').height() > txtNote ? $item.eq(itemNum[i]).find('.take-note').height() : txtNote;
+        }
         txtMaxHeight = $item.eq(itemNum[i]).height() > txtMaxHeight ? $item.eq(itemNum[i]).height() : txtMaxHeight;
       }
       for(i = 0; i < itemNum.length; i++){
-        $item.eq(itemNum[i]).find('.h-description').height(txtDescript);
-        $item.eq(itemNum[i]).find('.take-note').height(txtNote);
+        if($item.eq(itemNum[i]).find('.h-description').length) {
+            $item.eq(itemNum[i]).find('.h-description').height(txtDescript);
+        }
+        if($item.eq(itemNum[i]).find('.take-note').length) {
+            $item.eq(itemNum[i]).find('.take-note').height(txtNote);
+        }
         //$item.eq(itemNum[i]).height(txtMaxHeight);
         $item.eq(itemNum[i]).css({
             marginBottom: '20px'

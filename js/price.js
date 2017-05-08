@@ -17,9 +17,9 @@
                rows: items_per_rows_1
            });
 
-          //  $('#dataprice_2').equalColumn({
-          //      rows: items_per_rows_2
-          //  });
+           $('#dataprice_2').equalColumn({
+               rows: items_per_rows_2
+           });
 
             $('#dataprice_3').equalColumn({
                 rows: items_per_rows_3
