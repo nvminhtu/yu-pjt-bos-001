@@ -247,3 +247,29 @@ $(function(){
 
 	};
 });
+
+
+$(window).bind('scroll',function(){
+	  if ($(this).scrollTop() >300) {
+		 $('#sticky_menu_footer').fadeIn();
+	 }
+	 else{
+	   $('#sticky_menu_footer').fadeOut();
+	 }
+
+	 });
+
+
+$(document).ready(function() {
+$('a[href^=#]').click(function() {
+		var speed = 200; // ミリ秒
+		// アンカーの値取得
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		// 移動先を数値で取得
+		var position = target.offset().top-90;
+		// スムーススクロール
+		$('body,html').animate({scrollTop:position}, speed, 'swing');
+		return false;
+	});
+});

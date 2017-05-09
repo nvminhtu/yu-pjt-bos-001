@@ -1,43 +1,32 @@
+<!-- sticky btn -->
+<div id="sticky_menu_footer">
+  <ul>
+    <li><a href="<?php bloginfo('siteurl'); ?>/contact/"><img src="<?php bloginfo('template_url'); ?>/images/sticky_bn02.png" alt="Contact"></a></li>
+    <li><a href="tel:0362058288"><img src="<?php bloginfo('template_url'); ?>/images/sticky_bn01.png" alt="Tel: 0362058288"></a></li>
+  </ul>
+</div>
+<!-- //sticky btn -->
 
 <footer id="footer" class="footer">
   <div class="inner clearfix">
-    <div class="f_column_01">
+    <p class="f_logo"><img src="<?php bloginfo('template_url'); ?>/images/f_logo.png" alt="BOSTY"></p>
+    <div class="f_column_menu clearfix">
       <ul>
-        <li><a href="<?php bloginfo('siteurl'); ?>">HOME</a></li>
-        <li>&nbsp;</li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/studio/">スタジオ一覧</a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/price/">プログラム・料金</a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/feature/">BOSTYの特徴</a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/qa/">よくあるご質問</a></li>
+        <li><a href="./">HOME</a></li>
+        <li><a href="studio.html">スタジオ一覧</a></li>
       </ul>
-    </div>
-    <div class="f_column_02">
       <ul>
-        <li>&nbsp;</li>
-        <li>&nbsp;</li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/company/">会社概要</a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/news/">お知らせ</a></li>
-        <li><a href="<?php bloginfo('siteurl'); ?>/contact/">問い合わせ</a></li>
+        <li><a href="price.html">プログラム・料金</a></li>
+        <li><a href="feature.html">BOSTYの特徴</a></li>
       </ul>
-    </div>
-    <div class="f_column_03">
-      <p class="f_logo"><img src="<?php bloginfo('template_url'); ?>/images/f_logo.png" alt="BOSTY"></p>
-      <dl class="clearfix">
-        <dt><img src="<?php bloginfo('template_url'); ?>/images/f_ico_01.png"></dt>
-        <dd>〒105-0001<br>東京都港区虎ノ門1-16-11 桜川アネックス4F</dd>
-      </dl>
-      <dl class="clearfix">
-        <dt><img src="<?php bloginfo('template_url'); ?>/images/f_ico_02.png"></dt>
-        <dd><a href="tel:0362058288">03-6205-8288</a></dd>
-      </dl>
-      <p class="btn_02 index_img_13"><a href="<?php bloginfo('siteurl'); ?>/contact/"><img src="<?php bloginfo('template_url'); ?>/images/index_img_13.png">問い合わせはこちら</a></p><br>
-    </div>
-    <div class="f_column_04">
-      <div class="map_footer_area">
-          <div id="map_footer" data-lat="35.668235" data-long="139.749057" style="with:100%; height:204px;border:0;"></div>
-          <span class="map_place_name" data-content="桜川アネックス"></span>
-          <span class="map_place_address" data-content=""></span>
-      </div>
+      <ul>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="qa.html">よくあるご質問</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">お知らせ</a></li>
+        <li><a href="contact.html">問い合わせ</a></li>
+      </ul>
     </div>
   </div>
   <div class="copyright">© BOSTY</div>
@@ -45,6 +34,20 @@
 
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+    			auto: true,
+    			controls: false,
+    			pager:false,
+    			mode:'fade',
+    			responsive: true,
+    		  pause: 6500,
+     	    speed:1500
+    		});
+  });
+</script>
 <script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/page-scroller.js" type="text/javascript"></script>

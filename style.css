@@ -63,8 +63,9 @@ Text Domain: Bosty
   left: 0%;
 }
 /* #price page fix */
-#price td span {
-  font-size: 12px;
+#price #section_01 td span,
+#price #section_03 td span {
+  font-size: 16px;
   font-weight: normal;
   color: #363636;
 }

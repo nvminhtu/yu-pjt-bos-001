@@ -15,6 +15,7 @@
  <?php } ?>
 <link href="<?php bloginfo('template_url'); ?>/css/import.css" rel="stylesheet" type="text/css" />
 <link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" type="text/css" />
+<link href="<?php bloginfo('template_url'); ?>/css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
 <?php wp_head(); ?>
 </head>
 

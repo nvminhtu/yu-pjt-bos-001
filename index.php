@@ -7,19 +7,35 @@
  */ ?>
 <?php get_header(); ?>
 	<div class="mainvisual">
-		<h2>
-			<span class="main_text_01"><img src="<?php bloginfo('template_url'); ?>/images/top/main_text_01.png" alt="はじめようBOSTY(ボスティ)"><span>はじめようBOSTY(ボスティ)</span></span>
-			<span class="main_text_02">BOSTYだから、<br>短期間で手に入れることができる、</span>
-			<span class="main_text_03">夢のボディライン</span>
-		</h2>
-	</div>
-	<div class="div_01 inner clearfix">
-		<a href="<?php bloginfo('url'); ?>/studio/" class="index_img_01">
-			<p><span>Studio</span>スタジオ一覧</p>
-		</a>
-		<a href="<?php bloginfo('url'); ?>/price/" class="index_img_02">
-			<p><span>Program</span>プログラム・料金</p>
-		</a>
+			<ul class="bxslider">
+				<li>
+					<span class="pc02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual_pc.jpg" /></span>
+					<span class="tb02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual_tb.jpg" /></span>
+					<span class="sp02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual_sp.jpg" /></span>
+				</li>
+				<li>
+					<span class="pc02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual02_pc.jpg" /></span>
+					<span class="tb02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual02_tb.jpg" /></span>
+					<span class="sp02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual02_sp.jpg" /></span>
+				</li>
+				<li>
+					<span class="pc02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual03_pc.jpg" /></span>
+					<span class="tb02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual03_tb.jpg" /></span>
+					<span class="sp02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual03_sp.jpg" /></span>
+				</li>
+			</ul>
+		 <h2> <span class="main_text_01"><span>はじめようBOSTY</span></span> <span class="main_text_02">BOSTYだから、<br>
+		    短期間で手に入れることができる、</span> <span class="main_text_03">夢のボディライン</span> </h2>
+		  <p class="btn"><a href=""><img src="<?php bloginfo('template_url'); ?>/images/top/mainimg_btn.png" alt="詳しくはこちら" /></a></p>
+		</div>
+
+	<!-- main start -->
+	<div class="div_01">
+	  <div class="inner clearfix"> <a href="studio.html" class="index_img_01">
+	    <p><span>Studio</span>スタジオ一覧</p>
+	    </a> <a href="price.html" class="index_img_02">
+	    <p><span>Program</span>プログラム・料金</p>
+	    </a> </div>
 	</div>
 
 	<?php get_template_part('parts/index-blog-loop'); ?>
