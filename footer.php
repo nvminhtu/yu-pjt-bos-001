@@ -72,12 +72,14 @@
 <script src="<?php bloginfo('template_url'); ?>/js/map-footer.js" type="text/javascript"></script>
 <?php if (is_home() || is_front_page()) { ?>
 <script src="<?php bloginfo('template_url'); ?>/js/instagram.js" type="text/javascript"></script>
+<?php } else { ?>
+<script src="<?php bloginfo('template_url'); ?>/js/wpscript-customize.js" type="text/javascript"></script>
 <?php } ?>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.equalColumn.js" type="text/javascript"></script>
 <?php if (is_page('price')) { ?>
 <script src="<?php bloginfo('template_url'); ?>/js/price.js" type="text/javascript"></script>
 <?php } ?>
-<script src="<?php bloginfo('template_url'); ?>/js/wpscript-customize.js" type="text/javascript"></script>
+
 <?php if (is_page('confirmation')) { ?>
 
 <?php
