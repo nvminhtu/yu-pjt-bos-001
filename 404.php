@@ -9,11 +9,7 @@
 get_header();?>
 <div class="main">
   <div class="inner clearfix">
-    <div class="left_content">
       <h2 class="style_h2">申し訳ありませんが、探しているページが見つかりません。</h2>
-    </div>
-
-    <?php get_sidebar(); ?>
   </div>
 </div>
 

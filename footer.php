@@ -12,16 +12,16 @@
     <p class="f_logo"><img src="<?php bloginfo('template_url'); ?>/images/f_logo.png" alt="BOSTY"></p>
     <div class="f_column_menu clearfix">
       <ul>
-        <li><a href="./">HOME</a></li>
-        <li><a href="studio.html">スタジオ一覧</a></li>
+        <li><a href="<?php bloginfo('siteurl'); ?>">HOME</a></li>
+        <li><a href="<?php bloginfo('siteurl'); ?>/studio/">スタジオ一覧</a></li>
       </ul>
       <ul>
-        <li><a href="price.html">プログラム・料金</a></li>
-        <li><a href="feature.html">BOSTYの特徴</a></li>
+        <li><a href="<?php bloginfo('siteurl'); ?>/price/">プログラム・料金</a></li>
+        <li><a href="<?php bloginfo('siteurl'); ?>/feature/">BOSTYの特徴</a></li>
       </ul>
       <ul>
-        <li><a href="company.html">会社概要</a></li>
-        <li><a href="qa.html">よくあるご質問</a></li>
+        <li><a href="<?php bloginfo('siteurl'); ?>/company/">会社概要</a></li>
+        <li><a href="<?php bloginfo('siteurl'); ?>/qa/">よくあるご質問</a></li>
       </ul>
       <ul>
         <li><a href="#">お知らせ</a></li>
@@ -49,7 +49,7 @@
   });
 </script>
 <script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyCIpA4fYWolrgbB6esEOWLDfAYrjg9GoCA&language=ja&region=JP"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/page-scroller.js" type="text/javascript"></script>
 <?php if(is_front_page()||is_home()) { ?>
     <script src="<?php bloginfo('template_url'); ?>/js/jqinstapics.js" type="text/javascript"></script>
@@ -69,17 +69,15 @@
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/datetimepicker.js"></script>
 <?php endif ?>
 <script src="<?php bloginfo('template_url'); ?>/js/custom.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/map-footer.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.equalColumn.js" type="text/javascript"></script>
+<?php if (is_page('price')) { ?>
+<script src="<?php bloginfo('template_url'); ?>/js/price.js" type="text/javascript"></script>
+<?php } ?>
 <?php if (is_home() || is_front_page()) { ?>
 <script src="<?php bloginfo('template_url'); ?>/js/instagram.js" type="text/javascript"></script>
 <?php } else { ?>
 <script src="<?php bloginfo('template_url'); ?>/js/wpscript-customize.js" type="text/javascript"></script>
 <?php } ?>
-<script src="<?php bloginfo('template_url'); ?>/js/jquery.equalColumn.js" type="text/javascript"></script>
-<?php if (is_page('price')) { ?>
-<script src="<?php bloginfo('template_url'); ?>/js/price.js" type="text/javascript"></script>
-<?php } ?>
-
 <?php if (is_page('confirmation')) { ?>
 
 <?php
