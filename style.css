@@ -48,10 +48,23 @@ Text Domain: Bosty
     margin-left: auto;
   }
 }
+
 #bloglist .nav01 .small_des {
   font-size: 20px;
   font-weight: bold;
 }
 #bloglist .nav01 li a {
   font-weight: normal;
+}
+.btn_03 span {
+  padding: 0 16%;
+}
+.footer_section_03 .footer_tel {
+  left: 0%;
+}
+/* #price page fix */
+#price td span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #363636;
 }

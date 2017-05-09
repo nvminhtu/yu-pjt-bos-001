@@ -74,6 +74,7 @@
 <?php if (is_page('price')) { ?>
 <script src="<?php bloginfo('template_url'); ?>/js/price.js" type="text/javascript"></script>
 <?php } ?>
+<script src="<?php bloginfo('template_url'); ?>/js/wpscript-customize.js" type="text/javascript"></script>
 <?php if (is_page('confirmation')) { ?>
 
 <?php
