@@ -31,7 +31,13 @@
           $experienced_learning_content = get_field('experienced_learning_content');
         ?>
         <h2 class="title_01"><?php echo $experienced_learning; ?><span><?php echo $experienced_learning_description; ?></span></h2>
-        <p class="text_01"><?php echo strip_tags($experienced_learning_content,'<br>,<br />'); ?></p>
+        <p class="text_01">
+          <?php while( have_rows('experienced_learning_content') ): the_row();
+                  $experienced_learning_content_line = get_sub_field('experienced_learning_content_line');
+                  echo $experienced_learning_content_line.'<br>';
+          ?>
+        <?php endwhile; ?>
+        </p>
         <?php
             $i= 1;
             $class_row = "";
@@ -58,7 +64,13 @@
           <li>
             <h3 class="clearfix heightLine-a1 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース1" /><span>コース</span><span class="number"><?php echo $i; ?></span><?php echo $course_title; ?></h3>
             <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
-            <p class="h-description"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
+            <p class="h-description">
+              <?php while( have_rows('course_description') ): the_row();
+                      $course_description_line = get_sub_field('course_description_line');
+                      echo $course_description_line.'<br>';
+              ?>
+            <?php endwhile; ?>
+            </p>
             <?php
               $j = 0;
               while( have_rows('course_content_table') ): the_row();
@@ -99,7 +111,13 @@
           $eating_learning_content = get_field('eating_learning_content');
         ?>
         <h2 class="title_01"><?php echo $eating_learning; ?><span><?php echo $eating_learning_description; ?></span></h2>
-        <p class="text_01"><?php echo strip_tags($eating_learning_content,'<br>,<br />'); ?></p>
+        <p class="text_01">
+          <?php while( have_rows('eating_learning_content') ): the_row();
+                  $eating_learning_content_line = get_sub_field('eating_learning_content_line');
+                  echo $eating_learning_content_line.'<br>';
+                endwhile;
+          ?>
+        </p>
         <?php
           $i = 1;
           $class_row = "";
@@ -126,7 +144,13 @@
               <div class="list_02_inner">
                 <h3><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_05.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span><?php echo $course_title; ?></h3>
                 <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
-                <p class="h-description"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
+                <p class="h-description">
+                  <?php while( have_rows('course_description') ): the_row();
+                          $course_description_line = get_sub_field('course_description_line');
+                          echo $course_description_line.'<br>';
+                        endwhile;
+                  ?>
+                </p>
                 <?php
                   $j = 0;
                   while( have_rows('course_content_table') ): the_row();
@@ -166,7 +190,12 @@
           $special_learning_content = get_field('special_learning_content');
         ?>
         <h2 class="title_01"><?php echo $special_learning; ?><span><?php echo $special_learning_description; ?></span></h2>
-        <p class="text_01"><?php echo strip_tags($special_learning_content,'<br>,<br />'); ?></p>
+        <p class="text_01">  <?php
+              while( have_rows('special_learning_content') ): the_row();
+                $special_learning_content_line = get_sub_field('special_learning_content_line');
+                echo $special_learning_content_line.'<br>';
+              endwhile;
+          ?></p>
       </div>
       <?php
           $i = 1;
@@ -192,7 +221,14 @@
           <li>
             <h3 class="clearfix heightLine-a6 h_resauto"><img src="<?php bloginfo('template_url'); ?>/images/price/price_img_01.png" alt="コース<?php echo $i; ?>" /><span>コース</span><span class="number"><?php echo $i; ?></span></span><?php echo $course_title; ?></h3>
             <img src="<?php echo $course_picture_src[0]; ?>" alt="<?php echo $course_title; ?>" />
-            <p class="h-description"><?php echo strip_tags($course_description,'<br>,<br />'); ?></p>
+            <p class="h-description">
+              <?php
+                  while( have_rows('course_description') ): the_row();
+                    $course_description_line = get_sub_field('course_description_line');
+                    echo $course_description_line.'<br>';
+                  endwhile;
+              ?>
+            </p>
             <?php
               $j = 0;
               while( have_rows('course_content_table') ): the_row();
