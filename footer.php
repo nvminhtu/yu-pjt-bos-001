@@ -40,7 +40,7 @@
   $(document).ready(function(){
     $('.bxslider').bxSlider({
     			auto: true,
-    			controls: false,
+    			controls: true,
     			pager:false,
     			mode:'fade',
     			responsive: true,
