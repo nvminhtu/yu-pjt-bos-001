@@ -31,11 +31,14 @@
 
 	<!-- main start -->
 	<div class="div_01">
-	  <div class="inner clearfix"> <a href="studio.html" class="index_img_01">
-	    <p><span>Studio</span>スタジオ一覧</p>
-	    </a> <a href="price.html" class="index_img_02">
-	    <p><span>Program</span>プログラム・料金</p>
-	    </a> </div>
+	  <div class="inner clearfix">
+			<a href="<?php bloginfo('siteurl'); ?>/studio/" class="index_img_01">
+	    	<p><span>Studio</span>スタジオ一覧</p>
+	    </a>
+			<a href="<?php bloginfo('siteurl'); ?>/price/" class="index_img_02">
+	    	<p><span>Program</span>プログラム・料金</p>
+	    </a>
+		</div>
 	</div>
 
 	<?php get_template_part('parts/index-blog-loop'); ?>
@@ -87,7 +90,7 @@
 			<img src="<?php bloginfo('template_url'); ?>/images/index_img_12_sp.png" alt="まずはお気軽に体験レッスンから" class="sp" />
 			<div class="section_05_01">まずはお気軽に<span>体験レッスン</span>から</div>
 			<p class="btn_04">
-				<a href="<?php bloginfo('url'); ?>">
+				<a href="http://www.bosty.co.jp/" target="_blank">
 					<span class="btn_04_01">24時間<br>受付可能</span>
 					<span class="btn_04_02">Webでご予約</span>
 				</a>

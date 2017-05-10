@@ -16,6 +16,13 @@
       $special_learning = get_field('special_learning');
       // -----------------------------------------------------------------------------
     ?>
+    <div class="anchorlink">
+      <ul class="inner">
+        <li><a href="#section_01">体験コース</a></li>
+        <li><a href="#section_02">ダイエットコース</a></li>
+        <li><a href="#section_03">ボディメイクコース</a></li>
+      </ul>
+    </div>
     <section id="section_01" class="section_01">
       <div class="inner">
         <?php

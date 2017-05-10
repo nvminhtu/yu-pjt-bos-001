@@ -69,3 +69,18 @@ Text Domain: Bosty
   font-weight: normal;
   color: #363636;
 }
+.tbsp {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .tbsp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  #price .list_02 li:nth-child(4n+4) {
+    margin-left: auto;
+  }
+}

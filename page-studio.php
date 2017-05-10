@@ -9,6 +9,7 @@
 <?php get_header(); ?>
 
 <?php get_template_part('parts/main-visual-sec'); ?>
+
 <?php
     global $post;
     global $wp_query;
@@ -26,7 +27,14 @@
     $number_blogs = $the_query->found_posts;
   	$blog_posts = get_posts($args);
 		if($blog_posts) {
-  	$i=0; ?>
+  	$i = 1; $k = 0; $m = 1; ?>
+    <div class="anchorlink">
+      <ul class="inner">
+        <?php foreach($blog_posts as $post) : setup_postdata($post);  ?>
+                <li><a href="#section_stu<?php echo $m; ?>"><?php echo $post->post_title; ?></a></li>
+        <?php $m++; endforeach; ?>
+      </ul>
+    </div>
     <div id="studio-list" data-number="<?php echo $number_blogs; ?>">
       <?php foreach($blog_posts as $post) : setup_postdata($post);
         $map_direction = get_field('map_direction',$post->ID);
@@ -46,14 +54,15 @@
         if($i%2==0) { $alignPics = 'right'; } else { $alignPics = 'left'; }
         if($i%2==0) { $alignContent = 'left'; } else { $alignContent = 'right'; }
       ?>
-      <section id="section_<?php $i; ?>" class="section_01">
+
+      <section id="section_stu<?php echo $i; ?>" class="section_01">
         <div class="inner">
         <h3 class="title_01"><?php the_title(); ?></h3>
         <div class="clearfix">
           <div class="section_01_<?php echo $alignContent; ?>">
             <div class="map">
               <div class="maparea">
-                  <div class="gmap_<?php echo $i; ?>" data-lat="<?php echo $latitude; ?>" data-long="<?php echo $longitude; ?>" style="with:100%; height:320px;border:0;"></div>
+                  <div class="gmap_<?php echo $k; ?>" data-lat="<?php echo $latitude; ?>" data-long="<?php echo $longitude; ?>" style="with:100%; height:320px;border:0;"></div>
                   <span class="place_name_<?php echo $i; ?>" data-content="<?php echo $place_name; ?>"></span>
                   <span class="place_address_<?php echo $i; ?>" data-content="<?php echo $place_address; ?>"></span>
               </div>
@@ -105,7 +114,7 @@
       </div>
       </section>
 
-		<?php	$i++;
+		<?php	$i++; $k++;
 			endforeach;
     ?>
   </div> <!-- end #studio-list -->
