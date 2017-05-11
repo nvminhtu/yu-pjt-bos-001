@@ -77,8 +77,6 @@
 <?php } ?>
 <?php if (is_home() || is_front_page()) { ?>
 <script src="<?php bloginfo('template_url'); ?>/js/instagram.js" type="text/javascript"></script>
-<?php } else { ?>
-<script src="<?php bloginfo('template_url'); ?>/js/wpscript-customize.js" type="text/javascript"></script>
 <?php } ?>
 <?php if (is_page('confirmation')) { ?>
 

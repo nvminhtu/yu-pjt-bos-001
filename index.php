@@ -8,25 +8,46 @@
 <?php get_header(); ?>
 	<div class="mainvisual">
 			<ul class="bxslider">
-				<li>
-					<span class="pc02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual_pc.jpg" /></span>
-					<span class="tb02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual_tb.jpg" /></span>
-					<span class="sp02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual_sp.jpg" /></span>
-				</li>
-				<li>
-					<span class="pc02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual02_pc.jpg" /></span>
-					<span class="tb02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual02_tb.jpg" /></span>
-					<span class="sp02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual02_sp.jpg" /></span>
-				</li>
-				<li>
-					<span class="pc02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual03_pc.jpg" /></span>
-					<span class="tb02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual03_tb.jpg" /></span>
-					<span class="sp02"><img src="<?php bloginfo('template_url'); ?>/images/top/mainvisual03_sp.jpg" /></span>
-				</li>
+				<?php
+						$slider_items = get_field('slider_items','options');
+					  //print_r($slider_items);
+
+						foreach($slider_items as $item) {
+								$pc_slide_image = $item['pc_slide_image'];
+								$tablet_slide_image = $item['tablet_slide_image'];
+								$sp_slide_image = $item['sp_slide_image'];
+								$slider_text_1 = $item['slider_text_1'];
+								$slider_text_2 = $item['slider_text_2'];
+								$button_link = $item['button_link'];
+							?>
+							<li>
+								<span class="pc02"><img src="<?php echo $pc_slide_image; ?>" /></span>
+								<span class="tb02"><img src="<?php echo $tablet_slide_image; ?>" /></span>
+								<span class="sp02"><img src="<?php echo $sp_slide_image; ?>" /></span>
+								<h2>
+									  <span class="main_text_01">
+											<span>はじめようBOSTY</span>
+										</span>
+										<span class="main_text_02">
+											<?php foreach($slider_text_1 as $tex_item) {
+												echo $tex_item['slider_text_line'];
+											} ?>
+										</span>
+										<span class="main_text_03">
+											<?php foreach($slider_text_2 as $tex_item) {
+												echo $tex_item['slider_text_line'];
+											} ?>
+										</span>
+								</h2>
+							  <p class="btn">
+									<a href="<?php echo $button_link; ?>" target="_blank">
+										<img src="<?php bloginfo('template_url'); ?>/images/top/mainimg_btn.png" alt="詳しくはこちら" />
+									</a>
+								</p>
+							</li>
+
+					<?php } ?>
 			</ul>
-		 <h2> <span class="main_text_01"><span>はじめようBOSTY</span></span> <span class="main_text_02">BOSTYだから、<br>
-		    短期間で手に入れることができる、</span> <span class="main_text_03">夢のボディライン</span> </h2>
-		  <p class="btn"><a href=""><img src="<?php bloginfo('template_url'); ?>/images/top/mainimg_btn.png" alt="詳しくはこちら" /></a></p>
 		</div>
 
 	<!-- main start -->

@@ -1,13 +1,25 @@
 <?php /** -------------- Admin Customize -------------- **/
 // #theme-options
 if( function_exists('acf_add_options_page') ) {
+
+  //  #general admin setting
   acf_add_options_page(array(
     'page_title'  => 'Theme General Settings',
-    'menu_title'  => 'Theme Settings',
+    'menu_title'  => 'General Settings',
     'menu_slug'   => 'theme-general-settings',
     'capability'  => 'manage_options',
     'redirect'    => false
   ));
+  //  #nivo slider admin setting
+  acf_add_options_sub_page(array(
+		'page_title'  => 'Admin TOP Slider Settings',
+		'parent_slug'	=> 'theme-general-settings',
+    'menu_title'  => 'Sliders',
+    'menu_slug'   => 'admin-top-slider',
+    'capability'  => 'manage_options',
+    'redirect'    => false
+	));
+
 }
 
 // #user-fields: remove unused field for users

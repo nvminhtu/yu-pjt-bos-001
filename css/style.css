@@ -321,7 +321,7 @@ body {
   height:100%;
   display:block;
   background:rgba(0,0,0,0.4);
-  
+
   }
 .com_mainvisual h2 {
   height: 500px;
@@ -346,7 +346,7 @@ body {
 	right:30px;
 	text-align:right;
 }
-#index .mainvisual .btn img 
+#index .mainvisual .btn img
 {
 	width:80%;
 }
@@ -1718,7 +1718,6 @@ body {
 
 
 #contact .form_contact .checkb label {
-  width: 48%;
   box-sizing:border-box;
   display:inline-block;
   margin:0;
@@ -3082,7 +3081,7 @@ body#confirmation .menu-top-menu-container{}
 body#confirmation .menu-top-menu-container ul{margin-bottom:1px;}
 body#confirmation #submitconfirm{background: url(../images/btn-form.png); width: 300px; height: 60px; line-height: 60px; padding: 0; cursor: pointer; background-size: 100% auto; text-align: center; font-size: 18px; font-weight: bold; color: #fff; display: inline-block; position: relative;}
 .confirmWrap{padding: 20px 0; text-align: center;}
-.btn_02 .arrow{display: block; position: absolute; width: 15px; height: 15px; background: url(../images/btn_02_right.png) center no-repeat; top: 24px; margin-top: 0; right: 10px;} 
+.btn_02 .arrow{display: block; position: absolute; width: 15px; height: 15px; background: url(../images/btn_02_right.png) center no-repeat; top: 24px; margin-top: 0; right: 10px;}
 #contact .btn_02 #submit{height: 100%; background-size: 100% auto; text-align: center; font-size: 18px;font-weight: bold; color: #fff; display: block; position: relative;}
 .remake {
   margin: 10px 0;
@@ -3236,7 +3235,7 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 	bottom: 0;
 	width: 100%;
 	display:none;
-	
+
 }
 #sticky_menu_footer ul {
 	width: 100%;
@@ -3287,13 +3286,13 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 .policy
 {
 	background:url(../images/contact/policy_bg.png) repeat #efefef;
-	padding:60px 0; 
+	padding:60px 0;
 }
 
 .policy dl
 {
 	margin:15px 0;
-	
+
 }
 
 .policy dt
