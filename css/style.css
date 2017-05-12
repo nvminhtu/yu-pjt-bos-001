@@ -1842,15 +1842,16 @@ body {
   text-align: center;
 }
 
-.footer_section_03 {
+/* customize contact information at bottom */
+.footer_section_03.info-bottom img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .footer_section_03 .inner {
   position: relative;
-}
-
-.footer_section_03 img {
-  margin-top: -130px;
+  padding: 54px 0;
 }
 
 #popup_area {
@@ -2772,16 +2773,13 @@ body {
 }
 
 .footer_section_03 .footer_tel {
-  position: absolute;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
-  top: 200px;
-  left: 50%;
-  margin-left: -300px;
   width: 600px;
   line-height: 1;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .footer_section_03 .footer_tel span,
