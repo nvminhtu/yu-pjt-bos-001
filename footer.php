@@ -24,7 +24,7 @@
         <li><a href="<?php bloginfo('siteurl'); ?>/qa/">よくあるご質問</a></li>
       </ul>
       <ul>
-        <li><a href="#">お知らせ</a></li>
+        <li><a href="<?php bloginfo('siteurl'); ?>/news/">お知らせ</a></li>
         <li><a href="<?php bloginfo('siteurl'); ?>/contact/">問い合わせ</a></li>
       </ul>
     </div>

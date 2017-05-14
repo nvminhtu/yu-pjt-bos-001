@@ -3306,3 +3306,7 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 	border:1px solid #E5E5E5;
 	padding:30px 50px;
 }
+
+.sp-menu {
+  display: none;
+}
