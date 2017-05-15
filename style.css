@@ -84,3 +84,27 @@ Text Domain: Bosty
     margin-left: auto;
   }
 }
+.bx-wrapper .bx-controls-direction a {
+  z-index: 1!important;
+}
+#index .mainvisual .btn a:hover {
+  background: #ddd;
+}
+#index .mainvisual .btn a:hover img {
+  opacity: 0.7!important;
+}
+
+.sp-no-break {
+  display: block;
+}
+#price #section_01 td span, #price #section_03 td span {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  #price #section_01 td span, #price #section_03 td span {
+    display: inline;
+  }
+  .sp-no-break {
+    display: none;
+  }
+}

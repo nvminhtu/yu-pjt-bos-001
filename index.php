@@ -16,6 +16,7 @@
 								$pc_slide_image = $item['pc_slide_image'];
 								$tablet_slide_image = $item['tablet_slide_image'];
 								$sp_slide_image = $item['sp_slide_image'];
+								$slider_text_0 = $item['slider_text_0'];
 								$slider_text_1 = $item['slider_text_1'];
 								$slider_text_2 = $item['slider_text_2'];
 								$button_link = $item['button_link'];
@@ -24,27 +25,14 @@
 								<span class="pc02"><img src="<?php echo $pc_slide_image; ?>" /></span>
 								<span class="tb02"><img src="<?php echo $tablet_slide_image; ?>" /></span>
 								<span class="sp02"><img src="<?php echo $sp_slide_image; ?>" /></span>
-								<h2>
-									  <span class="main_text_01">
-											<span>はじめようBOSTY</span>
-										</span>
-
-									 <?php if($slider_text_1[0]['slider_text_line']!=''): ?>
-												<span class="main_text_02">
-													<?php foreach($slider_text_1 as $text_item) {
-														echo $text_item['slider_text_line'];
-													} ?>
-												</span>
-											<?php endif; ?>
-
-											<?php if($slider_text_2[0]['slider_text_line']!=''): ?>
-												<span class="main_text_03">
-													<?php foreach($slider_text_2 as $text_item) {
-														echo $text_item['slider_text_line'];
-													} ?>
-												</span>
-											<?php endif; ?>
-								</h2>
+								<?php echo '<h2>'; if($slider_text_0!=''): ?><span class="main_text_01"><span><?php echo $slider_text_0; ?></span></span><?php endif; ?>
+									  <?php if($slider_text_1[0]['slider_text_line']!=''): ?>
+											<span class="main_text_02"><?php foreach($slider_text_1 as $text_item) { echo $text_item['slider_text_line']; } ?></span>
+										<?php endif; ?>
+										<?php if($slider_text_2[0]['slider_text_line']!=''): ?>
+											<span class="main_text_03"><?php foreach($slider_text_2 as $text_item) { echo $text_item['slider_text_line']; } ?></span>
+									   <?php endif; ?>
+								<?php echo '</h2>'; ?>
 								<?php if($button_link!='') { ?>
 								  <p class="btn">
 										<a href="<?php echo $button_link; ?>" target="_blank">

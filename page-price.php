@@ -34,7 +34,7 @@
         <p class="text_01">
           <?php while( have_rows('experienced_learning_content') ): the_row();
                   $experienced_learning_content_line = get_sub_field('experienced_learning_content_line');
-                  echo $experienced_learning_content_line.'<br>';
+                  echo $experienced_learning_content_line.'<br class="sp-no-break">';
           ?>
         <?php endwhile; ?>
         </p>
@@ -67,7 +67,7 @@
             <p class="h-description">
               <?php while( have_rows('course_description') ): the_row();
                       $course_description_line = get_sub_field('course_description_line');
-                      echo $course_description_line.'<br>';
+                      echo $course_description_line.'<br class="sp-no-break">';
               ?>
             <?php endwhile; ?>
             </p>
@@ -114,7 +114,7 @@
         <p class="text_01">
           <?php while( have_rows('eating_learning_content') ): the_row();
                   $eating_learning_content_line = get_sub_field('eating_learning_content_line');
-                  echo $eating_learning_content_line.'<br>';
+                  echo $eating_learning_content_line.'<br class="sp-no-break">';
                 endwhile;
           ?>
         </p>
@@ -147,7 +147,7 @@
                 <p class="h-description">
                   <?php while( have_rows('course_description') ): the_row();
                           $course_description_line = get_sub_field('course_description_line');
-                          echo $course_description_line.'<br>';
+                          echo $course_description_line.'<br class="sp-no-break">';
                         endwhile;
                   ?>
                 </p>
@@ -193,7 +193,7 @@
         <p class="text_01">  <?php
               while( have_rows('special_learning_content') ): the_row();
                 $special_learning_content_line = get_sub_field('special_learning_content_line');
-                echo $special_learning_content_line.'<br>';
+                echo $special_learning_content_line.'<br class="sp-no-break">';
               endwhile;
           ?></p>
       </div>
@@ -225,7 +225,7 @@
               <?php
                   while( have_rows('course_description') ): the_row();
                     $course_description_line = get_sub_field('course_description_line');
-                    echo $course_description_line.'<br>';
+                    echo $course_description_line.'<br class="sp-no-break">';
                   endwhile;
               ?>
             </p>
