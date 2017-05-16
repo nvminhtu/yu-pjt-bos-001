@@ -32,7 +32,14 @@
               $feature_content = get_sub_field('feature_content');
               $feature_link = get_sub_field('feature_link');
               $feature_link_title = get_sub_field('feature_link_title');
+              $feature_target = get_sub_field('feature_target');
 
+              $target_link = '_self';
+              if($feature_target!='') {
+                if( in_array('New window', get_sub_field('feature_target') ) ) {
+                  $target_link = '_blank';
+                }
+              }
               if($i % 3 == 0 && $i!= 1) {
                 $class = "last";
               } else {
@@ -43,7 +50,7 @@
               <h3><?php echo $feature_title; ?></h3>
               <p><?php echo $feature_content; ?></p>
                 <?php if(isset($feature_link)&&$feature_link!='') { ?>
-                  <p><a href="#">
+                  <p><a href="<?php echo $feature_link; ?>" target="<?php echo $target_link; ?>">
                 <?php }
                   if(isset($feature_link_title)&&$feature_link_title!='') {
                     echo $feature_link_title;
@@ -63,10 +70,10 @@
     </div>
   </section>
   <!-- End feature Content -->
-  
+
   <!-- Gallery Section -->
 	<section id="section_03" class="section_03">
-    <?php 
+    <?php
       // get picture gallery from custom fields
       $title_gallery = get_field('title_gallery');
       $trainer_gallery = get_field('trainer_gallery');
@@ -79,20 +86,20 @@
 			<div id="instagram" class="clearfix">
         <?php // loop author slider main
             $i = 0;
-            if( $trainer_gallery ): 
-              foreach( $trainer_gallery as $image ): 
-        ?>              
-                <div class="slide"><img src="<?php echo $image['sizes']['img_feature_gallery']; ?>" alt="<?php echo $image['alt']; ?>" /></div> 
-        <?php  $i++; 
-            endforeach; 
-          endif; 
+            if( $trainer_gallery ):
+              foreach( $trainer_gallery as $image ):
+        ?>
+                <div class="slide"><img src="<?php echo $image['sizes']['img_feature_gallery']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
+        <?php  $i++;
+            endforeach;
+          endif;
           // end loop author thumb
         ?>
 			</div><!-- end #instagram -->
 		</div>
 	</section>
   <!-- End Gallery Section -->
-  
+
   <!-- Trainer Section -->
 	<section id="section_04" class="section_04">
 		<div class="inner">
@@ -147,5 +154,3 @@
   get_template_part('parts/contact-information');
 ?>
 <?php get_footer(); ?>
-
-
