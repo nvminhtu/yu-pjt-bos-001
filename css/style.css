@@ -521,12 +521,11 @@ body {
 	position:relative;
 }
 #index .mainvisual h2 {
- position:absolute;
- top:20%;
- left:0;
+  position: absolute;
+  top: 28%;
+  left: 0;
   text-align: center;
   width:100%;
-
 }
 
 

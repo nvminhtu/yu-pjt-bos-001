@@ -1241,12 +1241,7 @@
   }
 
   #index .mainvisual h2 {
-    /*background: url(../images/top/mainvisual_sp.jpg) bottom center no-repeat;*/
-    /*height: 450px;
-    -webkit-background-size: auto 100%;
-    -o-background-size: auto 100%;
-    background-size: auto 100%;
-    padding-top: 80px;
+    top: 20%!important;
   }
 
   #index .mainvisual h2 .main_text_01 span {
