@@ -52,9 +52,9 @@
     <div class="box">
       <p>
         <?php if ( has_post_thumbnail($post->ID) ) { ?>
-          <img src="<?php echo $img_blog_large_src; ?>" alt="<?php echo get_the_title($post->ID); ?>" alt="<?php echo $title; ?>" />
+          <a href="<?php the_permalink(); ?>"><img src="<?php echo $img_blog_large_src; ?>" alt="<?php echo get_the_title($post->ID); ?>" alt="<?php echo $title; ?>" /></a>
         <?php } else { ?>
-          <img src="<?php echo get_bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" alt="<?php echo $title; ?>">
+          <a href="<?php the_permalink(); ?>"><img src="<?php echo get_bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img02.jpg" alt="<?php echo $title; ?>"></a>
         <?php } ?>
       <div class="box_inner">
         <p class="tit"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>

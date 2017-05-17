@@ -17,8 +17,6 @@
         <?php while( have_rows('media_group') ): the_row();
           $media_link = get_sub_field('media_link');
           $media_pic = get_sub_field('media_pic');
-          //$media_pic_src = wp_get_attachment_image_src($media_pic_id,'img_company_media');
-          //print_r($media_pic);
           $media_channel = get_sub_field('media_channel');
           $media_date = get_sub_field('media_date');
         ?>

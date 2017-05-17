@@ -32,14 +32,7 @@
               $feature_content = get_sub_field('feature_content');
               $feature_link = get_sub_field('feature_link');
               $feature_link_title = get_sub_field('feature_link_title');
-              $feature_target = get_sub_field('feature_target');
 
-              $target_link = '_self';
-              if($feature_target!='') {
-                if( in_array('New window', get_sub_field('feature_target') ) ) {
-                  $target_link = '_blank';
-                }
-              }
               if($i % 3 == 0 && $i!= 1) {
                 $class = "last";
               } else {
@@ -50,13 +43,7 @@
               <h3><?php echo $feature_title; ?></h3>
               <p><?php echo $feature_content; ?></p>
                 <?php if(isset($feature_link)&&$feature_link!='') { ?>
-                  <p><a href="<?php echo $feature_link; ?>" target="<?php echo $target_link; ?>">
-                <?php }
-                  if(isset($feature_link_title)&&$feature_link_title!='') {
-                    echo $feature_link_title;
-                  }
-                 if(isset($feature_link)&&$feature_link!='') { ?>
-                  </a></p>
+                  <p><a href="<?php echo $feature_link; ?>"><?php } if(isset($feature_link_title)&&$feature_link_title!='') { echo $feature_link_title; } if(isset($feature_link)&&$feature_link!='') { ?></a></p>
                 <?php }?>
             </li>
             <?php if($i % 2 == 0) { ?>

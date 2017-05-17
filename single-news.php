@@ -33,8 +33,6 @@
           <div class="c_section">
             <?php if(has_post_thumbnail()) { ?>
               <p class="border_img img100"><img src="<?php echo $img_blog_src; ?>" alt="<?php the_title(); ?>" /></p>
-            <?php } else { ?>
-              <p class="border_img img100"><img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_detail_img01.jpg" alt="<?php the_title(); ?>" /></p>
             <?php } ?>
           </div>
           <?php the_content(); ?>

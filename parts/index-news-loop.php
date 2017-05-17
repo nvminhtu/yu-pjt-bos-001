@@ -35,7 +35,7 @@
         ?>
         <dl class="clearfix">
           <dt><?php echo $time; ?></dt>
-          <dd><?php the_title(); ?></dd>
+          <dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
         </dl>
         <?php $i++;
              endforeach;
