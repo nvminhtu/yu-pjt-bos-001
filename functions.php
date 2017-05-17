@@ -25,6 +25,10 @@ add_image_size( 'img_visual_tb', 992, 360, true );
 add_image_size( 'img_price_col3', 360, 213, true );
 add_image_size( 'img_price_col2', 574, 340, true );
 add_image_size( 'img_price_col2_sec2', 564, 318, true );
+add_image_size( 'img_company_media_large', 423, 423, true );
+add_image_size( 'img_company_media_medium', 250, 250, true );
+add_image_size( 'img_company_media_small', 150, 150, true );
+
 
 /** -------------- 02.Add included files -------------- **/
 require_once (dirname(__FILE__) . '/includes/add-image-size.php');
@@ -135,7 +139,6 @@ add_filter( 'wpcf7_form_elements', 'do_shortcode' );
 function template_chooser($template)
 {
   global $wp_query;
-  $post_type = get_query_var('post_type');
   if( $wp_query->is_search && $post_type == 'qa' )
   {
     return locate_template('search-qa.php');  //  redirect to archive-search.php
