@@ -5,7 +5,7 @@
     }
   ?>
 </div>
-<!-- <a href="./">HOME</a> &gt; タイトルが入ります。 -->
+
 <?php
 function custom_breadcrumbs() {
 

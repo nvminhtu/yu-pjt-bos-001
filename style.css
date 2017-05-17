@@ -108,3 +108,9 @@ Text Domain: Bosty
     display: none;
   }
 }
+
+#bloglist .dateinfo span.zilla-likes:hover, 
+#bloglist .dateinfo span.zilla-likes.active {
+  margin-left: 10px!important;
+  padding-left: 15px!important;
+}
