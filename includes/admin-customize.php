@@ -7,7 +7,7 @@ if( function_exists('acf_add_options_page') ) {
     'page_title'  => 'Theme General Settings',
     'menu_title'  => 'General Settings',
     'menu_slug'   => 'theme-general-settings',
-    'capability'  => 'manage_options',
+    'capability'  => 'manage_categories',
     'redirect'    => false
   ));
   //  #nivo slider admin setting
@@ -16,7 +16,7 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
     'menu_title'  => 'Sliders',
     'menu_slug'   => 'admin-top-slider',
-    'capability'  => 'manage_options',
+    'capability'  => 'manage_categories',
     'redirect'    => false
 	));
 
