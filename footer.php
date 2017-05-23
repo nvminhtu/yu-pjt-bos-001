@@ -38,7 +38,8 @@
 <?php if(is_front_page() || is_home()) { ?>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.bxslider').bxSlider({
+    $('.bxloading').fadeOut();
+    $('.bxslider').fadeIn().bxSlider({
     			auto: true,
     			controls: true,
     			pager:false,

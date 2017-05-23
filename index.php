@@ -6,13 +6,13 @@
  * Content will be gotten from admin editor
  */ ?>
 <?php get_header(); ?>
+	<div class="bxloading"><img src="<?php bloginfo('template_url'); ?>/images/loading.gif"></div>
 	<div class="mainvisual">
-			<ul class="bxslider">
+		    <ul class="bxslider" style="display: none;">
 				<?php
 						$slider_items = get_field('slider_items','options');
-					  //print_r($slider_items);
 
-						foreach($slider_items as $item) {
+							foreach($slider_items as $item) {
 								$pc_slide_image = $item['pc_slide_image'];
 								$tablet_slide_image = $item['tablet_slide_image'];
 								$sp_slide_image = $item['sp_slide_image'];

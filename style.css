@@ -114,3 +114,10 @@ Text Domain: Bosty
   margin-left: 10px!important;
   padding-left: 15px!important;
 }
+.bxloading {
+  height: 32px; 
+  position: absolute; 
+  top: 60px; 
+  z-index: 9999; 
+  left: 50%;
+}
