@@ -18,21 +18,21 @@
 <style>
 	/* pc */
 	.com_mainvisual {
-		background: url('<?php echo $img_visual_pc_src; ?>') no-repeat!important;
-    background-size: cover!important;
+		background: url('<?php echo $img_visual_pc_src; ?>') bottom center #000000 no-repeat!important;
+		background-size: contain!important;
 	}
 	/* tablet*/
 	@media screen and (max-width: 1200px) {
 		.com_mainvisual {
-			background: url('<?php echo $img_visual_tb_src; ?>') bottom center  no-repeat!important;
-      background-size: cover!important;
+			background: url('<?php echo $img_visual_tb_src; ?>') bottom center #000000 no-repeat!important;
+			background-size: cover!important;
 		}
 	}
 	/* mobile */
 	@media screen and (max-width: 768px) {
 		.com_mainvisual {
-			background: url('<?php echo $img_visual_sp_src; ?>')  bottom center no-repeat!important;
-      background-size: cover!important;
+			background: url('<?php echo $img_visual_sp_src; ?>')  bottom center #000000 no-repeat!important;
+			background-size: cover!important;
 		}
 	}
 </style>

@@ -6,6 +6,7 @@ add_theme_support( 'post-thumbnails' );
 
 // add image for uploading
 add_image_size( 'img_other_pages', 391, 198, true );
+add_image_size( 'img_other_pages_new', 390, 130, true );
 add_image_size( 'img_blog_index', 360, 165, true );
 add_image_size( 'img_studio_large', 423, 282, true );
 add_image_size( 'img_studio_small', 342, 278, true );
@@ -19,9 +20,9 @@ add_image_size( 'img_related_blog_large', 376, 197, true );
 add_image_size( 'img_related_blog_small', 230, 135, true );
 add_image_size( 'img_user_avatar_small', 40, 40, true );
 add_image_size( 'img_feature_gallery', 668, 449, true );
-add_image_size( 'img_visual_pc', 2000, 501, true );
-add_image_size( 'img_visual_sp', 768, 258, true );
-add_image_size( 'img_visual_tb', 992, 360, true );
+add_image_size( 'img_visual_pc', 1500, 500, true );
+add_image_size( 'img_visual_sp', 768, 256, true );
+add_image_size( 'img_visual_tb', 993, 331, true );
 add_image_size( 'img_price_col3', 360, 213, true );
 add_image_size( 'img_price_col2', 574, 340, true );
 add_image_size( 'img_price_col2_sec2', 564, 318, true );

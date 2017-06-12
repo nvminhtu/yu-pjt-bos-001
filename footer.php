@@ -107,6 +107,17 @@
     });
   </script>
 <?php } ?>
+<?php if(!is_home()||is_front_page()) { ?>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      if($(window).width()<1200) {
+        var slideHeight = $(window).width()/3;
+        $('.com_mainvisual h2').height(slideHeight); 
+      }
+    });
+  </script>
+<?php } ?>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
