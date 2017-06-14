@@ -110,10 +110,12 @@
 <?php if(!is_home()||is_front_page()) { ?>
   <script type="text/javascript">
     jQuery(document).ready(function($) {
-      if($(window).width()<1200) {
-        var slideHeight = $(window).width()/3;
-        $('.com_mainvisual h2').height(slideHeight); 
-      }
+      $(window).on('load resize', function () {
+        if($(window).width()<1500) {
+          var slideHeight = $(window).width()/3;
+          $('.com_mainvisual h2').height(slideHeight); 
+        }
+      });
     });
   </script>
 <?php } ?>
