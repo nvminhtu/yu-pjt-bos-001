@@ -46,7 +46,7 @@ class TNT_Recent_QA_List_Widget extends WP_Widget {
 			// The Query
 			$recent_qa_args = array(
 			  'post_type' => 'qa',
-			  'orderby' => 'menu_order',
+			  'order'   => 'DESC',
 			  'posts_per_page' => 5
 			);
 			$qa_query = new WP_Query( $recent_qa_args );
