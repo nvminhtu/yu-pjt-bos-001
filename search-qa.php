@@ -13,7 +13,11 @@
 <div class="main">
   <div class="search_area">
     <div class="inner search_inner">
+<<<<<<< HEAD
       <p class="search_tit">質問に関するキーワードを入力ください</p>
+=======
+      <p class="search_tit">テキストが入ります。テキストが入ります。</p>
+>>>>>>> e9db9ec0dd539b872f9d33a5d2a271a439279cbc
       <form action="/" method="get">
         <input type="text" name="s" class="text" placeholder="キーワードで検索">
         <input type="hidden" name="post_type" value="qa" />

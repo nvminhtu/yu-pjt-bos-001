@@ -22,7 +22,7 @@
         ?>
           <div class="slide">
             <a href="<?php echo $media_link; ?>">
-            <?php print_r($media_pic); ?>
+            <?php //print_r($media_pic); ?>
             <?php if($media_pic['width'] >= 423) { ?>
                <img src="<?php echo $media_pic['sizes']['img_company_media_large']; ?>" alt="" />
             <?php } elseif($media_pic['width'] >= 250) { ?>

@@ -12,9 +12,9 @@
         var bgPC = $bgtitle.data('pc'),
             bgTB = $bgtitle.data('tb'),
             bgSP = $bgtitle.data('sp');
-        console.log(bgPC);
+       
         $('#title-background').css("background", bgPC);
-        console.log('test');
+       
       }
 
       return {

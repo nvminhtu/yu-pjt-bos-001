@@ -195,25 +195,25 @@
   }
 
   #index .mainvisual .btn{
-	bottom:20px;
-	right:10px;
+  bottom:20px;
+  right:10px;
 }
 
 #index .mainvisual .btn img
 {
-	width:40%;
+  width:40%;
 }
 
-	#index .list_01{
-		margin-top: 45px;
-	}
-	#index .list_01 li{
-		width: 30%;
-		margin-left: 5%;
-	}
-	#index .list_01 li:first-child{
-		margin-left: 0;
-	}
+  #index .list_01{
+    margin-top: 45px;
+  }
+  #index .list_01 li{
+    width: 30%;
+    margin-left: 5%;
+  }
+  #index .list_01 li:first-child{
+    margin-left: 0;
+  }
   #index .title_02 {
     font-size: 18px;
   }
@@ -609,11 +609,11 @@
   .header .h_logo span {
     display: none;
   }
-	#index .list_01 li{
-		width: 70%;
-		float: none;
-		margin: 0 auto 40px;
-	}
+  #index .list_01 li{
+    width: 70%;
+    float: none;
+    margin: 0 auto 40px;
+  }
   #index .list_01 li img {
     width: 100%;
   }
@@ -800,21 +800,21 @@
 
     #index .mainvisual .btn img
 {
-	width:45%;
+  width:45%;
 }
 
 .f_column_menu { padding:0 0 20px 50px; box-sizing: border-box;}
 .f_column_menu ul
 {
-	padding:0 40px;
-	width:50%;
-	box-sizing:border-box;
-	float:left;
+  padding:0 40px;
+  width:50%;
+  box-sizing:border-box;
+  float:left;
 }
 }
 @media screen and (min-width:768px){
 #sticky_menu_footer {
-	display:none!important;
+  display:none!important;
 
 }
 }
@@ -835,7 +835,7 @@
   }
 
   .header .h_tel, .header .h_share {
-		/* display: none; */
+    /* display: none; */
   }
 
   .title_01 {
@@ -845,9 +845,9 @@
   .title_01 span {
     font-size: 30px;
   }
-	#index .list_01 li{
-		width: 80%;
-	}
+  #index .list_01 li{
+    width: 80%;
+  }
 
 
   #index .section_02_left {
@@ -878,8 +878,8 @@
 #index .div_01 a.index_img_02:after
 {
 
-	width:20px;
-	height:21px;
+  width:20px;
+  height:21px;
 
 }
 
@@ -1148,7 +1148,7 @@
 
 #price .section_04 .table_03 th
 {
-	font-size:13px;
+  font-size:13px;
   width: auto;
 }
 
@@ -1159,8 +1159,8 @@
 
 @media screen and (min-width: 641px) {
   a[href^="tel"]:link,
-	a[href^="tel"]:visited,
-	a[href^="tel"]:hover {
+  a[href^="tel"]:visited,
+  a[href^="tel"]:hover {
     text-decoration: none;
     pointer-events: none;
     cursor: default;
@@ -1241,12 +1241,7 @@
   }
 
   #index .mainvisual h2 {
-    /*background: url(../images/top/mainvisual_sp.jpg) bottom center no-repeat;*/
-    /*height: 450px;
-    -webkit-background-size: auto 100%;
-    -o-background-size: auto 100%;
-    background-size: auto 100%;
-    padding-top: 80px;
+    top: 20%!important;
   }
 
   #index .mainvisual h2 .main_text_01 span {
@@ -1519,10 +1514,10 @@
 .f_column_menu { padding:0 0 20px 20px; box-sizing: border-box;}
 .f_column_menu ul
 {
-	padding:0 20px;
-	width:50%;
-	box-sizing:border-box;
-	float:left;
+  padding:0 20px;
+  width:50%;
+  box-sizing:border-box;
+  float:left;
 }
 }
 
@@ -1606,7 +1601,7 @@
 .anchorlink li:last-child:after,
 .anchorlink li:nth-child(3n):after
 {
-	display:none;
+  display:none;
 }*/
 
 }
@@ -1936,16 +1931,16 @@
 
   #price .section_04 .table_03 th
   {
-	  width:auto;
+    width:auto;
   }
 
 .f_column_menu { padding:0 0 20px 20px; box-sizing: border-box;}
 .f_column_menu ul
 {
-	padding:0 10px;
-	width:50%;
-	box-sizing:border-box;
-	float:left;
+  padding:0 10px;
+  width:50%;
+  box-sizing:border-box;
+  float:left;
 }
 
 #contact .form_contact .checkb label {
@@ -1958,25 +1953,24 @@
 @media screen and (max-width: 479px){
     #price .arrow_des
 {
-	background:url(../images/price/arrow_right.png) no-repeat right center;
-	font-size:14px;
-	text-align:right;
-	display:block;
-	padding:0 25px 5px 0;
-	font-weight:bold;
+  background:url(../images/price/arrow_right.png) no-repeat right center;
+  font-size:14px;
+  text-align:right;
+  display:block;
+  padding:0 25px 5px 0;
+  font-weight:bold;
 }
 .f_logo { width:30%; margin:0 auto; float:none; text-align:center;}
-.f_column_menu { width:100%; float:none; padding:0; text-align:center; margin-bottom:20px;}
+.f_column_menu { width:100%; float:none; padding:0; text-align:center; margin-bottom:20px; margin-top: 20px;}
 .f_column_menu ul
 {
-	padding:0 10px;
-	width:auto;
-	box-sizing:border-box;
-	float:none;
+  padding:0 10px;
+  width:auto;
+  box-sizing:border-box;
+  float:none;
 }
-.f_column_menu ul li {
-	}
-
+.f_column_menu ul li {  }
+.f_column_menu ul li a { line-height: 2.3em; }
 
 }
 
