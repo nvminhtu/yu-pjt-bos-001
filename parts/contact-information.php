@@ -8,7 +8,7 @@
 ?>
 <section id="section_07" class="footer_section_02">
   <div class="inner">
-    <?php echo $text_information; ?>
+    <p class="top_ft_text"><?php echo $text_information; ?></p>
     <p class="btn_03"><a href="<?php echo $contact_link; ?>"><span><?php echo $contact_text; ?></span></a></p>
   </div>
 </section>

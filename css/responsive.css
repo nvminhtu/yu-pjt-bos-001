@@ -585,6 +585,7 @@
     width: auto;
     margin-left: 0;
     padding-right: 18%;
+    padding: 20px 0;
   }
 
   .footer_section_03 .footer_tel a {
@@ -904,7 +905,7 @@
   }
 
   .com_mainvisual h2 span {
-    font-size: 6vw;
+    font-size: 4vw;
   }
 
   .f_column_03 {
@@ -996,6 +997,10 @@
     width: 48%;
     margin-right: 0;
     margin-left: 4%;
+  }
+
+  #feature .section_05 .list_04 li.last {
+    clear: both;
   }
 
   #feature .section_05 .list_04 li:nth-child(odd) {
@@ -1111,6 +1116,7 @@
 
   .footer_section_03 .footer_tel {
     font-size: 20px;
+    padding: 20px 0;
   }
 
   .footer_section_03 .footer_tel a {
@@ -2118,5 +2124,21 @@
   .popup_time select {
     font-size: 2vh;
   }
+  .com_mainvisual h2 {
+    left: 0px;
+  }
+  .notify-box {
+    margin: 40px 0;
+  }
+}
 
+@media screen and (max-width: 980px) {
+  .remake { 
+    font-size: 2vw;
+    margin: 0;
+  }
+  .top_ft_text {
+    font-weight: bold;
+    font-size: 3vw;
+  }
 }

@@ -335,6 +335,7 @@ body {
   left: 0;
   font-weight: bold;
   color: #FFFFFF;
+  margin: 0 10px;
 }
 
 #index .mainvisual{
@@ -3080,7 +3081,6 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 .btn_02 .arrow{display: block; position: absolute; width: 15px; height: 15px; background: url(../images/btn_02_right.png) center no-repeat; top: 24px; margin-top: 0; right: 10px;}
 #contact .btn_02 #submit{height: 100%; background-size: 100% auto; text-align: center; font-size: 18px;font-weight: bold; color: #fff; display: block; position: relative;}
 .remake {
-  margin: 10px 0;
   font-weight: bold;
   font-size: 16px;
 }
@@ -3311,4 +3311,12 @@ body#confirmation #submitconfirm{background: url(../images/btn-form.png); width:
 
 #index .mainvisual .btn img {
   float: right!important;
+}
+
+.notify-box {
+  margin: 100px 0;
+  text-align: center;
+}
+.top_ft_text {
+  font-weight: bold;
 }
