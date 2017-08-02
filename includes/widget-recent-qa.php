@@ -42,57 +42,41 @@ class TNT_Recent_QA_List_Widget extends WP_Widget {
 	    <div class="nav02">
 		<p class="nav02_tit"><span><?php echo $instance['title']; ?></span></p>
 		<?php 
-			$post_objects = get_field('qa_ranking','option');
-			if($post_objects != "")
-			{
+			
+			// The Query
+			$recent_qa_args = array(
+			  'post_type' => 'qa',
+			  'orderby' => 'menu_order',
+			  'posts_per_page' => 5
+			);
+			$qa_query = new WP_Query( $recent_qa_args );
+
+			// The Loop
+			if ( $qa_query->have_posts() ) {
 				echo '<ul>';
-				foreach ($post_objects as $postQA) {
-					$terms = get_the_terms( $postQA->ID , 'qacat' );
+				while ( $qa_query->have_posts() ) {
+					$qa_query->the_post();
+					
+					$terms = get_the_terms( get_the_ID() , 'qacat' );
 					?>
-					<li>
-
-					<p class="nav_Q"><a href="<?php echo get_permalink($postQA->ID); ?>"><?php echo get_the_title( $postQA->ID ); ?></a></p>
-						<?php foreach ($terms as $term): ?>
-							<?php $termLink = get_term_link($term->term_id); ?>
-							<p class="nav_cate"><a href="<?php echo $termLink ?>"><?php echo $term->name; ?></a></p>	
-						<?php endforeach ?>
-					</li>
-					<?php
-				}
-			}
-			else{
-				// The Query
-				$recent_qa_args = array(
-				  'post_type' => 'qa',
-				  'posts_per_page' => 5
-				);
-				$qa_query = new WP_Query( $recent_qa_args );
-
-				// The Loop
-				if ( $qa_query->have_posts() ) {
-					echo '<ul>';
-					while ( $qa_query->have_posts() ) {
-						$qa_query->the_post();
-						
-						$terms = get_the_terms( get_the_ID() , 'qacat' );
-						?>
 						<li>
-
-						<p class="nav_Q"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-							<?php foreach ($terms as $term): ?>
+							<p class="nav_Q"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+							<?php if(!empty($terms)) {
+							     foreach ($terms as $term): ?>
 								<?php $termLink = get_term_link($term->term_id); ?>
 								<p class="nav_cate"><a href="<?php echo $termLink ?>"><?php echo $term->name; ?></a></p>	
-							<?php endforeach ?>
+							<?php endforeach;
+							} ?>
 						</li>
-						<?php
-					}
-					echo '</ul>';
-					/* Restore original Post Data */
-					wp_reset_postdata();
-				} else {
-					echo "<p>No QA to show</p>";
+					<?php 
 				}
+				echo '</ul>';
+				/* Restore original Post Data */
+				wp_reset_postdata();
+			} else {
+				echo "<p>No QA to show</p>";
 			}
+			
 		 ?>
 
 		</div>

@@ -2112,3 +2112,11 @@
 
 
 }
+
+@media screen and (max-width: 767px) {
+
+  .popup_time select {
+    font-size: 2vh;
+  }
+
+}

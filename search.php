@@ -29,7 +29,7 @@ get_header(); ?>
 	              $img_blog_list_item_src = $img_blog_list_item[0];
 	              //run the loop
 		?>
-			
+			<a href="<?php the_permalink(); ?>">
 	          <dl class="clearfix">
 	            <dt>
 	                <?php if(has_post_thumbnail()) { ?>
@@ -39,11 +39,12 @@ get_header(); ?>
 	                <?php } ?>
 	            </dt>
 	            <dd>
-	              <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+	              <h4><?php the_title(); ?></h4>
 	              <div class="clearfix">
 	                <p class="userinfo">
-	                  <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
+	                  <?php /* <span><img src="<?php echo $editor_avatar_url; ?>" /></span>
 	                  <span><?php echo $fullname; ?></span>
+	                  */ ?>
 	                </p>
 	                <p class="dateinfo">
 	                  <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
@@ -52,6 +53,7 @@ get_header(); ?>
 	              </div>
 	            </dd>
 	          </dl>
+	         </a>
 		    
 		    <?php endwhile; 
 			else :

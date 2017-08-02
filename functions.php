@@ -110,7 +110,7 @@ function get_custom_page_slug() {
     $id_page = 'bloglist';
   } elseif(is_page() && is_page('news')) {
     $id_page = 'bloglist';
-  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_tag()) {
+  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_singular('news')||is_post_type_archive('news')||is_search()||is_tag()) {
     $id_page = "bloglist";
   } elseif (is_singular('qa') || is_tax( 'qacat' ) || is_post_type_archive('qa')) {
     $id_page = "qa";
@@ -123,6 +123,7 @@ function get_custom_page_slug() {
   } else { }
   return $id_page;
 }
+
 
 // #favicon
 function add_favicon() {
