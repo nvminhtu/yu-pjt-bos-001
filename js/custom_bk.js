@@ -259,7 +259,7 @@ $(window).bind('scroll',function(){
 
 	 });
 
-/*
+
 $(document).ready(function() {
 $('a[href^=#]').click(function() {
 		var speed = 200; // ミリ秒
@@ -272,4 +272,4 @@ $('a[href^=#]').click(function() {
 		$('body,html').animate({scrollTop:position}, speed, 'swing');
 		return false;
 	});
-});*/
+});
