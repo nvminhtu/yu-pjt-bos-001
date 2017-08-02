@@ -37,31 +37,16 @@
             $nicename = get_the_author_meta( 'user_nicename' );
 
           ?>
-          <li><?php if ( has_post_thumbnail() ) { ?>
-                <a href="<?php the_permalink(); ?>"><img src="<?php echo $img_blog_src; ?>" alt="<?php the_title(); ?>" /></a>
+          <li>
+            <a href="<?php the_permalink(); ?>">
+              <?php if ( has_post_thumbnail() ) { ?>
+                <img src="<?php echo $img_blog_src; ?>" alt="<?php the_title(); ?>" />
               <?php } else { ?>
-                <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/index_img_04.jpg" alt="<?php the_title(); ?>" /></a>
+                <img src="<?php bloginfo('template_url'); ?>/images/index_img_04.jpg" alt="<?php the_title(); ?>" />
               <?php } ?>
-              <h3 class="title_02"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-              <p class="meta"><?php echo $time; ?>
-                <?php
-                  // 01. Load Cats of Blog
-                  $terms = wp_get_post_terms($post->ID, 'category', '');
-                  $categories_length = count($terms);
-                  
-                  $i = 1;
-
-                  if ( !empty( $terms ) && !is_wp_error( $terms ) ){
-                     foreach ( $terms as $term ) {
-                        echo "<a href='".get_term_link($term)."'>" . $term->name . "</a>";
-                        if($i!=$categories_length) {
-                            echo ", ";
-                        }
-                        $i++;
-                      }
-                   }
-                ?>
-               </p>
+              <h3 class="title_02"><?php the_title(); ?></h3>
+              <p class="meta"><?php echo $time; ?> ダイエット, 腹筋</p>
+            </a>
           </li>
           <?php $i++;
                endforeach;

@@ -6,17 +6,16 @@
  * Content will be gotten from admin editor
  */ ?>
 <?php get_header(); ?>
-	<div class="bxloading"><img src="<?php bloginfo('template_url'); ?>/images/loading.gif"></div>
 	<div class="mainvisual">
-		    <ul class="bxslider" style="display: none;">
+			<ul class="bxslider">
 				<?php
 						$slider_items = get_field('slider_items','options');
+					  //print_r($slider_items);
 
-							foreach($slider_items as $item) {
+						foreach($slider_items as $item) {
 								$pc_slide_image = $item['pc_slide_image'];
 								$tablet_slide_image = $item['tablet_slide_image'];
 								$sp_slide_image = $item['sp_slide_image'];
-								$slider_text_0 = $item['slider_text_0'];
 								$slider_text_1 = $item['slider_text_1'];
 								$slider_text_2 = $item['slider_text_2'];
 								$button_link = $item['button_link'];
@@ -25,14 +24,27 @@
 								<span class="pc02"><img src="<?php echo $pc_slide_image; ?>" /></span>
 								<span class="tb02"><img src="<?php echo $tablet_slide_image; ?>" /></span>
 								<span class="sp02"><img src="<?php echo $sp_slide_image; ?>" /></span>
-								<?php echo '<h2>'; if($slider_text_0!=''): ?><span class="main_text_01"><span><?php echo $slider_text_0; ?></span></span><?php endif; ?>
-									  <?php if($slider_text_1[0]['slider_text_line']!=''): ?>
-											<span class="main_text_02"><?php foreach($slider_text_1 as $text_item) { echo $text_item['slider_text_line']; } ?></span>
-										<?php endif; ?>
-										<?php if($slider_text_2[0]['slider_text_line']!=''): ?>
-											<span class="main_text_03"><?php foreach($slider_text_2 as $text_item) { echo $text_item['slider_text_line']; } ?></span>
-									   <?php endif; ?>
-								<?php echo '</h2>'; ?>
+								<h2>
+									  <span class="main_text_01">
+											<span>はじめようBOSTY</span>
+										</span>
+
+									 <?php if($slider_text_1[0]['slider_text_line']!=''): ?>
+												<span class="main_text_02">
+													<?php foreach($slider_text_1 as $text_item) {
+														echo $text_item['slider_text_line'];
+													} ?>
+												</span>
+											<?php endif; ?>
+
+											<?php if($slider_text_2[0]['slider_text_line']!=''): ?>
+												<span class="main_text_03">
+													<?php foreach($slider_text_2 as $text_item) {
+														echo $text_item['slider_text_line'];
+													} ?>
+												</span>
+											<?php endif; ?>
+								</h2>
 								<?php if($button_link!='') { ?>
 								  <p class="btn">
 										<a href="<?php echo $button_link; ?>" target="_blank">
@@ -107,7 +119,7 @@
 			<img src="<?php bloginfo('template_url'); ?>/images/index_img_12_sp.png" alt="まずはお気軽に体験レッスンから" class="sp" />
 			<div class="section_05_01">まずはお気軽に<span>体験レッスン</span>から</div>
 			<p class="btn_04">
-				<a href="<?php bloginfo('siteurl'); ?>/contact/">
+				<a href="http://www.bosty.co.jp/" target="_blank">
 					<span class="btn_04_01">24時間<br>受付可能</span>
 					<span class="btn_04_02">Webでご予約</span>
 				</a>

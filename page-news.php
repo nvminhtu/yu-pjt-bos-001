@@ -40,56 +40,52 @@
       ?>
       <?php if($i==1) { ?>
       <div class="big_article clearfix">
-        <a href="<?php the_permalink(); ?>">
-          <p class="bigimg">
-            <?php if(has_post_thumbnail()) { ?>
-              <img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" />
-            <?php } else { ?>
-              <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_bigimg.png" alt="<?php the_title(); ?>" />
-            <?php } ?>
-          </p>
-          <div class="bigcontent">
-             <h3><?php the_title(); ?></h3>
-              <?php
-                  //show content limited
-                 $content_display = mb_substr(wp_strip_all_tags( get_the_content()), 0, 80 , 'UTF-8');
-                 $content_display = apply_filters('the_content', $content_display);
-                 $content_display = strip_tags( $content_display, '<p><br/>');
-                 $content_length = mb_strlen($content_display);
+        <p class="bigimg">
+          <?php if(has_post_thumbnail()) { ?>
+            <img src="<?php echo $img_blog_list_src; ?>" alt="<?php the_title(); ?>" />
+          <?php } else { ?>
+            <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_bigimg.png" alt="<?php the_title(); ?>" />
+          <?php } ?>
+        </p>
+        <div class="bigcontent">
+          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <?php
+                //show content limited
+               $content_display = mb_substr(wp_strip_all_tags( get_the_content()), 0, 80 , 'UTF-8');
+               $content_display = apply_filters('the_content', $content_display);
+               $content_display = strip_tags( $content_display, '<p><br/>');
+               $content_length = mb_strlen($content_display);
 
-                 if($content_length > 81) {
-                   echo $content_display.' ...';
-                 } else {
-                   echo $content_display;
-                 }
-              ?>
-            <p class="news_no dateinfo">
-              <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
-            </p>
-          </div>
-        </a>
+               if($content_length > 81) {
+                 echo $content_display.' ...';
+               } else {
+                 echo $content_display;
+               }
+            ?>
+          <p class="news_no dateinfo">
+            <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
+          </p>
+        </div>
       </div>
       <?php } else { ?>
       <?php if($i==2) { ?> <div class="news_article clearfix"><?php } ?>
-          <a href="<?php the_permalink(); ?>">
-            <dl class="clearfix">
-              <dt>
-                  <?php if(has_post_thumbnail()) { ?>
-                    <img src="<?php echo $img_blog_list_item_src; ?>" alt="<?php the_title(); ?>" />
-                  <?php } else { ?>
-                    <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png"  alt="<?php the_title(); ?>" /></p>
-                  <?php } ?>
-              </dt>
-              <dd>
-                  <h4><?php the_title(); ?></h4>
-                  <div class="clearfix">
-                    <p class="news_no dateinfo">
-                      <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
-                    </p>
-                  </div>
-              </dd>
-            </dl>
-          </a>
+          <dl class="clearfix">
+            <dt>
+                <?php if(has_post_thumbnail()) { ?>
+                  <img src="<?php echo $img_blog_list_item_src; ?>" alt="<?php the_title(); ?>" />
+                <?php } else { ?>
+                  <img src="<?php bloginfo('template_url'); ?>/images/bloglist/bloglist_simg01.png"  alt="<?php the_title(); ?>" /></p>
+                <?php } ?>
+            </dt>
+            <dd>
+              <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+              <div class="clearfix">
+                <p class="news_no dateinfo">
+                  <span class="cal"><?php echo get_the_date('Y.m.d',$post->ID); ?></span>
+                </p>
+              </div>
+            </dd>
+          </dl>
       <?php if($i==$number_of_posts) { ?></div><?php } ?>
       <?php } //end check not 1 post ?>
       <?php $i++; endwhile; ?>

@@ -22,15 +22,7 @@
         ?>
           <div class="slide">
             <a href="<?php echo $media_link; ?>">
-            <?php //print_r($media_pic['width']); ?>
-            <?php if($media_pic['width'] >= 423) { ?>
-               <img src="<?php echo $media_pic['sizes']['img_company_media_large']; ?>" alt="" />
-            <?php } elseif($media_pic['width'] >= 250) { ?>
-               <img src="<?php echo $media_pic['sizes']['img_company_media_medium']; ?>" alt="" />
-            <?php } else { ?>
-              <img src="<?php echo $media_pic['sizes']['img_company_media_small']; ?>" alt="" />
-            <?php }?>
-
+            <img src="<?php echo $media_pic; ?>" alt="" />
             <p class="sl_tit"><?php echo $media_channel; ?></p>
             <p class="sl_date"><?php echo $media_date; ?></p></a>
           </div>

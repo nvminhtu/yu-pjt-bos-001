@@ -6,7 +6,6 @@ add_theme_support( 'post-thumbnails' );
 
 // add image for uploading
 add_image_size( 'img_other_pages', 391, 198, true );
-add_image_size( 'img_other_pages_new', 390, 130, true );
 add_image_size( 'img_blog_index', 360, 165, true );
 add_image_size( 'img_studio_large', 423, 282, true );
 add_image_size( 'img_studio_small', 342, 278, true );
@@ -20,16 +19,12 @@ add_image_size( 'img_related_blog_large', 376, 197, true );
 add_image_size( 'img_related_blog_small', 230, 135, true );
 add_image_size( 'img_user_avatar_small', 40, 40, true );
 add_image_size( 'img_feature_gallery', 668, 449, true );
-add_image_size( 'img_visual_pc', 1500, 500, true );
-add_image_size( 'img_visual_sp', 768, 256, true );
-add_image_size( 'img_visual_tb', 993, 331, true );
+add_image_size( 'img_visual_pc', 2000, 501, true );
+add_image_size( 'img_visual_sp', 768, 258, true );
+add_image_size( 'img_visual_tb', 992, 360, true );
 add_image_size( 'img_price_col3', 360, 213, true );
 add_image_size( 'img_price_col2', 574, 340, true );
 add_image_size( 'img_price_col2_sec2', 564, 318, true );
-add_image_size( 'img_company_media_large', 423, 423, true );
-add_image_size( 'img_company_media_medium', 250, 250, true );
-add_image_size( 'img_company_media_small', 150, 150, true );
-
 
 /** -------------- 02.Add included files -------------- **/
 require_once (dirname(__FILE__) . '/includes/add-image-size.php');
@@ -110,7 +105,7 @@ function get_custom_page_slug() {
     $id_page = 'bloglist';
   } elseif(is_page() && is_page('news')) {
     $id_page = 'bloglist';
-  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_singular('news')||is_post_type_archive('news')||is_search()||is_tag()) {
+  } elseif (is_singular('post')||is_category()||is_post_type_archive('post')||is_search()||is_tag()) {
     $id_page = "bloglist";
   } elseif (is_singular('qa') || is_tax( 'qacat' ) || is_post_type_archive('qa')) {
     $id_page = "qa";
@@ -140,6 +135,7 @@ add_filter( 'wpcf7_form_elements', 'do_shortcode' );
 function template_chooser($template)
 {
   global $wp_query;
+  $post_type = get_query_var('post_type');
   if( $wp_query->is_search && $post_type == 'qa' )
   {
     return locate_template('search-qa.php');  //  redirect to archive-search.php

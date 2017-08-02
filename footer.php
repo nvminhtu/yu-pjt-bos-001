@@ -38,8 +38,7 @@
 <?php if(is_front_page() || is_home()) { ?>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.bxloading').fadeOut();
-    $('.bxslider').fadeIn().bxSlider({
+    $('.bxslider').bxSlider({
     			auto: true,
     			controls: true,
     			pager:false,
@@ -107,19 +106,6 @@
     });
   </script>
 <?php } ?>
-<?php if(!is_home()||is_front_page()) { ?>
-  <script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $(window).on('load resize', function () {
-        if($(window).width()<1500) {
-          var slideHeight = $(window).width()/3;
-          $('.com_mainvisual h2').height(slideHeight); 
-        }
-      });
-    });
-  </script>
-<?php } ?>
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

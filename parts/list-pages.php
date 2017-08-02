@@ -13,7 +13,7 @@
             if($post->ID != $current_page_id) {
               setup_postdata($post);
               $page_description = get_field( "page_description", $post->ID );
-              $img_other_pages = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_other_pages_new');
+              $img_other_pages = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'img_other_pages');
 						  $img_other_pages_src = $img_other_pages[0];
           ?>
           <a href="<?php the_permalink(); ?>">

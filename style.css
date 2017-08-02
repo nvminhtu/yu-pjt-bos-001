@@ -38,10 +38,10 @@ Text Domain: Bosty
 }
 
 #instagram .slick-slide {
-  background: #F5F5E9;
+	background: #F5F5E9;
 }
 #instagram .slick-slide img {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 @media screen and (max-width: 890px) {
   #price .list_02 li:nth-child(4n+4) {
@@ -82,64 +82,5 @@ Text Domain: Bosty
 @media screen and (max-width: 890px) {
   #price .list_02 li:nth-child(4n+4) {
     margin-left: auto;
-  }
-}
-.bx-wrapper .bx-controls-direction a {
-  z-index: 1!important;
-}
-#index .mainvisual .btn a:hover {
-  background: #ddd;
-}
-#index .mainvisual .btn a:hover img {
-  opacity: 0.7!important;
-}
-
-.sp-no-break {
-  display: block;
-}
-#price #section_01 td span, #price #section_03 td span {
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  #price #section_01 td span, #price #section_03 td span {
-    display: inline;
-  }
-  .sp-no-break {
-    display: none;
-  }
-}
-
-#bloglist .dateinfo span.zilla-likes:hover, 
-#bloglist .dateinfo span.zilla-likes.active {
-  margin-left: 10px!important;
-  padding-left: 15px!important;
-}
-.bxloading {
-  height: 32px; 
-  position: absolute; 
-  top: 60px; 
-  z-index: 9999; 
-  left: 50%;
-}
-@media screen and (min-width: 1200px) {
-  .com_mainvisual .inner::before {
-    display: block;
-    position: absolute;
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0, #000000 50%);
-    top: 0;
-    height: 100%;
-    width: 30%;
-    content: '';
-    left: -150px;
-  }
-  .com_mainvisual .inner::after {
-    display: block;
-    position: absolute;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #000000 50%);
-    top: 0;
-    height: 100%;
-    width: 30%;
-    content: '';
-    right: -150px;
   }
 }

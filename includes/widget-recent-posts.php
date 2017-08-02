@@ -65,9 +65,9 @@ class MT_Recent_Post_List_Widget extends WP_Widget {
 
 							 	 	$my_postid = $post->ID;
 							 	   //show content limited
-									 							$content_display = str_replace("&nbsp;", "", get_the_content());
-		                          	$content_display = mb_substr(wp_strip_all_tags( get_the_content()), 0, 35 , 'UTF-8');
 
+		                          	$content_display = mb_substr(wp_strip_all_tags( get_the_content()), 0, 35 , 'UTF-8');
+																$content_display = str_replace("&nbsp;", "", $content_display);
 																$content_display = apply_filters('the_content', $content_display);
 		                            $content_display = strip_tags( $content_display, '');
 

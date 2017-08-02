@@ -63,8 +63,8 @@
             <div class="map">
               <div class="maparea">
                   <div class="gmap_<?php echo $k; ?>" data-lat="<?php echo $latitude; ?>" data-long="<?php echo $longitude; ?>" style="with:100%; height:320px;border:0;"></div>
-                  <span class="place_name_<?php echo $k; ?>" data-content="<?php echo $place_name; ?>"></span>
-                  <span class="place_address_<?php echo $k; ?>" data-content="<?php echo $place_address; ?>"></span>
+                  <span class="place_name_<?php echo $i; ?>" data-content="<?php echo $place_name; ?>"></span>
+                  <span class="place_address_<?php echo $i; ?>" data-content="<?php echo $place_address; ?>"></span>
               </div>
               <p class="text-right"><a href="<?php echo $mapURL; ?>" target="_blank">Google Mapで見る</a></p>
               <h4>アクセスマップ</h4>

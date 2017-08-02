@@ -43,7 +43,13 @@
               <h3><?php echo $feature_title; ?></h3>
               <p><?php echo $feature_content; ?></p>
                 <?php if(isset($feature_link)&&$feature_link!='') { ?>
-                  <p><a href="<?php echo $feature_link; ?>"><?php } if(isset($feature_link_title)&&$feature_link_title!='') { echo $feature_link_title; } if(isset($feature_link)&&$feature_link!='') { ?></a></p>
+                  <p><a href="#">
+                <?php }
+                  if(isset($feature_link_title)&&$feature_link_title!='') {
+                    echo $feature_link_title;
+                  }
+                 if(isset($feature_link)&&$feature_link!='') { ?>
+                  </a></p>
                 <?php }?>
             </li>
             <?php if($i % 2 == 0) { ?>
@@ -57,10 +63,10 @@
     </div>
   </section>
   <!-- End feature Content -->
-
+  
   <!-- Gallery Section -->
 	<section id="section_03" class="section_03">
-    <?php
+    <?php 
       // get picture gallery from custom fields
       $title_gallery = get_field('title_gallery');
       $trainer_gallery = get_field('trainer_gallery');
@@ -73,20 +79,20 @@
 			<div id="instagram" class="clearfix">
         <?php // loop author slider main
             $i = 0;
-            if( $trainer_gallery ):
-              foreach( $trainer_gallery as $image ):
-        ?>
-                <div class="slide"><img src="<?php echo $image['sizes']['img_feature_gallery']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
-        <?php  $i++;
-            endforeach;
-          endif;
+            if( $trainer_gallery ): 
+              foreach( $trainer_gallery as $image ): 
+        ?>              
+                <div class="slide"><img src="<?php echo $image['sizes']['img_feature_gallery']; ?>" alt="<?php echo $image['alt']; ?>" /></div> 
+        <?php  $i++; 
+            endforeach; 
+          endif; 
           // end loop author thumb
         ?>
 			</div><!-- end #instagram -->
 		</div>
 	</section>
   <!-- End Gallery Section -->
-
+  
   <!-- Trainer Section -->
 	<section id="section_04" class="section_04">
 		<div class="inner">
@@ -141,3 +147,5 @@
   get_template_part('parts/contact-information');
 ?>
 <?php get_footer(); ?>
+
+
