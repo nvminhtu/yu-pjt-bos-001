@@ -7,6 +7,13 @@ function check_weekdays(date) {
 	}
     return a ;
 }
+// $(document).on('click touch touchstart', function (e) {
+// 	"use strict";
+// 		if ($(e.target).closest("#popup_time01 ,.box_input_fcal input").length === 0) {
+// 		   $(".popup_time").fadeOut();
+// 		 // alert("touch");
+// 	}
+// });
 
 $("body").click(function(event) {
 	$(".popup_time").fadeOut();
@@ -15,6 +22,8 @@ $("body").click(function(event) {
 $(".popup_time").click(function(e) {
 	e.stopPropagation();
 });
+
+$('input[name="date_01"],input[name="date_02"],input[name="date_03"]').attr('readonly',true);
 
 $(document).ready(function() {
    "use strict"; 
@@ -37,51 +46,23 @@ $(document).ready(function() {
 		$("#popup_time02").fadeOut();
 	});
 });
-$(document).ready(function() {
-	"use strict";
-	$("#col01_datepicker").datepicker({ 
-		minDate: 0,
-	 	onSelect: function(dateText, inst) {
-	 	//inst.preventDefault();
-		/*var seldate = $(this).datepicker('getDate').toDateString().split(' ');
-		var check = check_weekdays(seldate[0]);
-			if(check===false){
-					$('#contact_col01_select_time01 .wd').attr("hidden","hidden");
-					$("#contact_col01_select_time02 .wd").attr("hidden","hidden");
-					var check_time_select01 = $('#contact_col01_select_time01').val();
-					var check_time_select02 = $('#contact_col01_select_time02').val();
-					if(check_time_select01==="17:00"||check_time_select01==="18:00"||check_time_select01==="19:00"||check_time_select01==="20:00"){
-						$('#contact_col01_select_time01').val("10:00");
-					}
-					if(check_time_select02==="17:00"||check_time_select02==="18:00"||check_time_select02==="19:00"||check_time_select02==="20:00"){
-						$('#contact_col01_select_time02').val("10:00");
-					}
-			}
-				else{
-					$('#contact_col01_select_time01 .wd').removeAttr("hidden");
-					$("#contact_col01_select_time02 .wd").removeAttr("hidden");
-			}*/
-			console.log('test');
-       }
-	});
-	$("#col01_done").click(function(){
-		 var date = $("#col01_datepicker").datepicker("getDate");
-		 var col_date = $.datepicker.formatDate("yy-mm-dd", date); 
-		 var col_time01 = $('#contact_col01_select_time01').val();
-		 var col_time02 = $('#contact_col01_select_time02').val();
-		 if(col_time02===null){col_time02="";}
-		 $("#popup_time01").fadeOut();
-		 $('input[name="date_01"]').val(col_date + " " + col_time01 + "~" + col_time02);
-	});
-});
+
+
 /* script date col01 */
 $(function() {
 "use strict";
+/*       var weekday=new Array();
+            weekday['Mon']="Monday";
+            weekday['Tue']="Tuesday";
+            weekday['Wed']="Wednesday";
+            weekday['Thu']="Thursday";
+            weekday['Fri']="Friday";
+            weekday['Sat']="Saturday";
+            weekday['Sun']="Sunday";*/
 	 
-   /* $("#col01_datepicker" ).datepicker({ 
+    $("#col01_datepicker" ).datepicker({ 
 		minDate: 0,
-	 	onSelect: function(dateText, inst) {
-	 	//inst.preventDefault();
+	 	onSelect: function() {       
 		var seldate = $(this).datepicker('getDate').toDateString().split(' ');
 		var check = check_weekdays(seldate[0]);
 			if(check===false){
@@ -100,7 +81,6 @@ $(function() {
 					$('#contact_col01_select_time01 .wd').removeAttr("hidden");
 					$("#contact_col01_select_time02 .wd").removeAttr("hidden");
 			}
-			console.log('test');
        }
 	});
 	$("#col01_done").click(function(){
@@ -112,9 +92,9 @@ $(function() {
 		 $("#popup_time01").fadeOut();
 		 $('input[name="date_01"]').val(col_date + " " + col_time01 + "~" + col_time02);
 	});
-	*/
+	
 /* script date col02 */
-    $("#col02_datepicker").datepicker({ 
+    $("#col02_datepicker" ).datepicker({ 
 		minDate: 0,
 	 	onSelect: function() {       
 		var seldate = $(this).datepicker('getDate').toDateString().split(' ');
