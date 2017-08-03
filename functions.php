@@ -46,9 +46,6 @@ require_once (dirname(__FILE__) . '/includes/widget-facebook.php');
 require_once (dirname(__FILE__) . '/includes/widget-recent-qa.php');
 require_once (dirname(__FILE__) . '/includes/widget-recent-posts.php');
 
-/* Post View Counter Feature */
-require_once (dirname(__FILE__) . '/includes/postviewcounter.php');
-
 /** -------------- 03. Setting for theme -------------- **/
 // #menu
 if (function_exists('register_nav_menu')) {

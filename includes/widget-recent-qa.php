@@ -42,16 +42,13 @@ class TNT_Recent_QA_List_Widget extends WP_Widget {
 	    <div class="nav02">
 		<p class="nav02_tit"><span><?php echo $instance['title']; ?></span></p>
 		<?php 
-			tnt_init_post_views();
-			// The Query
-			$qa_paged = get_query_var('paged') ? get_query_var('paged') : 1;
 			$qa_args = array(
 			  'post_type' => 'qa',
 			  'posts_per_page' => 5,
-			  'paged'=>$qa_paged,
-			  'meta_key' => 'tnt_post_views_count',
-			  'orderby' => 'meta_value_num', 
-			  'order' => 'DESC'
+			  'suppress_filters' => false,
+			  'orderby' => 'post_views',
+			  'fields' => '',
+			  'order'	=> 'desc'
 			);
 
 			$qa_query = new WP_Query( $qa_args );

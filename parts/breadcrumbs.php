@@ -1,11 +1,11 @@
 <div class="topicpath">
   <?php
- 		if(function_exists('custom_breadcrumbs')) {
+        if(function_exists('custom_breadcrumbs')) {
         custom_breadcrumbs();
     }
   ?>
 </div>
-<!-- <a href="./">HOME</a> &gt; タイトルが入ります。 -->
+
 <?php
 function custom_breadcrumbs() {
 
@@ -37,18 +37,20 @@ function custom_breadcrumbs() {
         } else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
 
             // If post is a custom post type
-            $post_type = get_post_type();
+           $post_type = get_post_type();
 
-            // If it is a custom post type display name and link
-            if($post_type != 'post') {
+            if(!empty($post_type)) {
+                // If it is a custom post type display name and link
+                if($post_type != 'post') {
 
-                $post_type_object = get_post_type_object($post_type);
-                $post_type_archive = get_post_type_archive_link($post_type);
+                    $post_type_object = get_post_type_object($post_type);
+                    $post_type_archive = get_post_type_archive_link($post_type);
+                    
+                    echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="/'.$post_type.'" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a>'.$separator.'</li>';
 
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a>'.$separator.'</li>';
-
+                }    
             }
-
+            
             $custom_tax_name = get_queried_object()->name;
             echo '<li class="item-current item-archive">' . $custom_tax_name . '</li>';
 
@@ -63,7 +65,7 @@ function custom_breadcrumbs() {
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_archive = get_post_type_archive_link($post_type);
 
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a>'.$separator.'</li>';
+                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="/'.$post_type.'" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a>'.$separator.'</li>';
 
             }
 
