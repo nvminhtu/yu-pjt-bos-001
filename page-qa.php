@@ -27,6 +27,8 @@
 <div class="left_content">
 <h3 class="h3_ttl">BOSTYに寄せられる質問</h3>
 
+<?php tnt_init_post_views(); ?>
+
 <div class="qa_sec">
 <?php
 // The Query
@@ -34,15 +36,20 @@ $qa_paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $qa_args = array(
   'post_type' => 'qa',
   'posts_per_page' => 5,
-  'paged'=>$qa_paged
+  'paged'=>$qa_paged,
+  'meta_key' => 'tnt_post_views_count',
+  'orderby' => 'meta_value_num', 
+  'order' => 'DESC'
 );
 $qa_query = new WP_Query( $qa_args );
+// $qa_query = pvc_get_most_viewed_posts( $qa_args );
 
 // The Loop
 if ( $qa_query->have_posts() ) {
   while ( $qa_query->have_posts() ) {
     $qa_query->the_post();
     ?>
+    <p><?php echo $viewCount; ?></p>
     <dl>
     <dt><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></dt>
     <dd><?php the_content(); ?></dd>
@@ -56,7 +63,6 @@ if ( $qa_query->have_posts() ) {
   <p>No FAQS to show</p>
   <?php
 }
-
 ?>
 </div>
 <style>

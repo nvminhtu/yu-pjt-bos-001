@@ -13,7 +13,11 @@
         <?php get_template_part('parts/breadcrumbs'); ?>
         <div class="qa_sec">
           <?php /* Start the Loop */
-              while ( have_posts() ) : the_post(); ?>
+              while ( have_posts() ) : the_post();
+              $postID = get_the_ID();
+              //Update view count
+              tnt_set_post_views($postID);
+          ?>
           <dl>
             <dt><?php the_title(); ?></dt>
             <dd><?php the_content(); ?></dd>
