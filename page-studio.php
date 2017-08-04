@@ -18,8 +18,8 @@
     $args = array(
       'post_type' =>'studio',
       'posts_per_page' => -1,
-      'orderby' => date,
-      'order' => desc,
+      'order' => 'asc',
+      'orderby' => 'menu_order',
       'field' => 'slug',
       'paged' => $paged
     );
