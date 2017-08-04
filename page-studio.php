@@ -16,18 +16,18 @@
     global $numposts;
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = array(
-  		'post_type' =>'studio',
-  		'posts_per_page' => -1,
-  		'orderby' => date,
-  		'order' => desc,
-  		'field' => 'slug',
-  		'paged' => $paged
-  	);
+      'post_type' =>'studio',
+      'posts_per_page' => -1,
+      'orderby' => date,
+      'order' => desc,
+      'field' => 'slug',
+      'paged' => $paged
+    );
     $the_query = new WP_Query( $args );
     $number_blogs = $the_query->found_posts;
-  	$blog_posts = get_posts($args);
-		if($blog_posts) {
-  	$i = 1; $k = 0; $m = 1; ?>
+    $blog_posts = get_posts($args);
+    if($blog_posts) {
+    $i = 1; $k = 0; $m = 1; ?>
     <div class="anchorlink">
       <ul class="inner">
         <?php foreach($blog_posts as $post) : setup_postdata($post);  ?>
@@ -63,8 +63,8 @@
             <div class="map">
               <div class="maparea">
                   <div class="gmap_<?php echo $k; ?>" data-lat="<?php echo $latitude; ?>" data-long="<?php echo $longitude; ?>" style="with:100%; height:320px;border:0;"></div>
-                  <span class="place_name_<?php echo $i; ?>" data-content="<?php echo $place_name; ?>"></span>
-                  <span class="place_address_<?php echo $i; ?>" data-content="<?php echo $place_address; ?>"></span>
+                  <span class="place_name_<?php echo $k; ?>" data-content="<?php echo $place_name; ?>"></span>
+                  <span class="place_address_<?php echo $k; ?>" data-content="<?php echo $place_address; ?>"></span>
               </div>
               <p class="text-right"><a href="<?php echo $mapURL; ?>" target="_blank">Google Mapで見る</a></p>
               <h4>アクセスマップ</h4>
@@ -114,14 +114,14 @@
       </div>
       </section>
 
-		<?php	$i++; $k++;
-			endforeach;
+    <?php $i++; $k++;
+      endforeach;
     ?>
   </div> <!-- end #studio-list -->
 <?php
       wp_reset_query();
-		wp_reset_postdata();
- 	}
+    wp_reset_postdata();
+  }
 ?>
 
 <?php
