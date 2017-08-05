@@ -142,10 +142,17 @@ $(document).ready(function() {
 	{
 		var check = true;
 		$('.form_contact input.wpcf7-text').each(function(index, el) {
-			if($(this).val() == "")
-			{
-				check = false;
-				// console.log("Input text" + index + ' : ' + check);
+			if($(this).hasClass('tel')) {
+				check = true;
+			} else if($(this).hasClass('date_02')) {
+				check = true;
+			} else if($(this).hasClass('date_03')) {
+				check = true;
+			}
+			else {
+				if($(this).val() == "") {
+					check = false;
+				}
 			}
 		});
 
@@ -257,19 +264,4 @@ $(window).bind('scroll',function(){
 	   $('#sticky_menu_footer').fadeOut();
 	 }
 
-	 });
-
-/*
-$(document).ready(function() {
-$('a[href^=#]').click(function() {
-		var speed = 200; // ミリ秒
-		// アンカーの値取得
-		var href= $(this).attr("href");
-		var target = $(href == "#" || href == "" ? 'html' : href);
-		// 移動先を数値で取得
-		var position = target.offset().top-90;
-		// スムーススクロール
-		$('body,html').animate({scrollTop:position}, speed, 'swing');
-		return false;
-	});
-});*/
+});
