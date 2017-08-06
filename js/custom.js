@@ -141,23 +141,17 @@ $(document).ready(function() {
 	function checkNotNullInput()
 	{
 		var check = true;
-		$('.form_contact input.wpcf7-text').each(function(index, el) {
-			if($(this).hasClass('tel')) {
-				check = true;
-			} else if($(this).hasClass('date_02')) {
-				check = true;
-			} else if($(this).hasClass('date_03')) {
-				check = true;
-			}
-			else {
-				if($(this).val() == "") {
-					check = false;
-				}
-			}
-		});
-
-		if($('.form_contact textarea.wpcf7-textarea').val() == "")
-		{
+		
+		if($('.form_contact input.wpcf7-text.name').val() == "") {
+			check = false;
+		}
+		if($('.form_contact input.wpcf7-text.date_01').val() == "") {
+			check = false;
+		}
+		if($('.form_contact input.wpcf7-text.email').val() == "") {
+			check = false;
+		}
+		if($('.form_contact textarea.wpcf7-textarea').val() == "") {
 			check = false;
 		}
 
