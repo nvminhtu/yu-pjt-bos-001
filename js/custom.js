@@ -146,12 +146,6 @@ $(document).ready(function() {
 		var flagInput = true,
 			flagTextArea = true;
 
-		/*$('.form_contact .wpcf7-validates-as-required').each(function(index, el) {
-			if($(this).val() == "") {
-			  	flagInput = false;
-			}	
-		}); */
-
 		$('.form_contact input[type="text"]').each(function(index, el) {
 			if($(this).hasClass('wpcf7-validates-as-required') === true) {
 				if($(this).val() == "") {
