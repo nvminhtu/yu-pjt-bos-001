@@ -137,7 +137,8 @@ $(document).ready(function() {
 	$('.share_twitter').attr('href', 'https://twitter.com/intent/tweet?url='+url_share);
 
 	/*TNT CUSTOM JS FOR CONTACT FORM*/
-
+	
+	
 	function checkNotNullInput()
 	{
 		var check = true;
