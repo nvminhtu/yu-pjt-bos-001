@@ -142,7 +142,7 @@ $(document).ready(function() {
 	{
 		var check = true;
 		
-		if($('.form_contact input.wpcf7-text.name').val() == "") {
+		/* if($('.form_contact input.wpcf7-text.name').val() == "") {
 			check = false;
 		}
 		if($('.form_contact input.wpcf7-text.date_01').val() == "") {
@@ -153,8 +153,16 @@ $(document).ready(function() {
 		}
 		if($('.form_contact textarea.wpcf7-textarea').val() == "") {
 			check = false;
-		}
-
+		} */
+		
+		// if($('.form_contact .wpcf7-validates-as-required').val() == "") {
+		// 	check = false;
+		// }
+		$('.form_contact .wpcf7-validates-as-required').each(function(index, el) {
+			if($(this).val() == "" || $(this).find('input[type="checkbox"]').is(':checked')) {
+				check = false;
+			}
+		});
 		return check;
 	}
 
