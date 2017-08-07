@@ -143,14 +143,44 @@ $(document).ready(function() {
 	{
 		var check = true;
 		
-		$('.form_contact .wpcf7-validates-as-required').each(function(index, el) {
-			if($(this).val() == "") {
-				check = false;
-			}	
-		}); 
+		var flagInput = true,
+			flagTextArea = true;
 
-		//put a flag = false, means all checkboxs are not checked
-        var flagCB = false;
+		/*$('.form_contact .wpcf7-validates-as-required').each(function(index, el) {
+			if($(this).val() == "") {
+			  	flagInput = false;
+			}	
+		}); */
+
+		$('.form_contact input[type="text"]').each(function(index, el) {
+			if($(this).hasClass('wpcf7-validates-as-required') === true) {
+				if($(this).val() == "") {
+			  		flagInput = false;
+				}
+			}
+		});
+		
+
+		$('.form_contact input[type="email"]').each(function(index, el) {
+			if($(this).hasClass('wpcf7-validates-as-required') === true) {
+				if($(this).val() == "") {
+			  		flagInput = false;
+				}
+			}
+		});
+
+		$('.form_contact textarea').each(function(index, el) {
+			if($(this).hasClass('wpcf7-validates-as-required') === true) {
+				if($(this).val() == "") {
+			  		flagInput = false;
+				}
+			}
+		});
+
+		// put a flag = false, means all checkboxs are not checked
+        var flagCB = false,
+        	hasRequired = false;
+
         $('.form_contact .checkb').each(function(index, el) {
         	var cbItems = $(this).find('.wpcf7-checkbox');
         	var boolCB = false;
@@ -163,17 +193,29 @@ $(document).ready(function() {
 		            }
 	       		 });
         		flagCB = boolCB;
+        		hasRequired = true;
         	}
         });
         
+        // check checkBox is required or not
+		if(hasRequired === true) {
+			
+			// if the checkboxes was not checked
+			if(flagCB === true && flagInput === true){
+	            check = true;
+	        }
+	        else {
+	        	check = false;
+	        }
 
-        //if the checkboxes was not checked
-        if(flagCB === false){
-            check = false;
-        }
-        else{
-        	check = true;
-        }
+		} else {
+			if(flagInput === true) {
+				check = true;
+			} else {
+				check = false;
+			}
+		}
+       
 
 		return check;
 	}
