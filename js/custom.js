@@ -143,26 +143,37 @@ $(document).ready(function() {
 		var check = true;
 		
 		$('.form_contact .wpcf7-validates-as-required').each(function(index, el) {
-			
 			if($(this).val() == "") {
 				check = false;
 			}	
-			
 		}); 
 
 		//put a flag = false, means all checkboxs are not checked
         var flagCB = false;
-        $('.form_contact .wpcf7-checkbox.wpcf7-validates-as-required').each(function(index, el) {
-            //if one of checkboxes is checked, flag = true
-            if($(this).find('input[type=checkbox]').is(':checked') === true) {
-                flagCB = true;
-            }
+        $('.form_contact .checkb').each(function(index, el) {
+        	var cbItems = $(this).find('.wpcf7-checkbox');
+        	var boolCB = false;
+        	if(cbItems.hasClass('wpcf7-validates-as-required') === true)
+        	{
+        		cbItems.each(function(index2, el2) {
+	            	//if one of checkboxes is checked, flag = true
+		            if($(this).find('input[type=checkbox]').is(':checked') === true) {
+		                boolCB = true;
+		            }
+	       		 });
+        		flagCB = boolCB;
+        	}
         });
+        
 
         //if the checkboxes was not checked
         if(flagCB === false){
             check = false;
         }
+        else{
+        	check = true;
+        }
+
 		return check;
 	}
 
