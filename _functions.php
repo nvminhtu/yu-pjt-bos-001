@@ -162,17 +162,4 @@ function admin_styles() { ?>
       min-height: 200px;
     }
   </style>
-<?php } 
-
-
-function admin_edit_slug_script() {
-    if(is_admin()){
-        global $pagenow;
-        if (( $pagenow == 'post.php' )) {
-          wp_enqueue_script('admin_edit_slug_script', get_bloginfo('template_url').'/js/admin_script.js', array('jquery'));
-        }
-       
-    }   
-}
-add_action( 'admin_enqueue_scripts', 'admin_edit_slug_script' ); 
-?>
+<?php } ?>
