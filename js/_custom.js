@@ -144,6 +144,7 @@ $(document).ready(function() {
 		var check = true;
 		
 		var flagInput = true,
+			flatSelect = true,
 			flagTextArea = true;
 
 		$('.form_contact input[type="text"]').each(function(index, el) {
@@ -170,7 +171,20 @@ $(document).ready(function() {
 				}
 			}
 		});
-
+		
+		// check select option is selected
+		$('.form_contact select').each(function(index, el) {
+			var boolSelect = false;
+			if($(this).hasClass('wpcf7-validates-as-required') === true) {
+				 if ($(this).find('option').is(':selected')) { 
+		          	if($(this).val()!='') {
+		               boolSelect = true;
+		            }
+		        }
+				flagSelect = boolSelect;
+			}
+		});
+		
 		// put a flag = false, means all checkboxs are not checked
         var flagCB = false,
         	hasRequired = false;
@@ -195,7 +209,7 @@ $(document).ready(function() {
 		if(hasRequired === true) {
 			
 			// if the checkboxes was not checked
-			if(flagCB === true && flagInput === true){
+			if(flagCB === true && flagInput === true && flagSelect === true){
 	            check = true;
 	        }
 	        else {
@@ -203,7 +217,7 @@ $(document).ready(function() {
 	        }
 
 		} else {
-			if(flagInput === true) {
+			if(flagInput === true && flagSelect) {
 				check = true;
 			} else {
 				check = false;
