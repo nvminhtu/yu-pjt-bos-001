@@ -16,10 +16,12 @@ if( is_admin() ) {
   }
 }
 
+
 // #preventEditor: don't remove span tag in WP Editor
 function tinyMCEoptions($options) {
     $options['extended_valid_elements'] = 'span';
+    $options['extended_valid_elements'] = 'u';
     return $options;
 }
-add_filter('tiny_mce_before_init', 'tinyMCEoptions');
+add_filter('tiny_mce_before_init', 'tinyMCEoptions'); 
 ?>
